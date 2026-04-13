@@ -231,6 +231,83 @@ const translations = {
         submit_publish: "Publicar Agora",
         price_month: "/mês",
         price_day: "/dia"
+    },
+    ke: {
+        nav_home: "Página Inicial",
+        nav_listings: "Kasa",
+        nav_publish: "Publika",
+        login: "Entra",
+        hero_title: "Atxa Bu Kasa na Kabu Verdi",
+        hero_subtitle: "Praia, Mindelo, Ilha di Sal... Aluguel pa tempu o pa anu",
+        search_location: "Buska sidadi ou bairru",
+        all_types: "Tudu Tipu",
+        type_apartment: "Apartamentu",
+        type_house: "Kasa",
+        type_villa: "Vila",
+        type_studio: "Estúdiu",
+        all_rent_types: "Tudu",
+        rent_long: "Anu",
+        rent_short: "Tempu badu",
+        search: "Buska",
+        popular_cities: "Sidadis Popular:",
+        why_choose: "Purkê Skolhe CasaCV",
+        feature_safe: "Kasa Verificadu",
+        feature_safe_desc: "Tudu kasa é verificadu na mau",
+        feature_lang: "Tudu Língua",
+        feature_lang_desc: "Disponível na Chinês, Inglês, Português",
+        feature_community: "Comunidadi Xinês",
+        feature_community_desc: "Seksãu spesial pa komunidadi xinês",
+        feature_support: "Servisu Kompletu",
+        feature_support_desc: "Ajudanti di visita té contratu",
+        featured_listings: "Kasa di Destaki",
+        view_all: "Tudu",
+        rent_guide: "Guia di Aluguel",
+        guide_search: "Buska Kasa",
+        guide_search_desc: "Filtra pa sidadi, preçu, tipu di kasa",
+        guide_contact: "Kunta ku Donu",
+        guide_contact_desc: "Liga diretu ou marca visita",
+        guide_visit: "Visita Kasa",
+        guide_visit_desc: "Odja kasa i vizinhança",
+        guide_sign: "Assina Contratu",
+        guide_sign_desc: "Assina contratu formal",
+        cta_title: "Bu Ten Kasa pa Aluga?",
+        cta_subtitle: "Publika grátis, atxa inquilinu rápidu",
+        cta_button: "Publika Agora",
+        footer_desc: "Plataforma di aluguel midjôr di Kabu Verdi",
+        footer_rent: "N Kre Aluga",
+        footer_short: "Tempu Badu",
+        footer_long: "Aluguel Anu",
+        footer_guide: "Guia",
+        footer_landlord: "N Ten Kasa",
+        footer_tips: "Guia pa Donu",
+        footer_pricing: "Preçu",
+        footer_contact: "Kuntatu",
+        listings_title: "Kasa Disponível",
+        listings_subtitle: "Atxa kasa di kalidadi na Kabu Verdi",
+        publish_title: "Publika Kasa",
+        publish_subtitle: "Publika grátis, atxa inquilinu rápidu",
+        form_basic_info: "Informason Básiku",
+        form_title: "Títulu di Anúnsiu",
+        form_title_placeholder: "Ex: Apartamentu T3 na sentru di Praia",
+        form_city: "Sidadi",
+        form_district: "Bairru",
+        form_address: "Endereçu",
+        form_rent_type: "Tipu di Aluguel",
+        form_property_type: "Tipu di Kasa",
+        form_rooms: "Kuartu",
+        form_area: "Área (㎡)",
+        form_price: "Preçu (CVE/mês)",
+        form_deposit: "Kauçãu (CVE)",
+        form_description: "Diskrisãu",
+        form_description_placeholder: "Diskreve kasa, kumodadi, transporti...",
+        form_contact_name: "Nomi di Kontatu",
+        form_contact_phone: "Telefone",
+        form_contact_wechat: "WeChat (Opisonal)",
+        form_images: "Karrega Imagen",
+        form_images_desc: "Arrasta i larga, máximu 10 imagen",
+        submit_publish: "Publika Agora",
+        price_month: "/mês",
+        price_day: "/dia"
     }
 };
 
@@ -241,8 +318,11 @@ function setLanguage(lang) {
     localStorage.setItem('casacv_language', lang);
     
     // 更新当前语言显示
-    const langNames = { zh: '中文', en: 'English', pt: 'Português' };
-    document.getElementById('current-lang').textContent = langNames[lang];
+    const langNames = { zh: '中文', en: 'English', pt: 'Português', ke: 'Kriolu' };
+    const langEl = document.getElementById('current-lang');
+    if (langEl) {
+        langEl.textContent = langNames[lang];
+    }
     
     // 隐藏下拉菜单
     document.getElementById('lang-dropdown').classList.remove('show');
