@@ -1,0 +1,294 @@
+// CasaCV 多语言支持
+
+const translations = {
+    zh: {
+        nav_home: "首页",
+        nav_listings: "房源",
+        nav_publish: "发布房源",
+        login: "登录",
+        hero_title: "在佛得角找到理想的家",
+        hero_subtitle: "普拉亚、明德卢、萨尔岛... 长租房、短租民宿一站式解决",
+        search_location: "输入城市或区域",
+        all_types: "所有类型",
+        type_apartment: "公寓",
+        type_house: "独栋房屋",
+        type_villa: "别墅",
+        type_studio: "单间",
+        all_rent_types: "租期不限",
+        rent_long: "长租",
+        rent_short: "短租/民宿",
+        search: "搜索",
+        popular_cities: "热门城市：",
+        why_choose: "为什么选择 CasaCV",
+        feature_safe: "真实房源",
+        feature_safe_desc: "人工审核每套房源，杜绝虚假信息",
+        feature_lang: "多语言服务",
+        feature_lang_desc: "中文、英文、葡语三语支持",
+        feature_community: "华人社区",
+        feature_community_desc: "专为华人打造的租房专区",
+        feature_support: "全程服务",
+        feature_support_desc: "从看房到签约，全程协助",
+        featured_listings: "精选房源",
+        view_all: "查看全部",
+        rent_guide: "佛得角租房指南",
+        guide_search: "搜索房源",
+        guide_search_desc: "按城市、价格、房型筛选，找到心仪的房子",
+        guide_contact: "联系房东",
+        guide_contact_desc: "直接拨打电话或在线预约看房",
+        guide_visit: "实地看房",
+        guide_visit_desc: "亲自查看房屋状况和周边环境",
+        guide_sign: "签约入住",
+        guide_sign_desc: "签订正规合同，安心入住新家",
+        cta_title: "有房子要出租？",
+        cta_subtitle: "免费发布房源，快速找到优质租客",
+        cta_button: "立即发布",
+        footer_desc: "佛得角最专业的租房平台，为华人社区提供便捷的租房服务",
+        footer_rent: "我要租房",
+        footer_short: "短租/民宿",
+        footer_long: "长租公寓",
+        footer_guide: "租房攻略",
+        footer_landlord: "我是房东",
+        footer_tips: "房东指南",
+        footer_pricing: "服务费用",
+        footer_contact: "联系我们",
+        listings_title: "房源列表",
+        listings_subtitle: "发现佛得角的优质房源",
+        publish_title: "发布房源",
+        publish_subtitle: "免费发布，快速找到租客",
+        form_basic_info: "基本信息",
+        form_title: "房源标题",
+        form_title_placeholder: "例如：普拉亚市中心三室公寓，拎包入住",
+        form_city: "城市",
+        form_district: "区域",
+        form_address: "详细地址",
+        form_rent_type: "出租类型",
+        form_property_type: "房屋类型",
+        form_rooms: "卧室数量",
+        form_area: "面积 (㎡)",
+        form_price: "租金 (CVE/月)",
+        form_deposit: "押金 (CVE)",
+        form_description: "房源描述",
+        form_description_placeholder: "详细描述房屋情况、周边配套、交通情况等...",
+        form_contact_name: "联系人",
+        form_contact_phone: "联系电话",
+        form_contact_wechat: "微信号（选填）",
+        form_images: "上传图片",
+        form_images_desc: "支持拖拽上传，最多10张",
+        submit_publish: "立即发布",
+        price_month: "/月",
+        price_day: "/天"
+    },
+    en: {
+        nav_home: "Home",
+        nav_listings: "Listings",
+        nav_publish: "Post Property",
+        login: "Login",
+        hero_title: "Find Your Ideal Home in Cape Verde",
+        hero_subtitle: "Praia, Mindelo, Sal Island... Long-term rentals and short-term stays",
+        search_location: "Enter city or area",
+        all_types: "All Types",
+        type_apartment: "Apartment",
+        type_house: "House",
+        type_villa: "Villa",
+        type_studio: "Studio",
+        all_rent_types: "All Rent Types",
+        rent_long: "Long-term",
+        rent_short: "Short-term/B&B",
+        search: "Search",
+        popular_cities: "Popular Cities:",
+        why_choose: "Why Choose CasaCV",
+        feature_safe: "Verified Listings",
+        feature_safe_desc: "Every listing is manually verified to ensure authenticity",
+        feature_lang: "Multilingual Support",
+        feature_lang_desc: "Available in Chinese, English, and Portuguese",
+        feature_community: "Chinese Community",
+        feature_community_desc: "Dedicated rental section for Chinese expats",
+        feature_support: "Full Service",
+        feature_support_desc: "Assistance from viewing to contract signing",
+        featured_listings: "Featured Listings",
+        view_all: "View All",
+        rent_guide: "Rental Guide",
+        guide_search: "Search Properties",
+        guide_search_desc: "Filter by city, price, and property type",
+        guide_contact: "Contact Landlord",
+        guide_contact_desc: "Call directly or schedule a viewing online",
+        guide_visit: "View Property",
+        guide_visit_desc: "Inspect the property and neighborhood in person",
+        guide_sign: "Sign Contract",
+        guide_sign_desc: "Sign a formal contract and move in with peace of mind",
+        cta_title: "Have a Property to Rent?",
+        cta_subtitle: "Post for free and find quality tenants quickly",
+        cta_button: "Post Now",
+        footer_desc: "Cape Verde's premier rental platform, providing convenient services for the Chinese community",
+        footer_rent: "I Want to Rent",
+        footer_short: "Short-term/B&B",
+        footer_long: "Long-term Rentals",
+        footer_guide: "Rental Guide",
+        footer_landlord: "I'm a Landlord",
+        footer_tips: "Landlord Guide",
+        footer_pricing: "Pricing",
+        footer_contact: "Contact Us",
+        listings_title: "Property Listings",
+        listings_subtitle: "Discover quality properties in Cape Verde",
+        publish_title: "Post Property",
+        publish_subtitle: "Post for free, find tenants fast",
+        form_basic_info: "Basic Information",
+        form_title: "Property Title",
+        form_title_placeholder: "e.g., 3-bedroom apartment in Praia city center",
+        form_city: "City",
+        form_district: "District",
+        form_address: "Address",
+        form_rent_type: "Rent Type",
+        form_property_type: "Property Type",
+        form_rooms: "Bedrooms",
+        form_area: "Area (㎡)",
+        form_price: "Rent (CVE/month)",
+        form_deposit: "Deposit (CVE)",
+        form_description: "Description",
+        form_description_placeholder: "Describe the property, amenities, transportation...",
+        form_contact_name: "Contact Name",
+        form_contact_phone: "Phone Number",
+        form_contact_wechat: "WeChat (Optional)",
+        form_images: "Upload Images",
+        form_images_desc: "Drag and drop, up to 10 images",
+        submit_publish: "Publish Now",
+        price_month: "/month",
+        price_day: "/day"
+    },
+    pt: {
+        nav_home: "Início",
+        nav_listings: "Imóveis",
+        nav_publish: "Anunciar",
+        login: "Entrar",
+        hero_title: "Encontre Sua Casa Ideal em Cabo Verde",
+        hero_subtitle: "Praia, Mindelo, Ilha do Sal... Aluguel por temporada ou anual",
+        search_location: "Digite cidade ou bairro",
+        all_types: "Todos os Tipos",
+        type_apartment: "Apartamento",
+        type_house: "Casa",
+        type_villa: "Moradia",
+        type_studio: "Estúdio",
+        all_rent_types: "Todos",
+        rent_long: "Anual",
+        rent_short: "Temporada",
+        search: "Buscar",
+        popular_cities: "Cidades Populares:",
+        why_choose: "Por Que Escolher CasaCV",
+        feature_safe: "Imóveis Verificados",
+        feature_safe_desc: "Cada imóvel é verificado manualmente",
+        feature_lang: "Multilíngue",
+        feature_lang_desc: "Disponível em Chinês, Inglês e Português",
+        feature_community: "Comunidade Chinesa",
+        feature_community_desc: "Seção especial para a comunidade chinesa",
+        feature_support: "Serviço Completo",
+        feature_support_desc: "Assistência da visita à assinatura do contrato",
+        featured_listings: "Destaques",
+        view_all: "Ver Todos",
+        rent_guide: "Guia de Aluguel",
+        guide_search: "Buscar Imóveis",
+        guide_search_desc: "Filtre por cidade, preço e tipo de imóvel",
+        guide_contact: "Contactar Proprietário",
+        guide_contact_desc: "Ligue diretamente ou agende uma visita",
+        guide_visit: "Visitar Imóvel",
+        guide_visit_desc: "Veja pessoalmente o imóvel e a vizinhança",
+        guide_sign: "Assinar Contrato",
+        guide_sign_desc: "Assine um contrato formal e mude-se com segurança",
+        cta_title: "Tem um Imóvel para Alugar?",
+        cta_subtitle: "Anuncie grátis e encontre inquilinos rapidamente",
+        cta_button: "Anunciar Agora",
+        footer_desc: "A melhor plataforma de aluguel de Cabo Verde, servindo a comunidade chinesa",
+        footer_rent: "Quero Alugar",
+        footer_short: "Temporada",
+        footer_long: "Aluguel Anual",
+        footer_guide: "Guia",
+        footer_landlord: "Sou Proprietário",
+        footer_tips: "Guia do Proprietário",
+        footer_pricing: "Preços",
+        footer_contact: "Contacto",
+        listings_title: "Imóveis Disponíveis",
+        listings_subtitle: "Descubra imóveis de qualidade em Cabo Verde",
+        publish_title: "Anunciar Imóvel",
+        publish_subtitle: "Anuncie grátis, encontre inquilinos rápido",
+        form_basic_info: "Informações Básicas",
+        form_title: "Título do Anúncio",
+        form_title_placeholder: "Ex: Apartamento T3 no centro da Praia",
+        form_city: "Cidade",
+        form_district: "Bairro",
+        form_address: "Endereço",
+        form_rent_type: "Tipo de Aluguel",
+        form_property_type: "Tipo de Imóvel",
+        form_rooms: "Quartos",
+        form_area: "Área (㎡)",
+        form_price: "Renda (CVE/mês)",
+        form_deposit: "Caução (CVE)",
+        form_description: "Descrição",
+        form_description_placeholder: "Descreva o imóvel, comodidades, transporte...",
+        form_contact_name: "Nome de Contacto",
+        form_contact_phone: "Telefone",
+        form_contact_wechat: "WeChat (Opcional)",
+        form_images: "Carregar Imagens",
+        form_images_desc: "Arraste e solte, máximo 10 imagens",
+        submit_publish: "Publicar Agora",
+        price_month: "/mês",
+        price_day: "/dia"
+    }
+};
+
+let currentLang = 'zh';
+
+function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('casacv_language', lang);
+    
+    // 更新当前语言显示
+    const langNames = { zh: '中文', en: 'English', pt: 'Português' };
+    document.getElementById('current-lang').textContent = langNames[lang];
+    
+    // 隐藏下拉菜单
+    document.getElementById('lang-dropdown').classList.remove('show');
+    
+    // 更新所有带 data-i18n 属性的元素
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+    
+    // 更新 placeholder
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (translations[lang][key]) {
+            el.placeholder = translations[lang][key];
+        }
+    });
+    
+    // 更新页面标题
+    const titleMap = {
+        'index.html': { zh: 'CasaCV - 佛得角租房平台', en: 'CasaCV - Cape Verde Rental Platform', pt: 'CasaCV - Plataforma de Aluguel' },
+        'listings.html': { zh: '房源列表 - CasaCV', en: 'Property Listings - CasaCV', pt: 'Imóveis - CasaCV' },
+        'publish.html': { zh: '发布房源 - CasaCV', en: 'Post Property - CasaCV', pt: 'Anunciar - CasaCV' }
+    };
+    
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    if (titleMap[currentPage]) {
+        document.title = titleMap[currentPage][lang];
+    }
+}
+
+function toggleLang() {
+    document.getElementById('lang-dropdown').classList.toggle('show');
+}
+
+// 点击外部关闭下拉菜单
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.language-switcher')) {
+        document.getElementById('lang-dropdown')?.classList.remove('show');
+    }
+});
+
+// 页面加载时初始化语言
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('casacv_language') || 'zh';
+    setLanguage(savedLang);
+});

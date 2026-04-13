@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CasaCV - 佛得角租房平台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-home"></i>
+                <span>CasaCV</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="active" data-i18n="nav_home">首页</a>
+                <a href="listings.html" data-i18n="nav_listings">房源</a>
+                <a href="publish.html" class="btn-primary" data-i18n="nav_publish">发布房源</a>
+            </div>
+            <div class="nav-actions">
+                <div class="language-switcher">
+                    <button class="lang-btn" onclick="toggleLang()">
+                        <i class="fas fa-globe"></i>
+                        <span id="current-lang">中文</span>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <a href="#" onclick="setLanguage('zh')">中文</a>
+                        <a href="#" onclick="setLanguage('en')">English</a>
+                        <a href="#" onclick="setLanguage('pt')">Português</a>
+                    </div>
+                </div>
+                <a href="#" class="btn-outline" data-i18n="login">登录</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 移动端菜单 -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html" data-i18n="nav_home">首页</a>
+        <a href="listings.html" data-i18n="nav_listings">房源</a>
+        <a href="publish.html" data-i18n="nav_publish">发布房源</a>
+        <a href="#" data-i18n="login">登录</a>
+    </div>
+
+    <!-- Hero区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="hero_title">在佛得角找到理想的家</h1>
+            <p data-i18n="hero_subtitle">普拉亚、明德卢、萨尔岛... 长租房、短租民宿一站式解决</p>
+            
+            <!-- 搜索框 -->
+            <div class="search-box">
+                <div class="search-input-group">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" placeholder="输入城市或区域" data-i18n-placeholder="search_location" id="search-location">
+                </div>
+                <div class="search-input-group">
+                    <i class="fas fa-home"></i>
+                    <select id="property-type">
+                        <option value="" data-i18n="all_types">所有类型</option>
+                        <option value="apartment" data-i18n="type_apartment">公寓</option>
+                        <option value="house" data-i18n="type_house">独栋房屋</option>
+                        <option value="villa" data-i18n="type_villa">别墅</option>
+                        <option value="studio" data-i18n="type_studio">单间</option>
+                    </select>
+                </div>
+                <div class="search-input-group">
+                    <i class="fas fa-tag"></i>
+                    <select id="rent-type">
+                        <option value="" data-i18n="all_rent_types">租期不限</option>
+                        <option value="long" data-i18n="rent_long">长租</option>
+                        <option value="short" data-i18n="rent_short">短租/民宿</option>
+                    </select>
+                </div>
+                <button class="search-btn" onclick="search()">
+                    <i class="fas fa-search"></i>
+                    <span data-i18n="search">搜索</span>
+                </button>
+            </div>
+
+            <!-- 热门城市 -->
+            <div class="popular-cities">
+                <span data-i18n="popular_cities">热门城市：</span>
+                <a href="#" onclick="setCity('Praia')">普拉亚 Praia</a>
+                <a href="#" onclick="setCity('Mindelo')">明德卢 Mindelo</a>
+                <a href="#" onclick="setCity('Santa Maria')">圣玛丽亚 Santa Maria</a>
+                <a href="#" onclick="setCity('Sal Rei')">萨尔雷 Sal Rei</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特色服务 -->
+    <section class="features">
+        <div class="container">
+            <h2 data-i18n="why_choose">为什么选择 CasaCV</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-i18n="feature_safe">真实房源</h3>
+                    <p data-i18n="feature_safe_desc">人工审核每套房源，杜绝虚假信息</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 data-i18n="feature_lang">多语言服务</h3>
+                    <p data-i18n="feature_lang_desc">中文、英文、葡语三语支持</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-i18n="feature_community">华人社区</h3>
+                    <p data-i18n="feature_community_desc">专为华人打造的租房专区</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 data-i18n="feature_support">全程服务</h3>
+                    <p data-i18n="feature_support_desc">从看房到签约，全程协助</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 精选房源 -->
+    <section class="listings">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="featured_listings">精选房源</h2>
+                <a href="listings.html" class="view-all" data-i18n="view_all">查看全部 <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="listings-grid" id="featured-listings">
+                <!-- 房源卡片将通过JS动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 租房指南 -->
+    <section class="guide">
+        <div class="container">
+            <h2 data-i18n="rent_guide">佛得角租房指南</h2>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <div class="guide-number">01</div>
+                    <h3 data-i18n="guide_search">搜索房源</h3>
+                    <p data-i18n="guide_search_desc">按城市、价格、房型筛选，找到心仪的房子</p>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-number">02</div>
+                    <h3 data-i18n="guide_contact">联系房东</h3>
+                    <p data-i18n="guide_contact_desc">直接拨打电话或在线预约看房</p>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-number">03</div>
+                    <h3 data-i18n="guide_visit">实地看房</h3>
+                    <p data-i18n="guide_visit_desc">亲自查看房屋状况和周边环境</p>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-number">04</div>
+                    <h3 data-i18n="guide_sign">签约入住</h3>
+                    <p data-i18n="guide_sign_desc">签订正规合同，安心入住新家</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA区域 -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-i18n="cta_title">有房子要出租？</h2>
+                <p data-i18n="cta_subtitle">免费发布房源，快速找到优质租客</p>
+                <a href="publish.html" class="btn-large" data-i18n="cta_button">立即发布</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-home"></i>
+                        <span>CasaCV</span>
+                    </a>
+                    <p data-i18n="footer_desc">佛得角最专业的租房平台，为华人社区提供便捷的租房服务</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_rent">我要租房</h4>
+                    <a href="listings.html" data-i18n="nav_listings">房源列表</a>
+                    <a href="#" data-i18n="footer_short">短租/民宿</a>
+                    <a href="#" data-i18n="footer_long">长租公寓</a>
+                    <a href="#" data-i18n="footer_guide">租房攻略</a>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_landlord">我是房东</h4>
+                    <a href="publish.html" data-i18n="nav_publish">发布房源</a>
+                    <a href="#" data-i18n="footer_tips">房东指南</a>
+                    <a href="#" data-i18n="footer_pricing">服务费用</a>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_contact">联系我们</h4>
+                    <p><i class="fas fa-phone"></i> +238 9123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@casacv.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Praia, Cape Verde</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CasaCV. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
