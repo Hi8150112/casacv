@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hi8150112.github.io/casacv/sitemap.xml
