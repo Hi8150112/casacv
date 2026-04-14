@@ -469,7 +469,7 @@ body {
 }
 
 /* 移动端底部导航 */
-.mobile-nav {
+.mobile-bottom-nav-modern {
     display: none;
     position: fixed;
     bottom: 0;
@@ -481,14 +481,14 @@ body {
     z-index: 1000;
 }
 
-.mobile-nav-items {
+.mobile-bottom-nav-modern {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 0 var(--space-xs);
 }
 
-.mobile-nav-item {
+.nav-item-modern {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -502,19 +502,38 @@ body {
     flex: 1;
 }
 
-.mobile-nav-item.active {
+.nav-item-modern.active {
     color: var(--accent-primary);
 }
 
-.mobile-nav-item i {
+.nav-item-modern i {
     font-size: 1.2rem;
 }
 
-.mobile-nav-item span {
+.nav-item-modern span {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
+}
+
+/* 发布按钮特殊样式 */
+.nav-item-main-modern {
+    position: relative;
+}
+
+.nav-main-btn-modern {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+    box-shadow: var(--shadow-md);
 }
 
 /* 发布按钮（悬浮） */
@@ -547,7 +566,7 @@ body {
 
 @media (max-width: 768px) {
     .sidebar-left {
-        display: none;
+        display: flex;
     }
     .main-content {
         margin-left: 0;
@@ -557,8 +576,8 @@ body {
     .search-bar-modern {
         display: none;
     }
-    .mobile-nav {
-        display: block;
+    .mobile-bottom-nav-modern {
+        display: flex;
     }
     .fab-post {
         display: flex;
@@ -568,6 +587,114 @@ body {
     .navbar-modern {
         padding: var(--space-sm) var(--space-md);
     }
+}
+
+/* Footer 样式 */
+.footer-modern {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    padding: var(--space-xl) var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.footer-container-modern {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-content-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-xl);
+    margin-bottom: var(--space-lg);
+}
+
+.footer-section-modern h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+}
+
+.footer-section-modern ul {
+    list-style: none;
+}
+
+.footer-section-modern li {
+    margin-bottom: var(--space-sm);
+}
+
+.footer-section-modern a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-section-modern a:hover {
+    color: var(--accent-primary);
+}
+
+.footer-section-modern p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-sm);
+}
+
+.footer-section-modern i {
+    margin-right: var(--space-sm);
+    color: var(--accent-primary);
+}
+
+.footer-bottom-modern {
+    text-align: center;
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-bottom-modern p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* 更多菜单弹窗 */
+.more-menu-modal {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    z-index: 1001;
+    min-width: 180px;
+}
+
+.more-menu-content {
+    padding: var(--space-sm);
+}
+
+.more-menu-content a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: var(--radius-md);
+    transition: all 0.2s;
+}
+
+.more-menu-content a:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.more-menu-content i {
+    width: 20px;
+    text-align: center;
 }
 
 /* 动画 */
