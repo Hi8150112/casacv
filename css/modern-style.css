@@ -1081,6 +1081,194 @@ body {
     }
 }
 
+/* 文学板块样式 */
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-lg);
+}
+
+.story-card-modern {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.story-card-modern:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.story-image-modern {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.story-image-modern img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.story-card-modern:hover .story-image-modern img {
+    transform: scale(1.05);
+}
+
+.story-genre-badge {
+    position: absolute;
+    top: var(--space-sm);
+    left: var(--space-sm);
+    background: var(--accent-primary);
+    color: white;
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.story-content-modern {
+    padding: var(--space-md);
+}
+
+.story-title-modern {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.story-original-title {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: var(--space-sm);
+}
+
+.story-author-modern {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-sm);
+}
+
+.story-author-modern i {
+    color: var(--accent-primary);
+    margin-right: var(--space-xs);
+}
+
+.story-summary-modern {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: var(--space-md);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.story-meta-modern {
+    display: flex;
+    gap: var(--space-md);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.story-meta-modern i {
+    margin-right: 4px;
+}
+
+/* 热门故事 */
+.popular-story-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.popular-story-item:last-child {
+    border-bottom: none;
+}
+
+.popular-story-item:hover {
+    background: var(--bg-tertiary);
+    margin: 0 calc(-1 * var(--space-md));
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+    border-radius: var(--radius-md);
+}
+
+.popular-rank {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.popular-story-item:nth-child(1) .popular-rank {
+    background: #ffd700;
+    color: #333;
+}
+
+.popular-story-item:nth-child(2) .popular-rank {
+    background: #c0c0c0;
+    color: #333;
+}
+
+.popular-story-item:nth-child(3) .popular-rank {
+    background: #cd7f32;
+    color: white;
+}
+
+.popular-info h5 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.popular-info span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* 作者 spotlight */
+.author-spotlight {
+    text-align: center;
+    padding: var(--space-md);
+}
+
+.author-avatar {
+    margin-bottom: var(--space-md);
+}
+
+.author-spotlight h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .stories-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* 动画 */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }

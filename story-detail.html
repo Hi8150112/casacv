@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ke">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontu - CasaCV Literatura</title>
+    <meta name="description" content="Lei kontu interesanti di China na Kriolu.">
+    <link rel="stylesheet" href="css/modern-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N52TE42NYM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N52TE42NYM');
+    </script>
+    <style>
+        .story-detail-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--space-xl);
+        }
+        .story-header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            padding-bottom: var(--space-lg);
+            border-bottom: 2px solid var(--border-color);
+        }
+        .story-header h1 {
+            font-size: 2.5rem;
+            color: var(--text-primary);
+            margin-bottom: var(--space-sm);
+        }
+        .story-original-title {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: var(--space-md);
+        }
+        .story-meta-bar {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-lg);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .story-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-primary);
+        }
+        .story-content p {
+            margin-bottom: var(--space-md);
+            text-indent: 2em;
+        }
+        .story-content h2 {
+            font-size: 1.8rem;
+            color: var(--accent-primary);
+            margin: var(--space-xl) 0 var(--space-md);
+            text-align: center;
+        }
+        .story-content .story-meta {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: var(--space-lg);
+            text-indent: 0;
+        }
+        .story-actions {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            margin: var(--space-xl) 0;
+            padding: var(--space-lg) 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .story-action-btn {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-sm) var(--space-lg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .story-action-btn:hover {
+            background: var(--accent-primary);
+            color: white;
+            border-color: var(--accent-primary);
+        }
+        .story-action-btn.liked {
+            background: #e74c3c;
+            color: white;
+            border-color: #e74c3c;
+        }
+        .story-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: var(--space-xl);
+            padding-top: var(--space-lg);
+        }
+        .nav-story-btn {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-md) var(--space-lg);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .nav-story-btn:hover {
+            background: var(--accent-primary);
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .story-header h1 {
+                font-size: 1.8rem;
+            }
+            .story-content {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar-modern">
+        <div class="nav-container-modern">
+            <a href="index.html" class="logo-modern">
+                <i class="fas fa-home"></i>
+                <span>CasaCV</span>
+            </a>
+            <a href="literature.html" class="btn-publish-nav">
+                <i class="fas fa-book"></i>
+                <span>Literatura</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="main-content" style="margin-left: 0; padding-top: 80px;">
+        <div class="story-detail-container">
+            <article id="story-content">
+                <!-- 内容将通过 JS 加载 -->
+            </article>
+            
+            <div class="story-actions">
+                <button class="story-action-btn" id="like-btn" onclick="toggleLike()">
+                    <i class="fas fa-heart"></i>
+                    <span id="like-count">0</span>
+                </button>
+                <button class="story-action-btn" onclick="shareStory()">
+                    <i class="fas fa-share-alt"></i>
+                    Partilha
+                </button>
+                <button class="story-action-btn" onclick="window.print()">
+                    <i class="fas fa-print"></i>
+                    Stampa
+                </button>
+            </div>
+            
+            <div class="story-navigation">
+                <a href="literature.html" class="nav-story-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Volta pa lista
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-modern">
+        <div class="footer-container-modern">
+            <div class="footer-bottom-modern">
+                <p>&copy; 2026 CasaCV Literatura. Tudu direitu riservadu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/literature.js"></script>
+    <script>
+        // 加载故事内容
+        function loadStory() {
+            const storyData = sessionStorage.getItem('currentStory');
+            if (!storyData) {
+                document.getElementById('story-content').innerHTML = `
+                    <div class="no-results-modern">
+                        <i class="fas fa-book"></i>
+                        <p>Kontu nunka atxa</p>
+                        <a href="literature.html" class="btn-primary-modern">Volta pa Literatura</a>
+                    </div>
+                `;
+                return;
+            }
+            
+            const story = JSON.parse(storyData);
+            
+            document.getElementById('story-content').innerHTML = `
+                <header class="story-header">
+                    <h1>${story.title}</h1>
+                    <p class="story-original-title">${story.originalTitle}</p>
+                    <div class="story-meta-bar">
+                        <span><i class="fas fa-user-edit"></i> ${story.author}</span>
+                        <span><i class="fas fa-clock"></i> ${story.readTime}</span>
+                        <span><i class="fas fa-eye"></i> ${story.views} leitura</span>
+                    </div>
+                </header>
+                <div class="story-content">
+                    ${story.content}
+                </div>
+            `;
+            
+            // 更新点赞数
+            document.getElementById('like-count').textContent = story.likes;
+            
+            // 检查是否已点赞
+            const likedStories = JSON.parse(localStorage.getItem('likedStories') || '[]');
+            if (likedStories.includes(story.id)) {
+                document.getElementById('like-btn').classList.add('liked');
+            }
+            
+            // 增加阅读数
+            incrementViews(story.id);
+        }
+        
+        // 增加阅读数
+        function incrementViews(storyId) {
+            const viewedStories = JSON.parse(localStorage.getItem('viewedStories') || '[]');
+            if (!viewedStories.includes(storyId)) {
+                viewedStories.push(storyId);
+                localStorage.setItem('viewedStories', JSON.stringify(viewedStories));
+                // 这里可以发送到服务器更新实际阅读数
+            }
+        }
+        
+        // 切换点赞
+        function toggleLike() {
+            const storyData = sessionStorage.getItem('currentStory');
+            if (!storyData) return;
+            
+            const story = JSON.parse(storyData);
+            const likedStories = JSON.parse(localStorage.getItem('likedStories') || '[]');
+            const likeBtn = document.getElementById('like-btn');
+            const likeCount = document.getElementById('like-count');
+            
+            if (likedStories.includes(story.id)) {
+                // 取消点赞
+                const index = likedStories.indexOf(story.id);
+                likedStories.splice(index, 1);
+                story.likes--;
+                likeBtn.classList.remove('liked');
+            } else {
+                // 点赞
+                likedStories.push(story.id);
+                story.likes++;
+                likeBtn.classList.add('liked');
+                
+                // 动画效果
+                likeBtn.style.transform = 'scale(1.2)';
+                setTimeout(() => likeBtn.style.transform = 'scale(1)', 200);
+            }
+            
+            localStorage.setItem('likedStories', JSON.stringify(likedStories));
+            sessionStorage.setItem('currentStory', JSON.stringify(story));
+            likeCount.textContent = story.likes;
+        }
+        
+        // 分享故事
+        function shareStory() {
+            const storyData = sessionStorage.getItem('currentStory');
+            if (!storyData) return;
+            
+            const story = JSON.parse(storyData);
+            const shareData = {
+                title: story.title,
+                text: story.summary,
+                url: window.location.href
+            };
+            
+            if (navigator.share) {
+                navigator.share(shareData);
+            } else {
+                // 复制链接
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    alert('Link kopiadu!');
+                });
+            }
+        }
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', loadStory);
+    </script>
+</body>
+</html>
