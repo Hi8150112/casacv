@@ -229,16 +229,16 @@
                 allListings = await Database.listings.getAll();
                 
                 if (allListings.length === 0) {
-                    // 如果没有数据，使用示例数据
-                    allListings = listingsData;
+                    // 如果没有数据，使用扩展数据（包含原有+虚假房源）
+                    allListings = extendedListings || listingsData;
                 }
                 
                 renderFilteredListings(allListings);
                 updateResultsCount(allListings.length);
             } catch (error) {
                 console.error('Error loading listings:', error);
-                // 使用本地数据作为后备
-                allListings = listingsData;
+                // 使用扩展数据作为后备
+                allListings = extendedListings || listingsData;
                 renderFilteredListings(allListings);
                 updateResultsCount(allListings.length);
             }
