@@ -577,29 +577,27 @@
     </div>
 
     <!-- 移动端底部导航 -->
-    <nav class="mobile-nav">
-        <div class="mobile-nav-items">
-            <a href="index.html" class="mobile-nav-item active">
-                <i class="fas fa-home"></i>
-                <span>Início</span>
-            </a>
-            <a href="listings.html" class="mobile-nav-item">
-                <i class="fas fa-building"></i>
-                <span>Kasa</span>
-            </a>
-            <a href="publish.html" class="mobile-nav-item" style="color: var(--accent-primary);">
-                <i class="fas fa-plus-circle" style="font-size: 1.5rem;"></i>
-                <span>Publika</span>
-            </a>
-            <a href="confession-wall.html" class="mobile-nav-item">
-                <i class="fas fa-heart"></i>
-                <span>Amor</span>
-            </a>
-            <a href="#" class="mobile-nav-item" onclick="showMoreMenu(); return false;">
-                <i class="fas fa-th-large"></i>
-                <span>Maidu</span>
-            </a>
-        </div>
+    <nav class="mobile-bottom-nav-modern">
+        <a href="index.html" class="nav-item-modern active">
+            <i class="fas fa-home"></i>
+            <span>Início</span>
+        </a>
+        <a href="listings.html" class="nav-item-modern">
+            <i class="fas fa-building"></i>
+            <span>Kasa</span>
+        </a>
+        <a href="publish.html" class="nav-item-modern" style="color: var(--accent-primary);">
+            <i class="fas fa-plus-circle" style="font-size: 1.5rem;"></i>
+            <span>Publika</span>
+        </a>
+        <a href="confession-wall.html" class="nav-item-modern">
+            <i class="fas fa-heart"></i>
+            <span>Amor</span>
+        </a>
+        <a href="#" class="nav-item-modern" onclick="showMoreMenu(); return false;">
+            <i class="fas fa-th-large"></i>
+            <span>Maidu</span>
+        </a>
     </nav>
     
     <!-- 更多菜单弹窗 -->
@@ -671,7 +669,7 @@
     </div>
 
     <!-- 邀请进度条 -->
-    <div id="inviteProgress" style="display:none;position:fixed;top:80px;right:20px;background:#ffffff;border-radius:12px;padding:16px;border:1px solid #e8e4df;z-index:100;max-width:280px;box-shadow:0 8px 24px rgba(0,0,0,0.08);">
+    <div id="inviteProgress" style="display:none;position:fixed;top:80px;right:20px;background:#ffffff;border-radius:12px;padding:16px;border:1px solid #e8e4df;z-index:100;max-width:280px;box-shadow:0 8px 24px rgba(0,0,0,0.08);" class="invite-progress-widget">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
             <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#5a6b7c,#8fa3b8);display:flex;align-items:center;justify-content:center;">
                 <i class="fas fa-gift" style="color:#fff;"></i>

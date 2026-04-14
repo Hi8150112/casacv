@@ -565,11 +565,15 @@ body {
 }
 
 @media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+    }
     .sidebar-left {
-        display: flex;
+        display: none;
     }
     .main-content {
         margin-left: 0;
+        margin-right: 0;
         padding: var(--space-md);
         padding-bottom: 80px;
     }
@@ -978,6 +982,13 @@ body {
 
 .action-btn.favorited {
     color: #f39c12;
+}
+
+/* 邀请进度条 - 移动端隐藏 */
+@media (max-width: 768px) {
+    .invite-progress-widget {
+        display: none !important;
+    }
 }
 
 /* 动画 */
