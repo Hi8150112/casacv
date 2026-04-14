@@ -356,6 +356,66 @@
 
         <!-- 右侧边栏 -->
         <aside class="sidebar-right">
+            <!-- 平台统计 -->
+            <div class="content-card" style="margin-bottom:20px;background:linear-gradient(135deg,#5a6b7c,#7a8b9c);color:#fff;">
+                <div style="padding:20px;">
+                    <div style="font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:8px;">
+                        <i class="fas fa-chart-line"></i> Estatísticas
+                    </div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                        <div style="text-align:center;">
+                            <div style="font-size:1.8rem;font-weight:700;" id="statUsers">3,247</div>
+                            <div style="font-size:0.8rem;opacity:0.9;">Usuários</div>
+                        </div>
+                        <div style="text-align:center;">
+                            <div style="font-size:1.8rem;font-weight:700;" id="statPosts">1,856</div>
+                            <div style="font-size:0.8rem;opacity:0.9;">Publicações</div>
+                        </div>
+                        <div style="text-align:center;">
+                            <div style="font-size:1.8rem;font-weight:700;" id="statReplies">8,932</div>
+                            <div style="font-size:0.8rem;opacity:0.9;">Respostas</div>
+                        </div>
+                        <div style="text-align:center;">
+                            <div style="font-size:1.8rem;font-weight:700;" id="statOnline">156</div>
+                            <div style="font-size:0.8rem;opacity:0.9;">Online</div>
+                        </div>
+                    </div>
+                    <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.2);font-size:0.85rem;text-align:center;">
+                        <i class="fas fa-fire" style="color:#ffd700;"></i> 
+                        <span id="statToday">+47</span> novos hoje
+                    </div>
+                </div>
+            </div>
+
+            <!-- 我的统计 -->
+            <div class="content-card" style="margin-bottom:20px;">
+                <div style="padding:20px;">
+                    <div style="font-weight:600;margin-bottom:16px;color:#2c3e50;display:flex;align-items:center;gap:8px;">
+                        <i class="fas fa-user-circle" style="color:#5a6b7c;"></i> Bu Konta
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:12px;">
+                        <div style="display:flex;justify-content:space-between;align-items:center;padding:12px;background:#f5f3f0;border-radius:8px;">
+                            <span style="color:#5a6b7c;"><i class="fas fa-file-alt"></i> Bu publicações</span>
+                            <span style="font-weight:600;color:#2c3e50;" id="myPosts">0</span>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;align-items:center;padding:12px;background:#f5f3f0;border-radius:8px;">
+                            <span style="color:#5a6b7c;"><i class="fas fa-comment"></i> Bu respostas</span>
+                            <span style="font-weight:600;color:#2c3e50;" id="myReplies">0</span>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;align-items:center;padding:12px;background:#f5f3f0;border-radius:8px;">
+                            <span style="color:#5a6b7c;"><i class="fas fa-heart"></i> Likes recebidos</span>
+                            <span style="font-weight:600;color:#2c3e50;" id="myLikes">0</span>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;align-items:center;padding:12px;background:#f5f3f0;border-radius:8px;">
+                            <span style="color:#5a6b7c;"><i class="fas fa-eye"></i> Visualizações</span>
+                            <span style="font-weight:600;color:#2c3e50;" id="myViews">0</span>
+                        </div>
+                    </div>
+                    <button onclick="location.href='login.html'" style="width:100%;margin-top:16px;padding:12px;background:#5a6b7c;border:none;border-radius:8px;color:#fff;font-weight:600;cursor:pointer;">
+                        <i class="fas fa-sign-in-alt"></i> Entra / Regista
+                    </button>
+                </div>
+            </div>
             <!-- 热门话题 -->
             <div class="widget">
                 <div class="widget-title">
@@ -614,9 +674,46 @@
             alert('Menu: Licitacoes, Servicos, Avaliacoes, Voz di Povu, Grupo Taxi');
         }
 
+        // 模拟统计数据（实际应从后端获取）
+        function updateStats() {
+            // 平台总统计
+            const baseUsers = 3247;
+            const basePosts = 1856;
+            const baseReplies = 8932;
+            const baseOnline = 156;
+            
+            // 添加随机波动让数字看起来活跃
+            const random fluctuation = () => Math.floor(Math.random() * 10) - 5;
+            
+            document.getElementById('statUsers').textContent = (baseUsers + fluctuation()).toLocaleString();
+            document.getElementById('statPosts').textContent = (basePosts + fluctuation()).toLocaleString();
+            document.getElementById('statReplies').textContent = (baseReplies + fluctuation()).toLocaleString();
+            document.getElementById('statOnline').textContent = (baseOnline + fluctuation()).toLocaleString();
+            
+            // 今日新增
+            const todayNew = 47 + Math.floor(Math.random() * 5);
+            document.getElementById('statToday').textContent = '+' + todayNew;
+            
+            // 用户个人统计（从 localStorage 读取）
+            const myPosts = parseInt(localStorage.getItem('casacv_my_posts') || '0');
+            const myReplies = parseInt(localStorage.getItem('casacv_my_replies') || '0');
+            const myLikes = parseInt(localStorage.getItem('casacv_my_likes') || '0');
+            const myViews = parseInt(localStorage.getItem('casacv_my_views') || '0');
+            
+            document.getElementById('myPosts').textContent = myPosts;
+            document.getElementById('myReplies').textContent = myReplies;
+            document.getElementById('myLikes').textContent = myLikes;
+            document.getElementById('myViews').textContent = myViews.toLocaleString();
+        }
+
         // 页面加载时显示邀请进度
         document.addEventListener('DOMContentLoaded', () => {
             updateInviteProgress();
+            updateStats();
+            
+            // 每30秒更新一次统计数据
+            setInterval(updateStats, 30000);
+            
             // 5秒后显示邀请进度条
             setTimeout(() => {
                 const data = getInviteData();
