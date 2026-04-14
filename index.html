@@ -3,26 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CasaCV - Aluguel de Casas em Cabo Verde | Praia Mindelo</title>
-    <meta name="description" content="CasaCV - O melhor site de aluguel em Cabo Verde. Encontre casas e apartamentos em Praia, Mindelo, Santa Maria. Aluguel longo e curto prazo.">
-    <meta name="keywords" content="aluguel cabo verde, casas praia, apartamentos mindelo, alugar casa cabo verde, imobiliaria cabo verde">
-    <meta name="author" content="CasaCV">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="CasaCV - Aluguel de Casas em Cabo Verde">
-    <meta property="og:description" content="Encontre casas e apartamentos para alugar em Cabo Verde. Praia, Mindelo, Santa Maria.">
-    <meta property="og:url" content="https://hi8150112.github.io/casacv/">
-    <meta property="og:type" content="website">
-    
-    <!-- Canonical -->
-    <link rel="canonical" href="https://hi8150112.github.io/casacv/">
-    
-    <link rel="stylesheet" href="css/style.css">
+    <title>CasaCV - Comunidade Kabu Verdi</title>
+    <meta name="description" content="CasaCV - A maior comunidade online de Cabo Verde. Casas, empregos, negócios, e muito mais.">
+    <link rel="stylesheet" href="css/modern-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N52TE42NYM"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -30,301 +15,480 @@
         gtag('js', new Date());
         gtag('config', 'G-N52TE42NYM');
     </script>
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "CasaCV",
-        "url": "https://hi8150112.github.io/casacv/",
-        "description": "Aluguel de casas e apartamentos em Cabo Verde",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://hi8150112.github.io/casacv/listings.html?search={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
-    }
-    </script>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
+    <!-- 顶部导航 -->
+    <nav class="navbar-modern">
+        <div class="nav-container-modern">
+            <a href="index.html" class="logo-modern">
                 <i class="fas fa-home"></i>
                 <span>CasaCV</span>
             </a>
-            <div class="nav-links" id="navLinks">
-                <a href="index.html" class="active" data-i18n="nav_home">Inicio</a>
-                <a href="listings.html" data-i18n="nav_listings">Kasa</a>
-                <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
-                <a href="china-trade.html" data-i18n="nav_china">China</a>
-                <a href="tenders.html" data-i18n="nav_tenders">Licitacoes</a>
-                <a href="services.html" data-i18n="nav_services">Servicos</a>
-                <a href="reviews.html" data-i18n="nav_reviews">Avaliacoes</a>
-                <a href="complaints.html" data-i18n="nav_complaints">Voz di Povu</a>
-                <a href="confession-wall.html" data-i18n="nav_confession">Mural</a>
-                <a href="taxi-group.html" data-i18n="nav_taxi" style="color:#25d366;"><i class="fab fa-whatsapp"></i> Taxi</a>
-                <a href="publish.html" class="btn-primary" data-i18n="nav_publish">Publika</a>
+            <div class="search-bar-modern">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buska kasa, trabaiu, servisu...">
             </div>
-            <div class="nav-actions">
-                <div class="language-switcher">
-                    <button class="lang-btn" onclick="toggleLang()">
-                        <i class="fas fa-globe"></i>
-                        <span id="current-lang">中文</span>
-                    </button>
-                    <div class="lang-dropdown" id="lang-dropdown">
-                        <a href="#" onclick="setLanguage('ke')">Kriolu</a>
-                        <a href="#" onclick="setLanguage('zh')">中文</a>
-                    </div>
-                </div>
-                <a href="#" class="btn-outline" data-i18n="login">Entra</a>
+            <div class="nav-actions-modern">
+                <button class="btn-icon" onclick="toggleLang()">
+                    <i class="fas fa-globe"></i>
+                </button>
+                <button class="btn-icon">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <button class="btn-primary-modern" onclick="location.href='publish.html'">
+                    <i class="fas fa-plus"></i> Publika
+                </button>
             </div>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
     </nav>
 
-    <!-- 移动端菜单 -->
-    <div class="mobile-menu" id="mobile-menu">
-        <a href="index.html" data-i18n="nav_home">Página Inicial</a>
-        <a href="listings.html" data-i18n="nav_listings">Kasa</a>
-        <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
-        <a href="china-trade.html" data-i18n="nav_china">Negósiu China</a>
-        <a href="tenders.html" data-i18n="nav_tenders">Licitacoes</a>
-        <a href="services.html" data-i18n="nav_services">Servicos</a>
-        <a href="confession-wall.html" data-i18n="nav_confession">Mural Amor</a>
-        <a href="publish.html" data-i18n="nav_publish">Publika</a>
-        <a href="#" data-i18n="login">Entra</a>
+    <!-- 主布局 -->
+    <div class="main-layout">
+        <!-- 左侧边栏 -->
+        <aside class="sidebar-left">
+            <div class="sidebar-section">
+                <nav>
+                    <a href="index.html" class="nav-item active">
+                        <i class="fas fa-home"></i>
+                        <span>Página Inicial</span>
+                    </a>
+                    <a href="listings.html" class="nav-item">
+                        <i class="fas fa-building"></i>
+                        <span>Kasa pa Aluga</span>
+                        <span class="badge">512</span>
+                    </a>
+                    <a href="jobs.html" class="nav-item">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Trabaiu</span>
+                        <span class="badge">89</span>
+                    </a>
+                    <a href="china-trade.html" class="nav-item">
+                        <i class="fas fa-handshake"></i>
+                        <span>Negósiu China</span>
+                    </a>
+                    <a href="tenders.html" class="nav-item">
+                        <i class="fas fa-gavel"></i>
+                        <span>Licitacoes</span>
+                        <span class="badge">23</span>
+                    </a>
+                    <a href="services.html" class="nav-item">
+                        <i class="fas fa-tools"></i>
+                        <span>Servicos</span>
+                    </a>
+                    <a href="reviews.html" class="nav-item">
+                        <i class="fas fa-star"></i>
+                        <span>Avaliacoes</span>
+                    </a>
+                    <a href="complaints.html" class="nav-item">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>Voz di Povu</span>
+                        <span class="badge" style="background:#e53e3e;">10</span>
+                    </a>
+                    <a href="confession-wall.html" class="nav-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Mural Amor</span>
+                        <span class="badge" style="background:#eb459e;">24</span>
+                    </a>
+                    <a href="taxi-group.html" class="nav-item" style="color:#25d366;">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Grupo Taxi</span>
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <!-- 快捷发布 -->
+            <div class="content-card" style="margin-bottom:20px;">
+                <div style="padding:16px 20px;">
+                    <div style="display:flex;gap:12px;align-items:center;">
+                        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#5865f2,#eb459e);"></div>
+                        <input type="text" placeholder="O kê bu kre publika? Kasa, trabaiu, servisu..." 
+                               style="flex:1;padding:12px 16px;background:#1a1a1a;border:1px solid #2f2f2f;border-radius:24px;color:#fff;"
+                               onclick="location.href='publish.html'">
+                    </div>
+                    <div style="display:flex;justify-content:space-around;margin-top:12px;padding-top:12px;border-top:1px solid #2f2f2f;">
+                        <button style="background:none;border:none;color:#b5b5b5;display:flex;align-items:center;gap:6px;cursor:pointer;" onclick="location.href='listings.html'">
+                            <i class="fas fa-home" style="color:#5865f2;"></i> Kasa
+                        </button>
+                        <button style="background:none;border:none;color:#b5b5b5;display:flex;align-items:center;gap:6px;cursor:pointer;" onclick="location.href='jobs.html'">
+                            <i class="fas fa-briefcase" style="color:#3ba55d;"></i> Trabaiu
+                        </button>
+                        <button style="background:none;border:none;color:#b5b5b5;display:flex;align-items:center;gap:6px;cursor:pointer;" onclick="location.href='confession-wall.html'">
+                            <i class="fas fa-heart" style="color:#eb459e;"></i> Amor
+                        </button>
+                        <button style="background:none;border:none;color:#b5b5b5;display:flex;align-items:center;gap:6px;cursor:pointer;" onclick="location.href='complaints.html'">
+                            <i class="fas fa-bullhorn" style="color:#f9a600;"></i> Reclama
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 房源预览 -->
+            <div class="content-card">
+                <div class="card-header">
+                    <div style="display:flex;align-items:center;gap:12px;">
+                        <i class="fas fa-building" style="font-size:1.5rem;color:#5865f2;"></i>
+                        <div>
+                            <div style="font-weight:600;">Kasa pa Aluga</div>
+                            <div style="font-size:0.8rem;color:#6e6e6e;">512 kasas disponível</div>
+                        </div>
+                    </div>
+                    <a href="listings.html" style="color:#5865f2;text-decoration:none;font-size:0.9rem;">Ver tudu <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div style="padding:0 20px 20px;">
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+                        <div style="background:#1a1a1a;border-radius:12px;overflow:hidden;cursor:pointer;" onclick="location.href='listings.html'">
+                            <div style="height:120px;background:linear-gradient(135deg,#667eea,#764ba2);"></div>
+                            <div style="padding:12px;">
+                                <div style="font-weight:600;margin-bottom:4px;">Apartamentu T3</div>
+                                <div style="font-size:0.85rem;color:#6e6e6e;"><i class="fas fa-map-marker-alt"></i> Praia, Plateau</div>
+                                <div style="color:#3ba55d;font-weight:600;margin-top:8px;">45,000 CVE/mês</div>
+                            </div>
+                        </div>
+                        <div style="background:#1a1a1a;border-radius:12px;overflow:hidden;cursor:pointer;" onclick="location.href='listings.html'">
+                            <div style="height:120px;background:linear-gradient(135deg,#f093fb,#f5576c);"></div>
+                            <div style="padding:12px;">
+                                <div style="font-weight:600;margin-bottom:4px;">Vila Luxu</div>
+                                <div style="font-size:0.85rem;color:#6e6e6e;"><i class="fas fa-map-marker-alt"></i> Sal, Santa Maria</div>
+                                <div style="color:#3ba55d;font-weight:600;margin-top:8px;">120,000 CVE/mês</div>
+                            </div>
+                        </div>
+                        <div style="background:#1a1a1a;border-radius:12px;overflow:hidden;cursor:pointer;" onclick="location.href='listings.html'">
+                            <div style="height:120px;background:linear-gradient(135deg,#4facfe,#00f2fe);"></div>
+                            <div style="padding:12px;">
+                                <div style="font-weight:600;margin-bottom:4px;">Kasa T2</div>
+                                <div style="font-size:0.85rem;color:#6e6e6e;"><i class="fas fa-map-marker-alt"></i> Mindelo</div>
+                                <div style="color:#3ba55d;font-weight:600;margin-top:8px;">35,000 CVE/mês</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 工作机会 -->
+            <div class="content-card">
+                <div class="card-header">
+                    <div style="display:flex;align-items:center;gap:12px;">
+                        <i class="fas fa-briefcase" style="font-size:1.5rem;color:#3ba55d;"></i>
+                        <div>
+                            <div style="font-weight:600;">Trabaiu</div>
+                            <div style="font-size:0.8rem;color:#6e6e6e;">89 vagas disponível</div>
+                        </div>
+                    </div>
+                    <a href="jobs.html" style="color:#5865f2;text-decoration:none;font-size:0.9rem;">Ver tudu <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div style="padding:0 20px 20px;">
+                    <div style="display:flex;flex-direction:column;gap:12px;">
+                        <div style="display:flex;align-items:center;gap:16px;padding:16px;background:#1a1a1a;border-radius:12px;cursor:pointer;" onclick="location.href='jobs.html'">
+                            <div style="width:50px;height:50px;border-radius:12px;background:linear-gradient(135deg,#667eea,#764ba2);display:flex;align-items:center;justify-content:center;">
+                                <i class="fas fa-hotel" style="font-size:1.2rem;color:#fff;"></i>
+                            </div>
+                            <div style="flex:1;">
+                                <div style="font-weight:600;">Rececionista Hotel</div>
+                                <div style="font-size:0.85rem;color:#6e6e6e;">Hotel Oasis • Praia • Full-time</div>
+                            </div>
+                            <div style="color:#3ba55d;font-weight:600;">45,000 CVE</div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:16px;padding:16px;background:#1a1a1a;border-radius:12px;cursor:pointer;" onclick="location.href='jobs.html'">
+                            <div style="width:50px;height:50px;border-radius:12px;background:linear-gradient(135deg,#f093fb,#f5576c);display:flex;align-items:center;justify-content:center;">
+                                <i class="fas fa-utensils" style="font-size:1.2rem;color:#fff;"></i>
+                            </div>
+                            <div style="flex:1;">
+                                <div style="font-weight:600;">Cozinheiro/a</div>
+                                <div style="font-size:0.85rem;color:#6e6e6e;">Restaurante Ferroviário • Mindelo</div>
+                            </div>
+                            <div style="color:#3ba55d;font-weight:600;">35,000 CVE</div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:16px;padding:16px;background:#1a1a1a;border-radius:12px;cursor:pointer;" onclick="location.href='jobs.html'">
+                            <div style="width:50px;height:50px;border-radius:12px;background:linear-gradient(135deg,#4facfe,#00f2fe);display:flex;align-items:center;justify-content:center;">
+                                <i class="fas fa-truck" style="font-size:1.2rem;color:#fff;"></i>
+                            </div>
+                            <div style="flex:1;">
+                                <div style="font-weight:600;">Motorista Entregas</div>
+                                <div style="font-size:0.85rem;color:#6e6e6e;">Kumi Bebi • Praia • Part-time</div>
+                            </div>
+                            <div style="color:#3ba55d;font-weight:600;">25,000 CVE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 爆料投诉 -->
+            <div class="content-card">
+                <div class="card-header">
+                    <div style="display:flex;align-items:center;gap:12px;">
+                        <i class="fas fa-bullhorn" style="font-size:1.5rem;color:#f9a600;"></i>
+                        <div>
+                            <div style="font-weight:600;">Voz di Povu</div>
+                            <div style="font-size:0.8rem;color:#6e6e6e;">Reclamacoes da comunidade</div>
+                        </div>
+                    </div>
+                    <a href="complaints.html" style="color:#5865f2;text-decoration:none;font-size:0.9rem;">Ver tudu <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div style="padding:0 20px 20px;">
+                    <div style="display:flex;flex-direction:column;gap:12px;">
+                        <div style="padding:16px;background:#1a1a1a;border-radius:12px;border-left:4px solid #e53e3e;">
+                            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                                <span style="background:#e53e3e;color:#fff;padding:2px 8px;border-radius:4px;font-size:0.7rem;">URGENTE</span>
+                                <span style="color:#6e6e6e;font-size:0.8rem;">há 2 oras</span>
+                            </div>
+                            <div style="font-weight:600;margin-bottom:4px;">Sem água na Palmarejo há 3 dias!</div>
+                            <div style="font-size:0.9rem;color:#b5b5b5;">Electra n ta respondi. Famílias sen nada.</div>
+                            <div style="display:flex;gap:16px;margin-top:12px;font-size:0.85rem;color:#6e6e6e;">
+                                <span><i class="fas fa-comment"></i> 45 comentários</span>
+                                <span><i class="fas fa-share"></i> 12 partilhas</span>
+                            </div>
+                        </div>
+                        <div style="padding:16px;background:#1a1a1a;border-radius:12px;border-left:4px solid #f9a600;">
+                            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                                <span style="background:#f9a600;color:#000;padding:2px 8px;border-radius:4px;font-size:0.7rem;">ATENÇÃO</span>
+                                <span style="color:#6e6e6e;font-size:0.8rem;">há 5 oras</span>
+                            </div>
+                            <div style="font-weight:600;margin-bottom:4px;">Estrada perigosa na São Filipe</div>
+                            <div style="font-size:0.9rem;color:#b5b5b5;">Buracos grandi, riscu di acidade.</div>
+                            <div style="display:flex;gap:16px;margin-top:12px;font-size:0.85rem;color:#6e6e6e;">
+                                <span><i class="fas fa-comment"></i> 23 comentários</span>
+                                <span><i class="fas fa-share"></i> 8 partilhas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 表白墙 -->
+            <div class="content-card">
+                <div class="card-header">
+                    <div style="display:flex;align-items:center;gap:12px;">
+                        <i class="fas fa-heart" style="font-size:1.5rem;color:#eb459e;"></i>
+                        <div>
+                            <div style="font-weight:600;">Mural di Amor</div>
+                            <div style="font-size:0.8rem;color:#6e6e6e;">Mensagens anónimas</div>
+                        </div>
+                    </div>
+                    <a href="confession-wall.html" style="color:#5865f2;text-decoration:none;font-size:0.9rem;">Ver tudu <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div style="padding:0 20px 20px;">
+                    <div style="display:flex;flex-direction:column;gap:12px;">
+                        <div style="padding:16px;background:linear-gradient(135deg,rgba(235,69,158,0.1),rgba(88,101,242,0.1));border-radius:12px;border:1px solid #2f2f2f;">
+                            <div style="font-size:1.5rem;margin-bottom:8px;">💕</div>
+                            <div style="font-style:italic;color:#b5b5b5;margin-bottom:12px;">"Maria di Praia, bu sorrisu ilumina nha dia. N ta espera bu na praia todo tardi."</div>
+                            <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.85rem;color:#6e6e6e;">
+                                <span><i class="fas fa-map-marker-alt"></i> Praia • há 1 ora</span>
+                                <span><i class="fas fa-heart" style="color:#eb459e;"></i> 156</span>
+                            </div>
+                        </div>
+                        <div style="padding:16px;background:linear-gradient(135deg,rgba(59,165,93,0.1),rgba(88,101,242,0.1));border-radius:12px;border:1px solid #2f2f2f;">
+                            <div style="font-size:1.5rem;margin-bottom:8px;">😍</div>
+                            <div style="font-style:italic;color:#b5b5b5;margin-bottom:12px;">"João do mercado, bu é nha principe azul. N gosta di bu desde 2019."</div>
+                            <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.85rem;color:#6e6e6e;">
+                                <span><i class="fas fa-map-marker-alt"></i> Mindelo • há 3 oras</span>
+                                <span><i class="fas fa-heart" style="color:#eb459e;"></i> 89</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 中国商务 -->
+            <div class="content-card">
+                <div class="card-header">
+                    <div style="display:flex;align-items:center;gap:12px;">
+                        <i class="fas fa-handshake" style="font-size:1.5rem;color:#e53e3e;"></i>
+                        <div>
+                            <div style="font-weight:600;">Negósiu ku China</div>
+                            <div style="font-size:0.8rem;color:#6e6e6e;">Importação e parcerias</div>
+                        </div>
+                    </div>
+                    <a href="china-trade.html" style="color:#5865f2;text-decoration:none;font-size:0.9rem;">Ver tudu <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div style="padding:0 20px 20px;">
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;">
+                        <div style="padding:16px;background:#1a1a1a;border-radius:12px;text-align:center;cursor:pointer;" onclick="location.href='china-trade.html'">
+                            <i class="fas fa-mobile-alt" style="font-size:2rem;color:#5865f2;margin-bottom:8px;"></i>
+                            <div style="font-weight:600;">Telemóveis</div>
+                            <div style="font-size:0.8rem;color:#6e6e6e;">Xiaomi, Huawei</div>
+                        </div>
+                        <div style="padding:16px;background:#1a1a1a;border-radius:12px;text-align:center;cursor:pointer;" onclick="location.href='china-trade.html'">
+                            <i class="fas fa-tshirt" style="font-size:2rem;color:#eb459e;margin-bottom:8px;"></i>
+                            <div style="font-weight:600;">Roupas</div>
+                            <div style="font-size:0.8rem;color:#6e6e6e;">Atacado</div>
+                        </div>
+                        <div style="padding:16px;background:#1a1a1a;border-radius:12px;text-align:center;cursor:pointer;" onclick="location.href='china-trade.html'">
+                            <i class="fas fa-couch" style="font-size:2rem;color:#3ba55d;margin-bottom:8px;"></i>
+                            <div style="font-weight:600;">Móveis</div>
+                            <div style="font-size:0.8rem;color:#6e6e6e;">Container</div>
+                        </div>
+                        <div style="padding:16px;background:#1a1a1a;border-radius:12px;text-align:center;cursor:pointer;" onclick="location.href='china-trade.html'">
+                            <i class="fas fa-solar-panel" style="font-size:2rem;color:#f9a600;margin-bottom:8px;"></i>
+                            <div style="font-weight:600;">Painel Solar</div>
+                            <div style="font-size:0.8rem;color:#6e6e6e;">Energia</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 本地服务 -->
+            <div class="content-card">
+                <div class="card-header">
+                    <div style="display:flex;align-items:center;gap:12px;">
+                        <i class="fas fa-tools" style="font-size:1.5rem;color:#805ad5;"></i>
+                        <div>
+                            <div style="font-weight:600;">Servicos Lokais</div>
+                            <div style="font-size:0.8rem;color:#6e6e6e;">Profisionais disponível</div>
+                        </div>
+                    </div>
+                    <a href="services.html" style="color:#5865f2;text-decoration:none;font-size:0.9rem;">Ver tudu <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div style="padding:0 20px 20px;">
+                    <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                        <span style="padding:8px 16px;background:#1a1a1a;border-radius:20px;font-size:0.9rem;"><i class="fas fa-wrench" style="color:#e53e3e;margin-right:6px;"></i>Eletricista</span>
+                        <span style="padding:8px 16px;background:#1a1a1a;border-radius:20px;font-size:0.9rem;"><i class="fas fa-faucet" style="color:#3182ce;margin-right:6px;"></i>Canalizador</span>
+                        <span style="padding:8px 16px;background:#1a1a1a;border-radius:20px;font-size:0.9rem;"><i class="fas fa-truck-moving" style="color:#38a169;margin-right:6px;"></i>Mudanças</span>
+                        <span style="padding:8px 16px;background:#1a1a1a;border-radius:20px;font-size:0.9rem;"><i class="fas fa-broom" style="color:#d69e2e;margin-right:6px;"></i>Limpeza</span>
+                        <span style="padding:8px 16px;background:#1a1a1a;border-radius:20px;font-size:0.9rem;"><i class="fas fa-balance-scale" style="color:#805ad5;margin-right:6px;"></i>Advogado</span>
+                        <span style="padding:8px 16px;background:#1a1a1a;border-radius:20px;font-size:0.9rem;"><i class="fas fa-laptop-code" style="color:#00b5d8;margin-right:6px;"></i>Informático</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 右侧边栏 -->
+        <aside class="sidebar-right">
+            <!-- 热门话题 -->
+            <div class="widget">
+                <div class="widget-title">
+                    Tendências
+                    <a href="#"><i class="fas fa-fire" style="color:#f9a600;"></i></a>
+                </div>
+                <div class="trending-item">
+                    <span class="trending-rank top">1</span>
+                    <div class="trending-content">
+                        <div class="trending-tag">#AguaElectra</div>
+                        <div class="trending-count">2.4k posts</div>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <span class="trending-rank top">2</span>
+                    <div class="trending-content">
+                        <div class="trending-tag">#EmpregoPraia</div>
+                        <div class="trending-count">1.8k posts</div>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <span class="trending-rank">3</span>
+                    <div class="trending-content">
+                        <div class="trending-tag">#CasaBaratu</div>
+                        <div class="trending-count">1.2k posts</div>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <span class="trending-rank">4</span>
+                    <div class="trending-content">
+                        <div class="trending-tag">#TransportePublico</div>
+                        <div class="trending-count">856 posts</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 推荐关注 -->
+            <div class="widget">
+                <div class="widget-title">
+                    Recomendados
+                    <a href="#">Ver tudu</a>
+                </div>
+                <div class="user-suggestion">
+                    <div class="avatar"></div>
+                    <div class="info">
+                        <div class="name">CasaCV Oficial</div>
+                        <div class="handle">@casacv</div>
+                    </div>
+                    <button class="btn-follow">Seguir</button>
+                </div>
+                <div class="user-suggestion">
+                    <div class="avatar" style="background:linear-gradient(135deg,#f093fb,#f5576c);"></div>
+                    <div class="info">
+                        <div class="name">Notícias CV</div>
+                        <div class="handle">@noticiascv</div>
+                    </div>
+                    <button class="btn-follow">Seguir</button>
+                </div>
+                <div class="user-suggestion">
+                    <div class="avatar" style="background:linear-gradient(135deg,#4facfe,#00f2fe);"></div>
+                    <div class="info">
+                        <div class="name">Empregos CV</div>
+                        <div class="handle">@empregoscv</div>
+                    </div>
+                    <button class="btn-follow">Seguir</button>
+                </div>
+            </div>
+
+            <!-- WhatsApp 群组 -->
+            <div class="widget" style="background:linear-gradient(135deg,#25d366,#128c7e);border:none;">
+                <div style="color:#fff;">
+                    <div style="font-weight:600;margin-bottom:8px;"><i class="fab fa-whatsapp"></i> Grupo Taxi CV</div>
+                    <div style="font-size:0.9rem;opacity:0.9;margin-bottom:12px;">156 taxistas • 2,340 membros</div>
+                    <button style="width:100%;padding:10px;background:#fff;color:#25d366;border:none;border-radius:8px;font-weight:600;cursor:pointer;" onclick="location.href='taxi-group.html'">
+                        Entrar no Grupo
+                    </button>
+                </div>
+            </div>
+
+            <!-- 链接 -->
+            <div style="padding:16px;font-size:0.8rem;color:#6e6e6e;">
+                <a href="#" style="color:#6e6e6e;text-decoration:none;margin-right:12px;">Sobre</a>
+                <a href="#" style="color:#6e6e6e;text-decoration:none;margin-right:12px;">Privacidade</a>
+                <a href="#" style="color:#6e6e6e;text-decoration:none;margin-right:12px;">Termos</a>
+                <a href="#" style="color:#6e6e6e;text-decoration:none;">Contato</a>
+                <div style="margin-top:8px;">© 2026 CasaCV</div>
+            </div>
+        </aside>
     </div>
 
-    <!-- Hero区域 -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 data-i18n="hero_title">Atxa Bu Kasa na Kabu Verdi</h1>
-            <p data-i18n="hero_subtitle">Praia, Mindelo, Ilha di Sal... Aluguel pa tempu o pa anu</p>
-            
-            <!-- 搜索框 -->
-            <div class="search-box">
-                <div class="search-input-group">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <input type="text" placeholder="输入城市或区域" data-i18n-placeholder="search_location" id="search-location">
-                </div>
-                <div class="search-input-group">
-                    <i class="fas fa-home"></i>
-                    <select id="property-type">
-                        <option value="" data-i18n="all_types">所有类型</option>
-                        <option value="apartment" data-i18n="type_apartment">公寓</option>
-                        <option value="house" data-i18n="type_house">独栋房屋</option>
-                        <option value="villa" data-i18n="type_villa">别墅</option>
-                        <option value="studio" data-i18n="type_studio">单间</option>
-                    </select>
-                </div>
-                <div class="search-input-group">
-                    <i class="fas fa-tag"></i>
-                    <select id="rent-type">
-                        <option value="" data-i18n="all_rent_types">租期不限</option>
-                        <option value="long" data-i18n="rent_long">长租</option>
-                        <option value="short" data-i18n="rent_short">短租/民宿</option>
-                    </select>
-                </div>
-                <button class="search-btn" onclick="search()">
-                    <i class="fas fa-search"></i>
-                    <span data-i18n="search">搜索</span>
-                </button>
-            </div>
-
-            <!-- 热门城市 -->
-            <div class="popular-cities">
-                <span data-i18n="popular_cities">热门城市：</span>
-                <a href="#" onclick="setCity('Praia')">普拉亚 Praia</a>
-                <a href="#" onclick="setCity('Mindelo')">明德卢 Mindelo</a>
-                <a href="#" onclick="setCity('Santa Maria')">圣玛丽亚 Santa Maria</a>
-                <a href="#" onclick="setCity('Sal Rei')">萨尔雷 Sal Rei</a>
-            </div>
+    <!-- 移动端底部导航 -->
+    <nav class="mobile-nav">
+        <div class="mobile-nav-items">
+            <a href="index.html" class="mobile-nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Início</span>
+            </a>
+            <a href="listings.html" class="mobile-nav-item">
+                <i class="fas fa-building"></i>
+                <span>Kasa</span>
+            </a>
+            <a href="jobs.html" class="mobile-nav-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Trabaiu</span>
+            </a>
+            <a href="confession-wall.html" class="mobile-nav-item">
+                <i class="fas fa-heart"></i>
+                <span>Amor</span>
+            </a>
+            <a href="#" class="mobile-nav-item" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+                <span>Mais</span>
+            </a>
         </div>
-    </section>
+    </nav>
 
-    <!-- 社区数据统计条 -->
-    <section class="community-stats-bar">
-        <div class="container">
-            <div class="stats-strip">
-                <div class="strip-stat">
-                    <i class="fas fa-users"></i>
-                    <span class="strip-number" id="stat-members">3,247</span>
-                    <span class="strip-label">Membrus Registadu / 注册用户</span>
-                </div>
-                <div class="strip-divider">|</div>
-                <div class="strip-stat">
-                    <i class="fas fa-home"></i>
-                    <span class="strip-number" id="stat-listings">512</span>
-                    <span class="strip-label">Kasa Disponível / 在线房源</span>
-                </div>
-                <div class="strip-divider">|</div>
-                <div class="strip-stat">
-                    <i class="fas fa-briefcase"></i>
-                    <span class="strip-number" id="stat-jobs">189</span>
-                    <span class="strip-label">Vaga di Trabai / 招聘职位</span>
-                </div>
-                <div class="strip-divider">|</div>
-                <div class="strip-stat">
-                    <i class="fas fa-heart"></i>
-                    <span class="strip-number" id="stat-confessions">1,024</span>
-                    <span class="strip-label">Konfissom / 表白</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 特色服务 -->
-    <section class="features">
-        <div class="container">
-            <h2 data-i18n="why_choose">为什么选择 CasaCV</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 data-i18n="feature_safe">真实房源</h3>
-                    <p data-i18n="feature_safe_desc">人工审核每套房源，杜绝虚假信息</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3 data-i18n="feature_lang">多语言服务</h3>
-                    <p data-i18n="feature_lang_desc">中文、英文、葡语三语支持</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 data-i18n="feature_community">华人社区</h3>
-                    <p data-i18n="feature_community_desc">专为华人打造的租房专区</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3 data-i18n="feature_support">全程服务</h3>
-                    <p data-i18n="feature_support_desc">从看房到签约，全程协助</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 精选房源 -->
-    <section class="listings">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-i18n="featured_listings">精选房源</h2>
-                <a href="listings.html" class="view-all" data-i18n="view_all">查看全部 <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="listings-grid" id="featured-listings">
-                <!-- 房源卡片将通过JS动态生成 -->
-            </div>
-        </div>
-    </section>
-
-    <!-- 租房指南 -->
-    <section class="guide">
-        <div class="container">
-            <h2 data-i18n="rent_guide">佛得角租房指南</h2>
-            <div class="guide-grid">
-                <div class="guide-card">
-                    <div class="guide-number">01</div>
-                    <h3 data-i18n="guide_search">搜索房源</h3>
-                    <p data-i18n="guide_search_desc">按城市、价格、房型筛选，找到心仪的房子</p>
-                </div>
-                <div class="guide-card">
-                    <div class="guide-number">02</div>
-                    <h3 data-i18n="guide_contact">联系房东</h3>
-                    <p data-i18n="guide_contact_desc">直接拨打电话或在线预约看房</p>
-                </div>
-                <div class="guide-card">
-                    <div class="guide-number">03</div>
-                    <h3 data-i18n="guide_visit">实地看房</h3>
-                    <p data-i18n="guide_visit_desc">亲自查看房屋状况和周边环境</p>
-                </div>
-                <div class="guide-card">
-                    <div class="guide-number">04</div>
-                    <h3 data-i18n="guide_sign">签约入住</h3>
-                    <p data-i18n="guide_sign_desc">签订正规合同，安心入住新家</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA区域 -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2 data-i18n="cta_title">有房子要出租？</h2>
-                <p data-i18n="cta_subtitle">免费发布房源，快速找到优质租客</p>
-                <a href="publish.html" class="btn-large" data-i18n="cta_button">立即发布</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 页脚 -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">
-                        <i class="fas fa-home"></i>
-                        <span>CasaCV</span>
-                    </a>
-                    <p data-i18n="footer_desc">佛得角最专业的租房平台，为华人社区提供便捷的租房服务</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-weixin"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4 data-i18n="footer_rent">我要租房</h4>
-                    <a href="listings.html" data-i18n="nav_listings">房源列表</a>
-                    <a href="#" data-i18n="footer_short">短租/民宿</a>
-                    <a href="#" data-i18n="footer_long">长租公寓</a>
-                    <a href="#" data-i18n="footer_guide">租房攻略</a>
-                </div>
-                <div class="footer-links">
-                    <h4 data-i18n="footer_landlord">我是房东</h4>
-                    <a href="publish.html" data-i18n="nav_publish">发布房源</a>
-                    <a href="#" data-i18n="footer_tips">房东指南</a>
-                    <a href="#" data-i18n="footer_pricing">服务费用</a>
-                </div>
-                <div class="footer-links">
-                    <h4 data-i18n="footer_contact">联系我们</h4>
-                    <p><i class="fas fa-phone"></i> +238 9123 4567</p>
-                    <p><i class="fas fa-envelope"></i> houlei@live.cn</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Praia, Cape Verde</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 CasaCV. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- 悬浮发布按钮 -->
+    <button class="fab-post" onclick="location.href='publish.html'">
+        <i class="fas fa-plus"></i>
+    </button>
 
     <script src="js/i18n.js"></script>
-    <script src="js/main.js"></script>
     <script>
-        // 移动端菜单切换
-        function toggleMobileMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('show');
+        function toggleLang() {
+            const current = localStorage.getItem('casacv_language') || 'ke';
+            const next = current === 'ke' ? 'zh' : 'ke';
+            localStorage.setItem('casacv_language', next);
+            location.reload();
         }
         
-        // 点击导航链接后关闭菜单
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('navLinks').classList.remove('show');
-            });
-        });
+        function toggleMobileMenu() {
+            alert('Menu: Licitacoes, Servicos, Avaliacoes, Voz di Povu, Grupo Taxi');
+        }
     </script>
 </body>
 </html>
