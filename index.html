@@ -587,20 +587,58 @@
                 <i class="fas fa-building"></i>
                 <span>Kasa</span>
             </a>
-            <a href="jobs.html" class="mobile-nav-item">
-                <i class="fas fa-briefcase"></i>
-                <span>Trabaiu</span>
+            <a href="publish.html" class="mobile-nav-item" style="color: var(--accent-primary);">
+                <i class="fas fa-plus-circle" style="font-size: 1.5rem;"></i>
+                <span>Publika</span>
             </a>
             <a href="confession-wall.html" class="mobile-nav-item">
                 <i class="fas fa-heart"></i>
                 <span>Amor</span>
             </a>
-            <a href="#" class="mobile-nav-item" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
+            <a href="#" class="mobile-nav-item" onclick="showMoreMenu(); return false;">
+                <i class="fas fa-th-large"></i>
                 <span>Maidu</span>
             </a>
         </div>
     </nav>
+    
+    <!-- 更多菜单弹窗 -->
+    <div id="moreMenuModal" style="display:none;position:fixed;bottom:70px;left:10px;right:10px;background:#ffffff;border-radius:16px;padding:16px;box-shadow:0 -4px 20px rgba(0,0,0,0.15);z-index:999;">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;text-align:center;">
+            <a href="jobs.html" style="text-decoration:none;color:#5a6b7c;padding:12px 4px;border-radius:8px;">
+                <i class="fas fa-briefcase" style="font-size:1.5rem;display:block;margin-bottom:4px;"></i>
+                <span style="font-size:0.7rem;">Trabaiu</span>
+            </a>
+            <a href="china-trade.html" style="text-decoration:none;color:#5a6b7c;padding:12px 4px;border-radius:8px;">
+                <i class="fas fa-ship" style="font-size:1.5rem;display:block;margin-bottom:4px;"></i>
+                <span style="font-size:0.7rem;">China</span>
+            </a>
+            <a href="tenders.html" style="text-decoration:none;color:#5a6b7c;padding:12px 4px;border-radius:8px;">
+                <i class="fas fa-gavel" style="font-size:1.5rem;display:block;margin-bottom:4px;"></i>
+                <span style="font-size:0.7rem;">Licitasaun</span>
+            </a>
+            <a href="services.html" style="text-decoration:none;color:#5a6b7c;padding:12px 4px;border-radius:8px;">
+                <i class="fas fa-tools" style="font-size:1.5rem;display:block;margin-bottom:4px;"></i>
+                <span style="font-size:0.7rem;">Servisu</span>
+            </a>
+            <a href="reviews.html" style="text-decoration:none;color:#5a6b7c;padding:12px 4px;border-radius:8px;">
+                <i class="fas fa-star" style="font-size:1.5rem;display:block;margin-bottom:4px;"></i>
+                <span style="font-size:0.7rem;">Avaliasaun</span>
+            </a>
+            <a href="complaints.html" style="text-decoration:none;color:#5a6b7c;padding:12px 4px;border-radius:8px;">
+                <i class="fas fa-bullhorn" style="font-size:1.5rem;display:block;margin-bottom:4px;"></i>
+                <span style="font-size:0.7rem;">Reklama</span>
+            </a>
+            <a href="taxi-group.html" style="text-decoration:none;color:#25d366;padding:12px 4px;border-radius:8px;">
+                <i class="fab fa-whatsapp" style="font-size:1.5rem;display:block;margin-bottom:4px;"></i>
+                <span style="font-size:0.7rem;">Taxi</span>
+            </a>
+            <a href="#" onclick="closeMoreMenu(); return false;" style="text-decoration:none;color:#b87b7b;padding:12px 4px;border-radius:8px;">
+                <i class="fas fa-times" style="font-size:1.5rem;display:block;margin-bottom:4px;"></i>
+                <span style="font-size:0.7rem;">Fexa</span>
+            </a>
+        </div>
+    </div>
 
     <!-- 悬浮发布按钮 -->
     <button class="fab-post" onclick="location.href='publish.html'">
@@ -743,6 +781,26 @@
         function toggleMobileMenu() {
             alert('Menu: Licitacoes, Servicos, Avaliacoes, Voz di Povu, Grupo Taxi');
         }
+        
+        // 显示更多菜单
+        function showMoreMenu() {
+            document.getElementById('moreMenuModal').style.display = 'block';
+        }
+        
+        // 关闭更多菜单
+        function closeMoreMenu() {
+            document.getElementById('moreMenuModal').style.display = 'none';
+        }
+        
+        // 点击其他地方关闭菜单
+        document.addEventListener('click', function(e) {
+            const modal = document.getElementById('moreMenuModal');
+            if (modal && modal.style.display === 'block') {
+                if (!modal.contains(e.target) && !e.target.closest('.mobile-nav-item')) {
+                    closeMoreMenu();
+                }
+            }
+        });
 
         // 使用夸大的虚拟统计数据
         function updateStats() {

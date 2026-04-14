@@ -477,7 +477,7 @@ body {
     right: 0;
     background: var(--bg-secondary);
     border-top: 1px solid var(--border-color);
-    padding: var(--space-sm) 0;
+    padding: var(--space-xs) 0 calc(var(--space-xs) + env(safe-area-inset-bottom));
     z-index: 1000;
 }
 
@@ -485,16 +485,21 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 0 var(--space-xs);
 }
 
 .mobile-nav-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    justify-content: center;
+    gap: 2px;
     color: var(--text-muted);
     text-decoration: none;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
+    min-width: 56px;
+    padding: 4px 2px;
+    flex: 1;
 }
 
 .mobile-nav-item.active {
@@ -502,7 +507,14 @@ body {
 }
 
 .mobile-nav-item i {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+}
+
+.mobile-nav-item span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 /* 发布按钮（悬浮） */
