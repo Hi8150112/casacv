@@ -204,18 +204,46 @@
         </div>
     </div>
 
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+    
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/database.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
     <script src="js/interactions.js"></script>
     <script>
         // 房源列表页专用脚本
-        document.addEventListener('DOMContentLoaded', () => {
-            renderAllListings();
-            updateResultsCount();
+        let allListings = [];
+        
+        document.addEventListener('DOMContentLoaded', async () => {
+            showToast('Karregando kasas...', 'info');
+            
+            try {
+                // 从数据库加载房源
+                allListings = await Database.listings.getAll();
+                
+                if (allListings.length === 0) {
+                    // 如果没有数据，使用示例数据
+                    allListings = listingsData;
+                }
+                
+                renderFilteredListings(allListings);
+                updateResultsCount(allListings.length);
+            } catch (error) {
+                console.error('Error loading listings:', error);
+                // 使用本地数据作为后备
+                allListings = listingsData;
+                renderFilteredListings(allListings);
+                updateResultsCount(allListings.length);
+            }
         });
 
-        function updateResultsCount() {
-            const count = listingsData.length;
+        function updateResultsCount(count) {
             document.getElementById('results-count').textContent = count + ' kasa';
         }
 
@@ -225,7 +253,7 @@
             const rentType = document.getElementById('filter-rent').value;
             const priceRange = document.getElementById('filter-price').value;
 
-            let filtered = listingsData.filter(listing => {
+            let filtered = allListings.filter(listing => {
                 if (city && listing.city !== city) return false;
                 if (type && listing.type !== type) return false;
                 if (rentType && listing.rentType !== rentType) return false;
@@ -237,7 +265,7 @@
             });
 
             renderFilteredListings(filtered);
-            document.getElementById('results-count').textContent = filtered.length + ' kasa';
+            updateResultsCount(filtered.length);
         }
 
         function renderFilteredListings(listings) {

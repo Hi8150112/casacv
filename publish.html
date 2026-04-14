@@ -273,7 +273,109 @@
         </div>
     </div>
 
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+    
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/database.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/interactions.js"></script>
+    
+    <script>
+        // 检查登录状态
+        auth.onAuthStateChanged((user) => {
+            if (!user) {
+                // 未登录，显示登录弹窗
+                Auth.showLoginModal();
+            }
+        });
+        
+        // 处理表单提交
+        document.getElementById('publish-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const user = auth.currentUser;
+            if (!user) {
+                Auth.showLoginModal();
+                return;
+            }
+            
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Publikando...';
+            
+            try {
+                // 收集表单数据
+                const listingData = {
+                    title: document.getElementById('title').value,
+                    city: document.getElementById('city').value,
+                    district: document.getElementById('district').value,
+                    address: document.getElementById('address').value,
+                    rentType: document.getElementById('rent-type').value,
+                    type: document.getElementById('property-type').value,
+                    rooms: parseInt(document.getElementById('rooms').value),
+                    area: parseInt(document.getElementById('area').value),
+                    price: parseInt(document.getElementById('price').value),
+                    deposit: parseInt(document.getElementById('deposit').value) || 0,
+                    description: document.getElementById('description').value,
+                    contact: {
+                        name: document.getElementById('contact-name').value,
+                        phone: document.getElementById('contact-phone').value,
+                        whatsapp: document.getElementById('contact-whatsapp').value || ''
+                    },
+                    images: []
+                };
+                
+                // 处理图片上传
+                const imageFiles = document.getElementById('images').files;
+                if (imageFiles.length > 0) {
+                    showToast('Karregando imajen...', 'info');
+                    
+                    for (let i = 0; i < Math.min(imageFiles.length, 10); i++) {
+                        const file = imageFiles[i];
+                        const storageRef = storage.ref(`listings/${Date.now()}_${file.name}`);
+                        await storageRef.put(file);
+                        const url = await storageRef.getDownloadURL();
+                        listingData.images.push(url);
+                    }
+                }
+                
+                // 保存到数据库
+                const listingId = await Database.listings.create(listingData);
+                
+                showToast('Kasa publikadu ku sucessu!', 'success');
+                
+                // 跳转到房源详情页
+                setTimeout(() => {
+                    window.location.href = `listing-detail.html?id=${listingId}`;
+                }, 1500);
+                
+            } catch (error) {
+                console.error('Error:', error);
+                showToast(error.message || 'Erro na publikason', 'error');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Publika Agora';
+            }
+        });
+        
+        // 图片预览
+        document.getElementById('images').addEventListener('change', function() {
+            const files = this.files;
+            if (files.length > 10) {
+                showToast('Máximu 10 imajen', 'error');
+                this.value = '';
+                return;
+            }
+            
+            // 显示预览
+            const uploadDiv = document.querySelector('.image-upload-modern');
+            uploadDiv.innerHTML = `<i class="fas fa-check-circle" style="color: #7a9e7e;"></i><p>${files.length} imajen selesionadu</p>`;
+        });
+    </script>
 </body>
 </html>
