@@ -771,34 +771,15 @@
             }, 2000);
         }
 
-        function toggleLang() {
-            const current = localStorage.getItem('casacv_language') || 'ke';
-            const next = current === 'ke' ? 'zh' : 'ke';
-            localStorage.setItem('casacv_language', next);
-            location.reload();
-        }
+        // 菜单控制
+        const menuModal = document.getElementById('moreMenuModal');
+        function showMoreMenu() { menuModal.style.display = 'block'; }
+        function closeMoreMenu() { menuModal.style.display = 'none'; }
         
-        function toggleMobileMenu() {
-            alert('Menu: Licitacoes, Servicos, Avaliacoes, Voz di Povu, Grupo Taxi');
-        }
-        
-        // 显示更多菜单
-        function showMoreMenu() {
-            document.getElementById('moreMenuModal').style.display = 'block';
-        }
-        
-        // 关闭更多菜单
-        function closeMoreMenu() {
-            document.getElementById('moreMenuModal').style.display = 'none';
-        }
-        
-        // 点击其他地方关闭菜单
-        document.addEventListener('click', function(e) {
-            const modal = document.getElementById('moreMenuModal');
-            if (modal && modal.style.display === 'block') {
-                if (!modal.contains(e.target) && !e.target.closest('.mobile-nav-item')) {
-                    closeMoreMenu();
-                }
+        // 点击外部关闭菜单
+        document.addEventListener('click', (e) => {
+            if (menuModal?.style.display === 'block' && !menuModal.contains(e.target) && !e.target.closest('.mobile-nav-item')) {
+                closeMoreMenu();
             }
         });
 
