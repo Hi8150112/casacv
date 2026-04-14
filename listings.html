@@ -24,24 +24,30 @@
                 <i class="fas fa-home"></i>
                 <span>CasaCV</span>
             </a>
-            <div class="nav-links">
-                <a href="index.html" data-i18n="nav_home">首页</a>
-                <a href="listings.html" class="active" data-i18n="nav_listings">房源</a>
-                <a href="publish.html" class="btn-primary" data-i18n="nav_publish">发布房源</a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" data-i18n="nav_home">Início</a>
+                <a href="listings.html" class="active" data-i18n="nav_listings">Kasa</a>
+                <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
+                <a href="china-trade.html" data-i18n="nav_china">China</a>
+                <a href="tenders.html" data-i18n="nav_tenders">Licitacoes</a>
+                <a href="services.html" data-i18n="nav_services">Servicos</a>
+                <a href="reviews.html" data-i18n="nav_reviews">Avaliacoes</a>
+                <a href="complaints.html" data-i18n="nav_complaints">Voz di Povu</a>
+                <a href="confession-wall.html" data-i18n="nav_confession">Mural</a>
+                <a href="taxi-group.html" data-i18n="nav_taxi" style="color:#25d366;"><i class="fab fa-whatsapp"></i> Taxi</a>
+                <a href="publish.html" class="btn-primary" data-i18n="nav_publish">Publika</a>
             </div>
             <div class="nav-actions">
                 <div class="language-switcher">
                     <button class="lang-btn" onclick="toggleLang()">
                         <i class="fas fa-globe"></i>
-                        <span id="current-lang">中文</span>
+                        <span id="current-lang">Kriolu</span>
                     </button>
                     <div class="lang-dropdown" id="lang-dropdown">
+                        <a href="#" onclick="setLanguage('ke')">Kriolu</a>
                         <a href="#" onclick="setLanguage('zh')">中文</a>
-                        <a href="#" onclick="setLanguage('en')">English</a>
-                        <a href="#" onclick="setLanguage('pt')">Português</a>
                     </div>
                 </div>
-                <a href="#" class="btn-outline" data-i18n="login">登录</a>
             </div>
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
                 <i class="fas fa-bars"></i>
@@ -51,16 +57,23 @@
 
     <!-- 移动端菜单 -->
     <div class="mobile-menu" id="mobile-menu">
-        <a href="index.html" data-i18n="nav_home">首页</a>
-        <a href="listings.html" data-i18n="nav_listings">房源</a>
-        <a href="publish.html" data-i18n="nav_publish">发布房源</a>
-        <a href="#" data-i18n="login">登录</a>
+        <a href="index.html" data-i18n="nav_home">Início</a>
+        <a href="listings.html" class="active" data-i18n="nav_listings">Kasa</a>
+        <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
+        <a href="china-trade.html" data-i18n="nav_china">China</a>
+        <a href="tenders.html" data-i18n="nav_tenders">Licitacoes</a>
+        <a href="services.html" data-i18n="nav_services">Servicos</a>
+        <a href="reviews.html" data-i18n="nav_reviews">Avaliacoes</a>
+        <a href="complaints.html" data-i18n="nav_complaints">Voz di Povu</a>
+        <a href="confession-wall.html" data-i18n="nav_confession">Mural</a>
+        <a href="taxi-group.html" data-i18n="nav_taxi">Taxi</a>
+        <a href="publish.html" data-i18n="nav_publish">Publika</a>
     </div>
 
     <!-- 页面标题 -->
     <section class="page-header">
-        <h1 data-i18n="listings_title">房源列表</h1>
-        <p data-i18n="listings_subtitle">发现佛得角的优质房源</p>
+        <h1 data-i18n="listings_title">Kasa pa Arrenda</h1>
+        <p data-i18n="listings_subtitle">Diskubri kasa di kalidadi na Kabu Verdi</p>
     </section>
 
     <!-- 筛选栏 -->
