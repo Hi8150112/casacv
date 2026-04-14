@@ -55,24 +55,22 @@
                 <i class="fas fa-home"></i>
                 <span>CasaCV</span>
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
                 <a href="index.html" class="active" data-i18n="nav_home">Inicio</a>
                 <a href="listings.html" data-i18n="nav_listings">Kasa</a>
-                <a href="jobs.html">Trabaiu</a>
-                <a href="china-trade.html">China</a>
-                <a href="tenders.html">Licitacoes</a>
-                <a href="services.html">Servicos</a>
-                <a href="reviews.html">Avaliacoes</a>
-                <a href="complaints.html">Voz di Povu</a>
-                <a href="confession-wall.html">Mural</a>
-                <a href="taxi-group.html" style="color:#25d366;"><i class="fab fa-whatsapp"></i> Taxi</a>
                 <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
-                <a href="china-trade.html" data-i18n="nav_china">Negósiu China</a>
+                <a href="china-trade.html" data-i18n="nav_china">China</a>
                 <a href="tenders.html" data-i18n="nav_tenders">Licitacoes</a>
                 <a href="services.html" data-i18n="nav_services">Servicos</a>
-                <a href="confession-wall.html" data-i18n="nav_confession">Mural Amor</a>
+                <a href="reviews.html" data-i18n="nav_reviews">Avaliacoes</a>
+                <a href="complaints.html" data-i18n="nav_complaints">Voz di Povu</a>
+                <a href="confession-wall.html" data-i18n="nav_confession">Mural</a>
+                <a href="taxi-group.html" data-i18n="nav_taxi" style="color:#25d366;"><i class="fab fa-whatsapp"></i> Taxi</a>
                 <a href="publish.html" class="btn-primary" data-i18n="nav_publish">Publika</a>
             </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
             <div class="nav-actions">
                 <div class="language-switcher">
                     <button class="lang-btn" onclick="toggleLang()">
@@ -317,5 +315,19 @@
 
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // 移动端菜单切换
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show');
+        }
+        
+        // 点击导航链接后关闭菜单
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('show');
+            });
+        });
+    </script>
 </body>
 </html>

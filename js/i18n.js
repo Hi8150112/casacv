@@ -90,7 +90,16 @@ const translations = {
         services_title: "本地服务",
         services_subtitle: "找专业服务人员",
         confession_title: "表白墙",
-        confession_subtitle: "分享你的心声"
+        confession_subtitle: "分享你的心声",
+        reviews_title: "大众点评",
+        reviews_subtitle: "佛得角本地商家评价",
+        complaints_title: "爆料投诉",
+        complaints_subtitle: "反映民生问题",
+        taxi_title: "WhatsApp出租车群",
+        taxi_subtitle: "加入群组，快速叫车",
+        nav_reviews: "大众点评",
+        nav_complaints: "爆料投诉",
+        nav_taxi: "出租车"
     },
     ke: {
         nav_home: "Página Inicial",
@@ -181,7 +190,16 @@ const translations = {
         services_title: "Servicos Lokais",
         services_subtitle: "Atxa profisionais",
         confession_title: "Mural di Amor",
-        confession_subtitle: "Partilha bu sentimentu"
+        confession_subtitle: "Partilha bu sentimentu",
+        reviews_title: "Avaliacoes",
+        reviews_subtitle: "Avalia lokais na Kabu Verdi",
+        complaints_title: "Voz di Povu",
+        complaints_subtitle: "Reklamason di problemas",
+        taxi_title: "Grupo Taxi WhatsApp",
+        taxi_subtitle: "Entra na grupu, txoma taxi rapidu",
+        nav_reviews: "Avaliacoes",
+        nav_complaints: "Voz di Povu",
+        nav_taxi: "Taxi"
     }
 };
 
@@ -229,7 +247,10 @@ function setLanguage(lang) {
         'china-trade.html': { zh: '中国商务 - CasaCV', ke: 'Negósiu China - CasaCV' },
         'tenders.html': { zh: '招投标 - CasaCV', ke: 'Licitacoes - CasaCV' },
         'services.html': { zh: '本地服务 - CasaCV', ke: 'Servicos - CasaCV' },
-        'confession-wall.html': { zh: '表白墙 - CasaCV', ke: 'Mural Amor - CasaCV' }
+        'confession-wall.html': { zh: '表白墙 - CasaCV', ke: 'Mural Amor - CasaCV' },
+        'reviews.html': { zh: '大众点评 - CasaCV', ke: 'Avaliacoes - CasaCV' },
+        'complaints.html': { zh: '爆料投诉 - CasaCV', ke: 'Voz di Povu - CasaCV' },
+        'taxi-group.html': { zh: '出租车群 - CasaCV', ke: 'Grupo Taxi - CasaCV' }
     };
     
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
