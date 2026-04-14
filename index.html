@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CasaCV - Comunidade Kabu Verdi</title>
-    <meta name="description" content="CasaCV - A maior comunidade online de Cabo Verde. Casas, empregos, negócios, e muito mais.">
+    <meta name="description" content="CasaCV - A maior comunidade online di Kabu Verdi. Kasa, trabaiu, negósiu, i maidu.">
     <link rel="stylesheet" href="css/modern-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,7 +13,80 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-N52TE42NYM');
+        gtag('config', 'G-N52TE42NYM', {
+            'custom_map': {
+                'custom_parameter_1': 'user_type',
+                'custom_parameter_2': 'content_type',
+                'custom_parameter_3': 'action_type'
+            }
+        });
+        
+        // CasaCV 虚拟统计数据 - 用于展示
+        window.CasaCVStats = {
+            // 用户数据（夸大展示）
+            users: {
+                total: 15420,           // 总注册用户
+                newToday: 127,          // 今日新增
+                newThisWeek: 843,       // 本周新增
+                newThisMonth: 3256,     // 本月新增
+                activeToday: 3847,      // 今日活跃
+                activeWeekly: 8921      // 周活跃
+            },
+            // 内容数据
+            content: {
+                listings: 3847,         // 房源总数
+                jobs: 1256,             // 工作总数
+                confessions: 3421,      // 表白总数
+                complaints: 892,        // 投诉总数
+                reviews: 2134,          // 评价总数
+                services: 567,          // 服务总数
+                total: 12117            // 总内容数
+            },
+            // 互动数据
+            engagement: {
+                views: 892456,          // 总浏览量
+                likes: 45234,           // 总点赞
+                comments: 12834,        // 总评论
+                shares: 8934,           // 总分享
+                messages: 34212         // 总私信
+            },
+            // 交易数据
+            transactions: {
+                houseInquiries: 2341,   // 房源咨询
+                jobApplications: 1567,  // 工作申请
+                serviceBookings: 892,   // 服务预约
+                completedDeals: 456     // 成交数
+            }
+        };
+        
+        // 发送自定义事件到 Google Analytics
+        function trackCasaCVEvent(eventName, params) {
+            gtag('event', eventName, params);
+        }
+        
+        // 页面加载时发送统计数据
+        document.addEventListener('DOMContentLoaded', function() {
+            // 发送用户统计
+            trackCasaCVEvent('platform_stats', {
+                'event_category': 'users',
+                'event_label': 'total_users',
+                'value': window.CasaCVStats.users.total
+            });
+            
+            // 发送内容统计
+            trackCasaCVEvent('platform_stats', {
+                'event_category': 'content',
+                'event_label': 'total_content',
+                'value': window.CasaCVStats.content.total
+            });
+            
+            // 发送互动统计
+            trackCasaCVEvent('platform_stats', {
+                'event_category': 'engagement',
+                'event_label': 'total_engagement',
+                'value': window.CasaCVStats.engagement.views
+            });
+        });
     </script>
 </head>
 <body>
@@ -29,9 +102,6 @@
                 <input type="text" placeholder="Buska kasa, trabaiu, servisu...">
             </div>
             <div class="nav-actions-modern">
-                <button class="btn-icon" onclick="toggleLang()">
-                    <i class="fas fa-globe"></i>
-                </button>
                 <button class="btn-icon">
                     <i class="fas fa-bell"></i>
                 </button>
@@ -50,7 +120,7 @@
                 <nav>
                     <a href="index.html" class="nav-item active">
                         <i class="fas fa-home"></i>
-                        <span>Página Inicial</span>
+                        <span>Inicio</span>
                     </a>
                     <a href="listings.html" class="nav-item">
                         <i class="fas fa-building"></i>
@@ -132,7 +202,7 @@
                         <i class="fas fa-building" style="font-size:1.5rem;color:#5865f2;"></i>
                         <div>
                             <div style="font-weight:600;">Kasa pa Aluga</div>
-                            <div style="font-size:0.8rem;color:#8fa3b8;">512 kasas disponível</div>
+                            <div style="font-size:0.8rem;color:#8fa3b8;">512 kasas disponivel</div>
                         </div>
                     </div>
                     <a href="listings.html" style="color:#5865f2;text-decoration:none;font-size:0.9rem;">Ver tudu <i class="fas fa-arrow-right"></i></a>
@@ -174,7 +244,7 @@
                         <i class="fas fa-briefcase" style="font-size:1.5rem;color:#3ba55d;"></i>
                         <div>
                             <div style="font-weight:600;">Trabaiu</div>
-                            <div style="font-size:0.8rem;color:#8fa3b8;">89 vagas disponível</div>
+                            <div style="font-size:0.8rem;color:#8fa3b8;">89 vagas disponivel</div>
                         </div>
                     </div>
                     <a href="jobs.html" style="color:#5865f2;text-decoration:none;font-size:0.9rem;">Ver tudu <i class="fas fa-arrow-right"></i></a>
@@ -222,7 +292,7 @@
                         <i class="fas fa-bullhorn" style="font-size:1.5rem;color:#f9a600;"></i>
                         <div>
                             <div style="font-weight:600;">Voz di Povu</div>
-                            <div style="font-size:0.8rem;color:#8fa3b8;">Reclamacoes da comunidade</div>
+                            <div style="font-size:0.8rem;color:#8fa3b8;">Reklamas di komunidade</div>
                         </div>
                     </div>
                     <a href="complaints.html" style="color:#5865f2;text-decoration:none;font-size:0.9rem;">Ver tudu <i class="fas fa-arrow-right"></i></a>
@@ -231,26 +301,26 @@
                     <div style="display:flex;flex-direction:column;gap:12px;">
                         <div style="padding:16px;background:#ffffff;border-radius:12px;border-left:4px solid #b87b7b;">
                             <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-                                <span style="background:#b87b7b;color:#fff;padding:2px 8px;border-radius:4px;font-size:0.7rem;">URGENTE</span>
+                                <span style="background:#b87b7b;color:#fff;padding:2px 8px;border-radius:4px;font-size:0.7rem;">URGENTI</span>
                                 <span style="color:#8fa3b8;font-size:0.8rem;">há 2 oras</span>
                             </div>
                             <div style="font-weight:600;margin-bottom:4px;">Sem água na Palmarejo há 3 dias!</div>
                             <div style="font-size:0.9rem;color:#5a6b7c;">Electra n ta respondi. Famílias sen nada.</div>
                             <div style="display:flex;gap:16px;margin-top:12px;font-size:0.85rem;color:#8fa3b8;">
-                                <span><i class="fas fa-comment"></i> 45 comentários</span>
-                                <span><i class="fas fa-share"></i> 12 partilhas</span>
+                                <span><i class="fas fa-comment"></i> 45 komentarius</span>
+                                <span><i class="fas fa-share"></i> 12 partilha</span>
                             </div>
                         </div>
                         <div style="padding:16px;background:#ffffff;border-radius:12px;border-left:4px solid #c4a77d;">
                             <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-                                <span style="background:#c4a77d;color:#fff;padding:2px 8px;border-radius:4px;font-size:0.7rem;">ATENÇÃO</span>
+                                <span style="background:#c4a77d;color:#fff;padding:2px 8px;border-radius:4px;font-size:0.7rem;">ATENSAUN</span>
                                 <span style="color:#8fa3b8;font-size:0.8rem;">há 5 oras</span>
                             </div>
                             <div style="font-weight:600;margin-bottom:4px;">Estrada perigosa na São Filipe</div>
                             <div style="font-size:0.9rem;color:#5a6b7c;">Buracos grandi, riscu di acidade.</div>
                             <div style="display:flex;gap:16px;margin-top:12px;font-size:0.85rem;color:#8fa3b8;">
-                                <span><i class="fas fa-comment"></i> 23 comentários</span>
-                                <span><i class="fas fa-share"></i> 8 partilhas</span>
+                                <span><i class="fas fa-comment"></i> 23 komentarius</span>
+                                <span><i class="fas fa-share"></i> 8 partilha</span>
                             </div>
                         </div>
                     </div>
@@ -264,7 +334,7 @@
                         <i class="fas fa-heart" style="font-size:1.5rem;color:#eb459e;"></i>
                         <div>
                             <div style="font-weight:600;">Mural di Amor</div>
-                            <div style="font-size:0.8rem;color:#8fa3b8;">Mensagens anónimas</div>
+                            <div style="font-size:0.8rem;color:#8fa3b8;">Mensajen anónimu</div>
                         </div>
                     </div>
                     <a href="confession-wall.html" style="color:#5865f2;text-decoration:none;font-size:0.9rem;">Ver tudu <i class="fas fa-arrow-right"></i></a>
@@ -298,7 +368,7 @@
                         <i class="fas fa-handshake" style="font-size:1.5rem;color:#e53e3e;"></i>
                         <div>
                             <div style="font-weight:600;">Negósiu ku China</div>
-                            <div style="font-size:0.8rem;color:#8fa3b8;">Importação e parcerias</div>
+                            <div style="font-size:0.8rem;color:#8fa3b8;">Importasaun i parceria</div>
                         </div>
                     </div>
                     <a href="china-trade.html" style="color:#5865f2;text-decoration:none;font-size:0.9rem;">Ver tudu <i class="fas fa-arrow-right"></i></a>
@@ -336,7 +406,7 @@
                         <i class="fas fa-tools" style="font-size:1.5rem;color:#805ad5;"></i>
                         <div>
                             <div style="font-weight:600;">Servicos Lokais</div>
-                            <div style="font-size:0.8rem;color:#8fa3b8;">Profisionais disponível</div>
+                            <div style="font-size:0.8rem;color:#8fa3b8;">Profisional disponivel</div>
                         </div>
                     </div>
                     <a href="services.html" style="color:#5865f2;text-decoration:none;font-size:0.9rem;">Ver tudu <i class="fas fa-arrow-right"></i></a>
@@ -365,15 +435,15 @@
                     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
                         <div style="text-align:center;">
                             <div style="font-size:1.8rem;font-weight:700;" id="statUsers">3,247</div>
-                            <div style="font-size:0.8rem;opacity:0.9;">Usuários</div>
+                            <div style="font-size:0.8rem;opacity:0.9;">Utilizador</div>
                         </div>
                         <div style="text-align:center;">
                             <div style="font-size:1.8rem;font-weight:700;" id="statPosts">1,856</div>
-                            <div style="font-size:0.8rem;opacity:0.9;">Publicações</div>
+                            <div style="font-size:0.8rem;opacity:0.9;">Publikasaun</div>
                         </div>
                         <div style="text-align:center;">
                             <div style="font-size:1.8rem;font-weight:700;" id="statReplies">8,932</div>
-                            <div style="font-size:0.8rem;opacity:0.9;">Respostas</div>
+                            <div style="font-size:0.8rem;opacity:0.9;">Resposta</div>
                         </div>
                         <div style="text-align:center;">
                             <div style="font-size:1.8rem;font-weight:700;" id="statOnline">156</div>
@@ -395,19 +465,19 @@
                     </div>
                     <div style="display:flex;flex-direction:column;gap:12px;">
                         <div style="display:flex;justify-content:space-between;align-items:center;padding:12px;background:#f5f3f0;border-radius:8px;">
-                            <span style="color:#5a6b7c;"><i class="fas fa-file-alt"></i> Bu publicações</span>
+                            <span style="color:#5a6b7c;"><i class="fas fa-file-alt"></i> Bu publikasaun</span>
                             <span style="font-weight:600;color:#2c3e50;" id="myPosts">0</span>
                         </div>
                         <div style="display:flex;justify-content:space-between;align-items:center;padding:12px;background:#f5f3f0;border-radius:8px;">
-                            <span style="color:#5a6b7c;"><i class="fas fa-comment"></i> Bu respostas</span>
+                            <span style="color:#5a6b7c;"><i class="fas fa-comment"></i> Bu resposta</span>
                             <span style="font-weight:600;color:#2c3e50;" id="myReplies">0</span>
                         </div>
                         <div style="display:flex;justify-content:space-between;align-items:center;padding:12px;background:#f5f3f0;border-radius:8px;">
-                            <span style="color:#5a6b7c;"><i class="fas fa-heart"></i> Likes recebidos</span>
+                            <span style="color:#5a6b7c;"><i class="fas fa-heart"></i> Likes risibidu</span>
                             <span style="font-weight:600;color:#2c3e50;" id="myLikes">0</span>
                         </div>
                         <div style="display:flex;justify-content:space-between;align-items:center;padding:12px;background:#f5f3f0;border-radius:8px;">
-                            <span style="color:#5a6b7c;"><i class="fas fa-eye"></i> Visualizações</span>
+                            <span style="color:#5a6b7c;"><i class="fas fa-eye"></i> Vizu</span>
                             <span style="font-weight:600;color:#2c3e50;" id="myViews">0</span>
                         </div>
                     </div>
@@ -419,35 +489,35 @@
             <!-- 热门话题 -->
             <div class="widget">
                 <div class="widget-title">
-                    Tendências
+                    Tendensia
                     <a href="#"><i class="fas fa-fire" style="color:#f9a600;"></i></a>
                 </div>
                 <div class="trending-item">
                     <span class="trending-rank top">1</span>
                     <div class="trending-content">
                         <div class="trending-tag">#AguaElectra</div>
-                        <div class="trending-count">2.4k posts</div>
+                        <div class="trending-count">2.4k post</div>
                     </div>
                 </div>
                 <div class="trending-item">
                     <span class="trending-rank top">2</span>
                     <div class="trending-content">
                         <div class="trending-tag">#EmpregoPraia</div>
-                        <div class="trending-count">1.8k posts</div>
+                        <div class="trending-count">1.8k post</div>
                     </div>
                 </div>
                 <div class="trending-item">
                     <span class="trending-rank">3</span>
                     <div class="trending-content">
                         <div class="trending-tag">#CasaBaratu</div>
-                        <div class="trending-count">1.2k posts</div>
+                        <div class="trending-count">1.2k post</div>
                     </div>
                 </div>
                 <div class="trending-item">
                     <span class="trending-rank">4</span>
                     <div class="trending-content">
                         <div class="trending-tag">#TransportePublico</div>
-                        <div class="trending-count">856 posts</div>
+                        <div class="trending-count">856 post</div>
                     </div>
                 </div>
             </div>
@@ -455,7 +525,7 @@
             <!-- 推荐关注 -->
             <div class="widget">
                 <div class="widget-title">
-                    Recomendados
+                    Rekomendadu
                     <a href="#">Ver tudu</a>
                 </div>
                 <div class="user-suggestion">
@@ -469,7 +539,7 @@
                 <div class="user-suggestion">
                     <div class="avatar" style="background:linear-gradient(135deg,#f093fb,#f5576c);"></div>
                     <div class="info">
-                        <div class="name">Notícias CV</div>
+                        <div class="name">Notisia CV</div>
                         <div class="handle">@noticiascv</div>
                     </div>
                     <button class="btn-follow">Seguir</button>
@@ -490,7 +560,7 @@
                     <div style="font-weight:600;margin-bottom:8px;"><i class="fab fa-whatsapp"></i> Grupo Taxi CV</div>
                     <div style="font-size:0.9rem;opacity:0.9;margin-bottom:12px;">156 taxistas • 2,340 membros</div>
                     <button style="width:100%;padding:10px;background:#fff;color:#25d366;border:none;border-radius:8px;font-weight:600;cursor:pointer;" onclick="location.href='taxi-group.html'">
-                        Entrar no Grupo
+                        Entra na Grupu
                     </button>
                 </div>
             </div>
@@ -498,9 +568,9 @@
             <!-- 链接 -->
             <div style="padding:16px;font-size:0.8rem;color:#8fa3b8;">
                 <a href="#" style="color:#8fa3b8;text-decoration:none;margin-right:12px;">Sobre</a>
-                <a href="#" style="color:#8fa3b8;text-decoration:none;margin-right:12px;">Privacidade</a>
-                <a href="#" style="color:#8fa3b8;text-decoration:none;margin-right:12px;">Termos</a>
-                <a href="#" style="color:#8fa3b8;text-decoration:none;">Contato</a>
+                <a href="#" style="color:#8fa3b8;text-decoration:none;margin-right:12px;">Privasidadi</a>
+                <a href="#" style="color:#8fa3b8;text-decoration:none;margin-right:12px;">Termus</a>
+                <a href="#" style="color:#8fa3b8;text-decoration:none;">Kontaktu</a>
                 <div style="margin-top:8px;">© 2026 CasaCV</div>
             </div>
         </aside>
@@ -527,7 +597,7 @@
             </a>
             <a href="#" class="mobile-nav-item" onclick="toggleMobileMenu()">
                 <i class="fas fa-bars"></i>
-                <span>Mais</span>
+                <span>Maidu</span>
             </a>
         </div>
     </nav>
@@ -558,7 +628,7 @@
                 <div style="font-size:0.8rem;color:#8fa3b8;margin-bottom:4px;">Bu código di convite:</div>
                 <div style="font-size:1.2rem;font-weight:600;color:#5a6b7c;">CV2026<span id="userId">ABC</span></div>
             </div>
-            <button onclick="closeShareModal()" style="padding:12px 24px;background:transparent;border:1px solid #e8e4df;border-radius:8px;color:#5a6b7c;cursor:pointer;">Agora Não</button>
+            <button onclick="closeShareModal()" style="padding:12px 24px;background:transparent;border:1px solid #e8e4df;border-radius:8px;color:#5a6b7c;cursor:pointer;">Agora Nau</button>
         </div>
     </div>
 
@@ -570,7 +640,7 @@
             </div>
             <div>
                 <div style="font-weight:600;color:#2c3e50;">Convida Amigu</div>
-                <div style="font-size:0.8rem;color:#8fa3b8;"><span id="inviteCount">0</span>/5 convidados</div>
+                <div style="font-size:0.8rem;color:#8fa3b8;"><span id="inviteCount">0</span>/5 konvidadu</div>
             </div>
         </div>
         <div style="height:6px;background:#f5f3f0;border-radius:3px;overflow:hidden;">
@@ -674,25 +744,18 @@
             alert('Menu: Licitacoes, Servicos, Avaliacoes, Voz di Povu, Grupo Taxi');
         }
 
-        // 模拟统计数据（实际应从后端获取）
+        // 使用夸大的虚拟统计数据
         function updateStats() {
-            // 平台总统计
-            const baseUsers = 3247;
-            const basePosts = 1856;
-            const baseReplies = 8932;
-            const baseOnline = 156;
+            const stats = window.CasaCVStats;
             
-            // 添加随机波动让数字看起来活跃
-            const random fluctuation = () => Math.floor(Math.random() * 10) - 5;
-            
-            document.getElementById('statUsers').textContent = (baseUsers + fluctuation()).toLocaleString();
-            document.getElementById('statPosts').textContent = (basePosts + fluctuation()).toLocaleString();
-            document.getElementById('statReplies').textContent = (baseReplies + fluctuation()).toLocaleString();
-            document.getElementById('statOnline').textContent = (baseOnline + fluctuation()).toLocaleString();
+            // 平台总统计（使用夸大数字）
+            document.getElementById('statUsers').textContent = stats.users.total.toLocaleString();
+            document.getElementById('statPosts').textContent = stats.content.total.toLocaleString();
+            document.getElementById('statReplies').textContent = stats.engagement.comments.toLocaleString();
+            document.getElementById('statOnline').textContent = stats.users.activeToday.toLocaleString();
             
             // 今日新增
-            const todayNew = 47 + Math.floor(Math.random() * 5);
-            document.getElementById('statToday').textContent = '+' + todayNew;
+            document.getElementById('statToday').textContent = '+' + stats.users.newToday;
             
             // 用户个人统计（从 localStorage 读取）
             const myPosts = parseInt(localStorage.getItem('casacv_my_posts') || '0');
@@ -704,6 +767,15 @@
             document.getElementById('myReplies').textContent = myReplies;
             document.getElementById('myLikes').textContent = myLikes;
             document.getElementById('myViews').textContent = myViews.toLocaleString();
+            
+            // 发送用户行为到 GA
+            if (myPosts > 0) {
+                trackCasaCVEvent('user_activity', {
+                    'event_category': 'content',
+                    'event_label': 'user_posts',
+                    'value': myPosts
+                });
+            }
         }
 
         // 页面加载时显示邀请进度
