@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="ke">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voz di Povu - CasaCV</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Fala bu problema, bu voz importa! Reklamasaun na Kabu Verdi.">
+    <link rel="stylesheet" href="css/modern-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N52TE42NYM"></script>
     <script>
@@ -14,121 +16,139 @@
         gtag('config', 'G-N52TE42NYM');
     </script>
     <style>
-        .complaint-hero { background: linear-gradient(135deg, #c53030, #e53e3e); color: white; padding: 50px 20px; text-align: center; }
-        .complaint-hero h1 { font-size: 2rem; margin-bottom: 10px; }
-        .complaint-hero p { opacity: 0.9; }
-        .complaint-section { padding: 40px 20px; max-width: 900px; margin: 0 auto; }
-        .complaint-filters { display: flex; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; }
-        .complaint-filter { padding: 8px 16px; border: 1px solid #e2e8f0; border-radius: 20px; background: white; cursor: pointer; font-size: 0.9rem; }
-        .complaint-filter.active { background: #c53030; color: white; }
-        .complaint-item { background: white; border-radius: 10px; padding: 20px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #e53e3e; }
-        .complaint-item.resolved { border-left-color: #38a169; opacity: 0.8; }
-        .complaint-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
-        .complaint-title { font-size: 1.1rem; color: #2d3748; font-weight: 600; }
-        .complaint-badge { padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; }
-        .complaint-badge.pending { background: #fed7d7; color: #742a2a; }
-        .complaint-badge.resolved { background: #c6f6d5; color: #22543d; }
-        .complaint-location { color: #718096; font-size: 0.85rem; margin-bottom: 10px; }
-        .complaint-content { color: #4a5568; line-height: 1.6; margin-bottom: 12px; }
-        .complaint-footer { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #718096; }
-        .complaint-actions { display: flex; gap: 15px; }
-        .complaint-actions span { cursor: pointer; }
-        .complaint-actions span:hover { color: #c53030; }
-        .btn-complaint { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #c53030; color: white; border-radius: 50%; border: none; font-size: 1.5rem; cursor: pointer; box-shadow: 0 4px 12px rgba(197,48,48,0.4); }
-        .hot-topics { background: #fff5f5; border-radius: 10px; padding: 20px; margin-bottom: 25px; }
-        .hot-topics h3 { color: #c53030; margin-bottom: 12px; }
-        .hot-topic-tag { display: inline-block; padding: 6px 14px; background: white; border-radius: 20px; margin: 5px; font-size: 0.85rem; color: #c53030; border: 1px solid #fed7d7; }
+        .complaint-hero-modern { background: linear-gradient(135deg, #b87b7b, #c98b8b); color: white; padding: 60px 20px; text-align: center; }
+        .complaint-hero-modern h1 { font-size: 2rem; margin-bottom: 10px; }
+        .complaint-section-modern { padding: 40px 20px; max-width: 900px; margin: 0 auto; }
+        .complaint-filters-modern { display: flex; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; }
+        .complaint-filter-modern { padding: 8px 16px; border: 1px solid #e8e4df; border-radius: 20px; background: white; cursor: pointer; font-size: 0.9rem; }
+        .complaint-filter-modern.active { background: #b87b7b; color: white; }
+        .complaint-item-modern { background: white; border-radius: 10px; padding: 20px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #b87b7b; }
+        .complaint-item-modern.resolved { border-left-color: #7a9e7e; opacity: 0.8; }
+        .complaint-header-modern { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+        .complaint-title-modern { font-size: 1.1rem; color: #2c3e50; font-weight: 600; }
+        .complaint-badge-modern { padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; }
+        .complaint-badge-modern.pending { background: #f5e5e5; color: #8b5b5b; }
+        .complaint-badge-modern.resolved { background: #e5f0e5; color: #5b7b5b; }
+        .complaint-location-modern { color: #5a6b7c; font-size: 0.85rem; margin-bottom: 10px; }
+        .complaint-content-modern { color: #2c3e50; line-height: 1.6; margin-bottom: 12px; }
+        .complaint-footer-modern { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #5a6b7c; }
+        .complaint-actions-modern { display: flex; gap: 15px; }
+        .complaint-actions-modern span { cursor: pointer; }
+        .complaint-actions-modern span:hover { color: #b87b7b; }
+        .btn-complaint-modern { position: fixed; bottom: 90px; right: 20px; width: 56px; height: 56px; background: #b87b7b; color: white; border-radius: 50%; border: none; font-size: 1.5rem; cursor: pointer; box-shadow: 0 4px 12px rgba(184,123,123,0.4); z-index: 100; }
+        .hot-topics-modern { background: #faf9f7; border-radius: 10px; padding: 20px; margin-bottom: 25px; }
+        .hot-topics-modern h3 { color: #b87b7b; margin-bottom: 12px; }
+        .hot-topic-tag-modern { display: inline-block; padding: 6px 14px; background: white; border-radius: 20px; margin: 5px; font-size: 0.85rem; color: #b87b7b; border: 1px solid #e8e4df; }
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-home"></i>
-                <span>CasaCV</span>
-            </a>
-            <div class="nav-links" id="navLinks">
-                <a href="index.html" data-i18n="nav_home">Início</a>
-                <a href="listings.html" data-i18n="nav_listings">Kasa</a>
-                <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
-                <a href="china-trade.html" data-i18n="nav_china">China</a>
-                <a href="tenders.html" data-i18n="nav_tenders">Licitacoes</a>
-                <a href="services.html" data-i18n="nav_services">Servicos</a>
-                <a href="reviews.html" data-i18n="nav_reviews">Avaliacoes</a>
-                <a href="complaints.html" class="active" data-i18n="nav_complaints">Voz di Povu</a>
-                <a href="confession-wall.html" data-i18n="nav_confession">Mural</a>
-                <a href="taxi-group.html" data-i18n="nav_taxi" style="color:#25d366;"><i class="fab fa-whatsapp"></i> Taxi</a>
-                <a href="publish.html" class="btn-primary" data-i18n="nav_publish">Publika</a>
+    <!-- 顶部导航 -->
+    <nav class="navbar-modern">
+        <div class="nav-container-modern">
+            <a href="index.html" class="logo-modern"><i class="fas fa-home"></i><span>CasaCV</span></a>
+            <div class="search-bar-modern">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buska..." id="search-input">
             </div>
-            <div class="nav-actions">
-                <div class="language-switcher">
-                    <button class="lang-btn" onclick="toggleLang()">
-                        <i class="fas fa-globe"></i>
-                        <span id="current-lang">Kriolu</span>
-                    </button>
-                    <div class="lang-dropdown" id="lang-dropdown">
-                        <a href="#" onclick="setLanguage('ke')">Kriolu</a>
-                        <a href="#" onclick="setLanguage('zh')">中文</a>
-                    </div>
-                </div>
+            <div class="nav-actions-modern">
+                <a href="publish.html" class="btn-publish-nav"><i class="fas fa-plus"></i><span>Publika</span></a>
             </div>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
+            <button class="mobile-menu-btn-modern" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
         </div>
     </nav>
 
     <!-- 移动端菜单 -->
-    <div class="mobile-menu" id="mobile-menu">
-        <a href="index.html" data-i18n="nav_home">Início</a>
-        <a href="listings.html" data-i18n="nav_listings">Kasa</a>
-        <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
-        <a href="china-trade.html" data-i18n="nav_china">China</a>
-        <a href="tenders.html" data-i18n="nav_tenders">Licitacoes</a>
-        <a href="services.html" data-i18n="nav_services">Servicos</a>
-        <a href="reviews.html" data-i18n="nav_reviews">Avaliacoes</a>
-        <a href="complaints.html" class="active" data-i18n="nav_complaints">Voz di Povu</a>
-        <a href="confession-wall.html" data-i18n="nav_confession">Mural</a>
-        <a href="taxi-group.html" data-i18n="nav_taxi">Taxi</a>
-        <a href="publish.html" data-i18n="nav_publish">Publika</a>
+    <div class="mobile-menu-modern" id="mobile-menu">
+        <a href="index.html"><i class="fas fa-home"></i> Inisio</a>
+        <a href="listings.html"><i class="fas fa-building"></i> Kasa</a>
+        <a href="jobs.html"><i class="fas fa-briefcase"></i> Trabaiu</a>
+        <a href="services.html"><i class="fas fa-tools"></i> Servisu</a>
+        <a href="reviews.html"><i class="fas fa-star"></i> Avaliasaun</a>
+        <a href="confession-wall.html"><i class="fas fa-heart"></i> Mural</a>
+        <a href="complaints.html" class="active"><i class="fas fa-bullhorn"></i> Voz di Povu</a>
+        <a href="taxi-group.html"><i class="fab fa-whatsapp"></i> Taxi</a>
+        <a href="publish.html"><i class="fas fa-plus-circle"></i> Publika</a>
     </div>
 
-    <section class="complaint-hero">
+    <section class="complaint-hero-modern">
         <h1><i class="fas fa-bullhorn"></i> Voz di Povu</h1>
         <p>Fala bu problema, bu voz importa!</p>
     </section>
 
-    <section class="complaint-section">
-        <div class="hot-topics">
+    <section class="complaint-section-modern">
+        <div class="hot-topics-modern">
             <h3><i class="fas fa-fire"></i> Temas Korrenti</h3>
-            <span class="hot-topic-tag">#AguaElectra</span>
-            <span class="hot-topic-tag">#EstradaRuin</span>
-            <span class="hot-topic-tag">#SaudePublica</span>
-            <span class="hot-topic-tag">#PrecuAltu</span>
-            <span class="hot-topic-tag">#Transporte</span>
+            <span class="hot-topic-tag-modern">#AguaElectra</span>
+            <span class="hot-topic-tag-modern">#EstradaRuin</span>
+            <span class="hot-topic-tag-modern">#SaudePublica</span>
+            <span class="hot-topic-tag-modern">#PrecuAltu</span>
+            <span class="hot-topic-tag-modern">#Transporte</span>
         </div>
 
-        <div class="complaint-filters">
-            <button class="complaint-filter active" data-filter="all">Tudu</button>
-            <button class="complaint-filter" data-filter="infrastructure">Infraestrutura</button>
-            <button class="complaint-filter" data-filter="service">Servicos Publicos</button>
-            <button class="complaint-filter" data-filter="safety">Seguranca</button>
-            <button class="complaint-filter" data-filter="resolved">Resolvido</button>
+        <div class="complaint-filters-modern">
+            <button class="complaint-filter-modern active" data-filter="all">Tudu</button>
+            <button class="complaint-filter-modern" data-filter="infrastructure">Infraestrutura</button>
+            <button class="complaint-filter-modern" data-filter="service">Servisu Publiku</button>
+            <button class="complaint-filter-modern" data-filter="safety">Seguransa</button>
+            <button class="complaint-filter-modern" data-filter="resolved">Resolvido</button>
         </div>
 
         <div id="complaintList"></div>
     </section>
 
-    <button class="btn-complaint" onclick="alert('Publika reclamacao: houlei@live.cn')" title="Publika Reclamacao">
+    <button class="btn-complaint-modern" onclick="alert('Publika reklamasaun: houlei@live.cn')" title="Publika Reklamasaun">
         <i class="fas fa-plus"></i>
     </button>
 
-    <footer style="background:#c53030;color:white;padding:30px;text-align:center;">
-        <p>Voz di Povu - Bu voz, bu direitu</p>
-        <p style="margin-top:8px;opacity:0.7;font-size:0.9rem;">Contato: houlei@live.cn</p>
+    <!-- 页脚 -->
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="footer-grid-modern">
+                <div class="footer-brand-modern">
+                    <a href="index.html" class="logo-modern"><i class="fas fa-home"></i><span>CasaCV</span></a>
+                    <p>Plataforma di konfiansa pa aluguel na Kabu Verdi</p>
+                </div>
+                <div class="footer-links-modern">
+                    <h4>Servisu</h4>
+                    <a href="services.html">Servisu</a>
+                    <a href="jobs.html">Empregu</a>
+                    <a href="publish.html">Publika</a>
+                </div>
+                <div class="footer-links-modern">
+                    <h4>Kontaktu</h4>
+                    <p><i class="fas fa-envelope"></i> houlei@live.cn</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Praia, Kabu Verdi</p>
+                </div>
+            </div>
+            <div class="footer-bottom-modern">
+                <p>&copy; 2026 CasaCV. Tudu direitu riservadu.</p>
+            </div>
+        </div>
     </footer>
 
+    <!-- 移动端底部导航 -->
+    <nav class="mobile-bottom-nav-modern" id="mobile-bottom-nav">
+        <a href="index.html" class="nav-item-modern"><i class="fas fa-home"></i><span>Inisio</span></a>
+        <a href="listings.html" class="nav-item-modern"><i class="fas fa-building"></i><span>Kasa</span></a>
+        <a href="publish.html" class="nav-item-modern nav-item-main-modern"><div class="nav-main-btn-modern"><i class="fas fa-plus"></i></div><span>Publika</span></a>
+        <a href="jobs.html" class="nav-item-modern"><i class="fas fa-briefcase"></i><span>Trabaiu</span></a>
+        <a href="#" class="nav-item-modern active" id="more-menu-btn"><i class="fas fa-ellipsis-h"></i><span>Mais</span></a>
+    </nav>
+
+    <!-- 更多菜单弹窗 -->
+    <div class="more-menu-modal" id="more-menu-modal">
+        <div class="more-menu-content">
+            <a href="services.html"><i class="fas fa-tools"></i> Servisu</a>
+            <a href="reviews.html"><i class="fas fa-star"></i> Avaliasaun</a>
+            <a href="confession-wall.html"><i class="fas fa-heart"></i> Mural</a>
+            <a href="complaints.html" class="active"><i class="fas fa-bullhorn"></i> Voz di Povu</a>
+            <a href="taxi-group.html"><i class="fab fa-whatsapp"></i> Taxi</a>
+            <a href="tenders.html"><i class="fas fa-gavel"></i> Licitasaun</a>
+        </div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
     <script>
         const complaints = [
             { id: 1, title: "Sem agua 3 dia na Praia", location: "Praia, Achada Grande", category: "infrastructure", content: "Electra ka ta manda agua faz 3 dia. Nha krianca ta bebe agua botija, ki ta kustadu karu. Alguem sabe kel ki ta pasau?", author: "Maria S.", time: "2 oras atras", likes: 156, comments: 42, status: "pending" },
@@ -137,10 +157,10 @@
             { id: 4, title: "Precu pexe ta altu dimais", location: "Praia, Mercado", category: "service", content: "Antes pexe ta kustadu 200 CVE, agora 500 CVE! Povu ki ta puxa vida kon ki? Pescador fala ki intermediario ki ta subi precu.", author: "Carlos M.", time: "1 dia atras", likes: 189, comments: 56, status: "pending" },
             { id: 5, title: "Ladron na bairro Palmarejo", location: "Praia, Palmarejo", category: "safety", content: "Semana pasada 3 kaza fura. Policia bai, fala ki ten ki faze denuncia, ma nada acontece. Nos ta vive ku medu.", author: "Familia G.", time: "2 dia atras", likes: 298, comments: 78, status: "pending" },
             { id: 6, title: "Onibus tarde sempri", location: "Praia, Achada Santo Antonio", category: "service", content: "Transporte publico ta um desastri. Onibus ta txiga tarde, as vezes ka ta txiga. Povu ta perde trabaiu ku es atrasu.", author: "Pedro L.", time: "3 dia atras", likes: 167, comments: 45, status: "pending" },
-            { id: 7, title: "Lixo na praia da Gamboa", location: "Praia, Gamboa", category: "infrastructure", content: "Praia bonitu, ma ta cheiu di lixo. Turista ta tira foto, ma ta vomi ku odjor. Câmara Municipal ten ki atua.", author: "Turista2026", time: "3 dia atras", likes: 445, comments: 123, status: "resolved", resolution: "Câmara limpa praia ontem. Obrigadu pa bu voz!" },
+            { id: 7, title: "Lixo na praia da Gamboa", location: "Praia, Gamboa", category: "infrastructure", content: "Praia bonitu, ma ta cheiu di lixo. Turista ta tira foto, ma ta vomi ku odjor. Camara Municipal ten ki atua.", author: "Turista2026", time: "3 dia atras", likes: 445, comments: 123, status: "resolved", resolution: "Camara limpa praia ontem. Obrigadu pa bu voz!" },
             { id: 8, title: "Internet ta lentu na Sal", location: "Santa Maria, Sal", category: "infrastructure", content: "Pagu 5000 CVE pa internet, ma ta funsiona 50% di tempu. Trabaiu online ta fika difisil. CV Telecom ten ki mija servisu.", author: "Empresario J.", time: "4 dia atras", likes: 312, comments: 98, status: "pending" },
-            { id: 9, title: "Escola sem professor", location: "Tarrafal, Santiago", category: "service", content: "Nha fidju ta bai escola, ma ka ten professor di matematica faz 2 mes. Krianca ta perde anu letivu. Ministério ka ta responde.", author: "Pai Preocupadu", time: "5 dia atras", likes: 523, comments: 156, status: "pending" },
-            { id: 10, title: "Barulhu discoteca na noite", location: "Mindelo, Centro", category: "safety", content: "Discoteca pertu di kaza, ta toca musica te 5 da madrugada. Ka pode durmi. Policia bai, ma donu di bar fala ki paga 'direitu'.", author: "Vizinho Cansadu", time: "6 dia atras", likes: 278, comments: 89, status: "pending" }
+            { id: 9, title: "Escola sem professor", location: "Tarrafal, Santiago", category: "service", content: "Nha fidju ta bai escola, ma ka ten professor di matematica faz 2 mes. Krianca ta perde anu letivu. Ministerio ka ta responde.", author: "Pai Preocupadu", time: "5 dia atras", likes: 523, comments: 156, status: "pending" },
+            { id: 10, title: "Barulhu discoteca na noite", location: "Mindelo, Centro", category: "safety", content: "Discoteca pertu di kaza, ta toca muzika te 5 da madrugada. Ka pode durmi. Policia bai, ma donu di bar fala ki paga 'direitu'.", author: "Vizinho Cansadu", time: "6 dia atras", likes: 278, comments: 89, status: "pending" }
         ];
 
         function renderComplaints(filter = 'all') {
@@ -156,17 +176,17 @@
             }
 
             container.innerHTML = filtered.map(c => `
-                <div class="complaint-item ${c.status}">
-                    <div class="complaint-header">
-                        <div class="complaint-title">${c.title}</div>
-                        <span class="complaint-badge ${c.status}">${c.status === 'pending' ? 'Pendente' : 'Resolvido'}</span>
+                <div class="complaint-item-modern ${c.status}">
+                    <div class="complaint-header-modern">
+                        <div class="complaint-title-modern">${c.title}</div>
+                        <span class="complaint-badge-modern ${c.status}">${c.status === 'pending' ? 'Pendente' : 'Resolvido'}</span>
                     </div>
-                    <div class="complaint-location"><i class="fas fa-map-marker-alt"></i> ${c.location}</div>
-                    <div class="complaint-content">${c.content}</div>
-                    ${c.resolution ? `<div style="background:#f0fff4;padding:10px;border-radius:6px;margin:10px 0;color:#22543d;"><i class="fas fa-check-circle"></i> ${c.resolution}</div>` : ''}
-                    <div class="complaint-footer">
+                    <div class="complaint-location-modern"><i class="fas fa-map-marker-alt"></i> ${c.location}</div>
+                    <div class="complaint-content-modern">${c.content}</div>
+                    ${c.resolution ? `<div style="background:#f0fff4;padding:10px;border-radius:6px;margin:10px 0;color:#5b7b5b;"><i class="fas fa-check-circle"></i> ${c.resolution}</div>` : ''}
+                    <div class="complaint-footer-modern">
                         <span><i class="fas fa-user"></i> ${c.author} · ${c.time}</span>
-                        <div class="complaint-actions">
+                        <div class="complaint-actions-modern">
                             <span onclick="alert('Bu gosta: ${c.likes + 1}')"><i class="fas fa-thumbs-up"></i> ${c.likes}</span>
                             <span><i class="fas fa-comment"></i> ${c.comments}</span>
                             <span onclick="alert('Partilha: houlei@live.cn')"><i class="fas fa-share"></i></span>
@@ -176,9 +196,9 @@
             `).join('');
         }
 
-        document.querySelectorAll('.complaint-filter').forEach(btn => {
+        document.querySelectorAll('.complaint-filter-modern').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.complaint-filter').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.complaint-filter-modern').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 renderComplaints(btn.dataset.filter);
             });

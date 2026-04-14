@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="ke">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avaliacoes - CasaCV</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Avaliasaun - CasaCV</title>
+    <meta name="description" content="Avalia lokais na Kabu Verdi. Restaurante, praia, hotel.">
+    <link rel="stylesheet" href="css/modern-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N52TE42NYM"></script>
     <script>
@@ -14,169 +16,188 @@
         gtag('config', 'G-N52TE42NYM');
     </script>
     <style>
-        .review-hero { background: linear-gradient(135deg, #d69e2e, #ecc94b); color: white; padding: 50px 20px; text-align: center; }
-        .review-hero h1 { font-size: 2rem; margin-bottom: 10px; }
-        .review-section { padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
-        .category-tabs { display: flex; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; justify-content: center; }
-        .category-tab { padding: 10px 20px; border: 2px solid #e2e8f0; border-radius: 25px; background: white; cursor: pointer; font-weight: 500; }
-        .category-tab.active { background: #d69e2e; color: white; border-color: #d69e2e; }
-        .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .review-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
-        .review-image { height: 180px; background: linear-gradient(135deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; }
-        .review-content { padding: 20px; }
-        .review-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
-        .review-name { font-size: 1.1rem; font-weight: 600; color: #2d3748; }
-        .review-rating { color: #ecc94b; }
-        .review-category { font-size: 0.8rem; color: #718096; margin-bottom: 8px; }
-        .review-text { color: #4a5568; font-size: 0.9rem; line-height: 1.5; margin-bottom: 12px; }
-        .review-footer { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #718096; border-top: 1px solid #e2e8f0; padding-top: 12px; }
-        .review-actions { display: flex; gap: 15px; }
-        .review-actions span { cursor: pointer; }
-        .review-actions span:hover { color: #d69e2e; }
-        .top-rated { background: #fffaf0; border-radius: 10px; padding: 20px; margin-bottom: 25px; }
-        .top-rated h3 { color: #d69e2e; margin-bottom: 15px; }
-        .top-item { display: flex; align-items: center; padding: 10px 0; border-bottom: 1px solid #fed7d7; }
-        .top-item:last-child { border-bottom: none; }
-        .top-rank { width: 30px; height: 30px; background: #d69e2e; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; margin-right: 15px; }
-        .top-info { flex: 1; }
-        .top-name { font-weight: 500; color: #2d3748; }
-        .top-category { font-size: 0.8rem; color: #718096; }
-        .top-score { color: #d69e2e; font-weight: 600; }
+        .review-hero-modern { background: linear-gradient(135deg, #c4a77d, #d4b78d); color: white; padding: 60px 20px; text-align: center; }
+        .review-hero-modern h1 { font-size: 2rem; margin-bottom: 10px; }
+        .review-section-modern { padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
+        .category-tabs-modern { display: flex; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; justify-content: center; }
+        .category-tab-modern { padding: 10px 20px; border: 2px solid #e8e4df; border-radius: 25px; background: white; cursor: pointer; font-weight: 500; }
+        .category-tab-modern.active { background: #c4a77d; color: white; border-color: #c4a77d; }
+        .review-grid-modern { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .review-card-modern { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+        .review-image-modern { height: 180px; background: linear-gradient(135deg, #5a6b7c, #7a9e7e); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; }
+        .review-content-modern { padding: 20px; }
+        .review-header-modern { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+        .review-name-modern { font-size: 1.1rem; font-weight: 600; color: #2c3e50; }
+        .review-rating-modern { color: #c4a77d; }
+        .review-category-modern { font-size: 0.8rem; color: #5a6b7c; margin-bottom: 8px; }
+        .review-text-modern { color: #2c3e50; font-size: 0.9rem; line-height: 1.5; margin-bottom: 12px; }
+        .review-footer-modern { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #5a6b7c; border-top: 1px solid #e8e4df; padding-top: 12px; }
+        .review-actions-modern { display: flex; gap: 15px; }
+        .review-actions-modern span { cursor: pointer; }
+        .review-actions-modern span:hover { color: #c4a77d; }
+        .top-rated-modern { background: #faf9f7; border-radius: 10px; padding: 20px; margin-bottom: 25px; }
+        .top-rated-modern h3 { color: #c4a77d; margin-bottom: 15px; }
+        .top-item-modern { display: flex; align-items: center; padding: 10px 0; border-bottom: 1px solid #e8e4df; }
+        .top-item-modern:last-child { border-bottom: none; }
+        .top-rank-modern { width: 30px; height: 30px; background: #c4a77d; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; margin-right: 15px; }
+        .top-info-modern { flex: 1; }
+        .top-name-modern { font-weight: 500; color: #2c3e50; }
+        .top-category-modern { font-size: 0.8rem; color: #5a6b7c; }
+        .top-score-modern { color: #c4a77d; font-weight: 600; }
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-home"></i>
-                <span>CasaCV</span>
-            </a>
-            <div class="nav-links" id="navLinks">
-                <a href="index.html" data-i18n="nav_home">Início</a>
-                <a href="listings.html" data-i18n="nav_listings">Kasa</a>
-                <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
-                <a href="china-trade.html" data-i18n="nav_china">China</a>
-                <a href="tenders.html" data-i18n="nav_tenders">Licitacoes</a>
-                <a href="services.html" data-i18n="nav_services">Servicos</a>
-                <a href="reviews.html" class="active" data-i18n="nav_reviews">Avaliacoes</a>
-                <a href="complaints.html" data-i18n="nav_complaints">Voz di Povu</a>
-                <a href="confession-wall.html" data-i18n="nav_confession">Mural</a>
-                <a href="taxi-group.html" data-i18n="nav_taxi" style="color:#25d366;"><i class="fab fa-whatsapp"></i> Taxi</a>
-                <a href="publish.html" class="btn-primary" data-i18n="nav_publish">Publika</a>
+    <!-- 顶部导航 -->
+    <nav class="navbar-modern">
+        <div class="nav-container-modern">
+            <a href="index.html" class="logo-modern"><i class="fas fa-home"></i><span>CasaCV</span></a>
+            <div class="search-bar-modern">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buska avaliasaun..." id="search-input">
             </div>
-            <div class="nav-actions">
-                <div class="language-switcher">
-                    <button class="lang-btn" onclick="toggleLang()">
-                        <i class="fas fa-globe"></i>
-                        <span id="current-lang">Kriolu</span>
-                    </button>
-                    <div class="lang-dropdown" id="lang-dropdown">
-                        <a href="#" onclick="setLanguage('ke')">Kriolu</a>
-                        <a href="#" onclick="setLanguage('zh')">中文</a>
-                    </div>
-                </div>
+            <div class="nav-actions-modern">
+                <a href="publish.html" class="btn-publish-nav"><i class="fas fa-plus"></i><span>Publika</span></a>
             </div>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
+            <button class="mobile-menu-btn-modern" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
         </div>
     </nav>
 
     <!-- 移动端菜单 -->
-    <div class="mobile-menu" id="mobile-menu">
-        <a href="index.html" data-i18n="nav_home">Início</a>
-        <a href="listings.html" data-i18n="nav_listings">Kasa</a>
-        <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
-        <a href="china-trade.html" data-i18n="nav_china">China</a>
-        <a href="tenders.html" data-i18n="nav_tenders">Licitacoes</a>
-        <a href="services.html" data-i18n="nav_services">Servicos</a>
-        <a href="reviews.html" class="active" data-i18n="nav_reviews">Avaliacoes</a>
-        <a href="complaints.html" data-i18n="nav_complaints">Voz di Povu</a>
-        <a href="confession-wall.html" data-i18n="nav_confession">Mural</a>
-        <a href="taxi-group.html" data-i18n="nav_taxi">Taxi</a>
-        <a href="publish.html" data-i18n="nav_publish">Publika</a>
+    <div class="mobile-menu-modern" id="mobile-menu">
+        <a href="index.html"><i class="fas fa-home"></i> Inisio</a>
+        <a href="listings.html"><i class="fas fa-building"></i> Kasa</a>
+        <a href="jobs.html"><i class="fas fa-briefcase"></i> Trabaiu</a>
+        <a href="services.html"><i class="fas fa-tools"></i> Servisu</a>
+        <a href="reviews.html" class="active"><i class="fas fa-star"></i> Avaliasaun</a>
+        <a href="confession-wall.html"><i class="fas fa-heart"></i> Mural</a>
+        <a href="complaints.html"><i class="fas fa-bullhorn"></i> Voz di Povu</a>
+        <a href="taxi-group.html"><i class="fab fa-whatsapp"></i> Taxi</a>
+        <a href="publish.html"><i class="fas fa-plus-circle"></i> Publika</a>
     </div>
 
-    <section class="review-hero">
-        <h1><i class="fas fa-star"></i> Avaliacoes</h1>
-        <p>Descubri melhor lugar na Kabu Verdi</p>
+    <section class="review-hero-modern">
+        <h1><i class="fas fa-star"></i> Avaliasaun</h1>
+        <p>Diskubri melhor lokais na Kabu Verdi</p>
     </section>
 
-    <section class="review-section">
-        <div class="top-rated">
+    <section class="review-section-modern">
+        <div class="top-rated-modern">
             <h3><i class="fas fa-trophy"></i> Top 5 Es Semana</h3>
-            <div class="top-item">
-                <div class="top-rank">1</div>
-                <div class="top-info">
-                    <div class="top-name">Cafe Del Mar</div>
-                    <div class="top-category">Restaurante · Santa Maria</div>
+            <div class="top-item-modern">
+                <div class="top-rank-modern">1</div>
+                <div class="top-info-modern">
+                    <div class="top-name-modern">Cafe Del Mar</div>
+                    <div class="top-category-modern">Restaurante · Santa Maria</div>
                 </div>
-                <div class="top-score">4.9</div>
+                <div class="top-score-modern">4.9</div>
             </div>
-            <div class="top-item">
-                <div class="top-rank">2</div>
-                <div class="top-info">
-                    <div class="top-name">Praia da Chave</div>
-                    <div class="top-category">Praia · Boa Vista</div>
+            <div class="top-item-modern">
+                <div class="top-rank-modern">2</div>
+                <div class="top-info-modern">
+                    <div class="top-name-modern">Praia da Chave</div>
+                    <div class="top-category-modern">Praia · Boa Vista</div>
                 </div>
-                <div class="top-score">4.8</div>
+                <div class="top-score-modern">4.8</div>
             </div>
-            <div class="top-item">
-                <div class="top-rank">3</div>
-                <div class="top-info">
-                    <div class="top-name">Restaurante Ferroviario</div>
-                    <div class="top-category">Restaurante · Mindelo</div>
+            <div class="top-item-modern">
+                <div class="top-rank-modern">3</div>
+                <div class="top-info-modern">
+                    <div class="top-name-modern">Restaurante Ferroviario</div>
+                    <div class="top-category-modern">Restaurante · Mindelo</div>
                 </div>
-                <div class="top-score">4.7</div>
+                <div class="top-score-modern">4.7</div>
             </div>
-            <div class="top-item">
-                <div class="top-rank">4</div>
-                <div class="top-info">
-                    <div class="top-name">Cidade Velha</div>
-                    <div class="top-category">Turismo · Santiago</div>
+            <div class="top-item-modern">
+                <div class="top-rank-modern">4</div>
+                <div class="top-info-modern">
+                    <div class="top-name-modern">Cidade Velha</div>
+                    <div class="top-category-modern">Turizmu · Santiago</div>
                 </div>
-                <div class="top-score">4.7</div>
+                <div class="top-score-modern">4.7</div>
             </div>
-            <div class="top-item">
-                <div class="top-rank">5</div>
-                <div class="top-info">
-                    <div class="top-name">Mercado de Sucupira</div>
-                    <div class="top-category">Compras · Praia</div>
+            <div class="top-item-modern">
+                <div class="top-rank-modern">5</div>
+                <div class="top-info-modern">
+                    <div class="top-name-modern">Mercado Sucupira</div>
+                    <div class="top-category-modern">Kompra · Praia</div>
                 </div>
-                <div class="top-score">4.6</div>
+                <div class="top-score-modern">4.6</div>
             </div>
         </div>
 
-        <div class="category-tabs">
-            <button class="category-tab active" data-cat="all">Tudu</button>
-            <button class="category-tab" data-cat="restaurant">Restaurante</button>
-            <button class="category-tab" data-cat="beach">Praia</button>
-            <button class="category-tab" data-cat="hotel">Hotel</button>
-            <button class="category-tab" data-cat="shop">Loja</button>
-            <button class="category-tab" data-cat="service">Servico</button>
+        <div class="category-tabs-modern">
+            <button class="category-tab-modern active" data-cat="all">Tudu</button>
+            <button class="category-tab-modern" data-cat="restaurant">Restaurante</button>
+            <button class="category-tab-modern" data-cat="beach">Praia</button>
+            <button class="category-tab-modern" data-cat="hotel">Hotel</button>
+            <button class="category-tab-modern" data-cat="shop">Loja</button>
+            <button class="category-tab-modern" data-cat="service">Servisu</button>
         </div>
 
-        <div class="review-grid" id="reviewGrid"></div>
+        <div class="review-grid-modern" id="reviewGrid"></div>
     </section>
 
-    <footer style="background:#d69e2e;color:white;padding:30px;text-align:center;">
-        <p>Avaliacoes - Bu opiniao importa</p>
-        <p style="margin-top:8px;opacity:0.7;">Contato: houlei@live.cn</p>
+    <!-- 页脚 -->
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="footer-grid-modern">
+                <div class="footer-brand-modern">
+                    <a href="index.html" class="logo-modern"><i class="fas fa-home"></i><span>CasaCV</span></a>
+                    <p>Plataforma di konfiansa pa aluguel na Kabu Verdi</p>
+                </div>
+                <div class="footer-links-modern">
+                    <h4>Servisu</h4>
+                    <a href="services.html">Servisu</a>
+                    <a href="jobs.html">Empregu</a>
+                    <a href="publish.html">Publika</a>
+                </div>
+                <div class="footer-links-modern">
+                    <h4>Kontaktu</h4>
+                    <p><i class="fas fa-envelope"></i> houlei@live.cn</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Praia, Kabu Verdi</p>
+                </div>
+            </div>
+            <div class="footer-bottom-modern">
+                <p>&copy; 2026 CasaCV. Tudu direitu riservadu.</p>
+            </div>
+        </div>
     </footer>
 
+    <!-- 移动端底部导航 -->
+    <nav class="mobile-bottom-nav-modern" id="mobile-bottom-nav">
+        <a href="index.html" class="nav-item-modern"><i class="fas fa-home"></i><span>Inisio</span></a>
+        <a href="listings.html" class="nav-item-modern"><i class="fas fa-building"></i><span>Kasa</span></a>
+        <a href="publish.html" class="nav-item-modern nav-item-main-modern"><div class="nav-main-btn-modern"><i class="fas fa-plus"></i></div><span>Publika</span></a>
+        <a href="jobs.html" class="nav-item-modern"><i class="fas fa-briefcase"></i><span>Trabaiu</span></a>
+        <a href="#" class="nav-item-modern active" id="more-menu-btn"><i class="fas fa-ellipsis-h"></i><span>Mais</span></a>
+    </nav>
+
+    <!-- 更多菜单弹窗 -->
+    <div class="more-menu-modal" id="more-menu-modal">
+        <div class="more-menu-content">
+            <a href="services.html"><i class="fas fa-tools"></i> Servisu</a>
+            <a href="reviews.html" class="active"><i class="fas fa-star"></i> Avaliasaun</a>
+            <a href="confession-wall.html"><i class="fas fa-heart"></i> Mural</a>
+            <a href="complaints.html"><i class="fas fa-bullhorn"></i> Voz di Povu</a>
+            <a href="taxi-group.html"><i class="fab fa-whatsapp"></i> Taxi</a>
+            <a href="tenders.html"><i class="fas fa-gavel"></i> Licitasaun</a>
+        </div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
     <script>
         const reviews = [
-            { id: 1, name: "Cafe Del Mar", category: "restaurant", location: "Santa Maria, Sal", rating: 5, text: "Comida maravilhosa! Peixe grelhado ta fresco, atendimento top. Precu justu pa qualidade. Recomendu!", author: "Ana S.", time: "2 dia atras", likes: 312 },
-            { id: 2, name: "Praia da Chave", category: "beach", location: "Boa Vista", rating: 5, text: "Praia mais bonitu di Kabu Verdi! Agua cristalina, areia branca. Ta vale pena visita.", author: "Turista2026", time: "3 dia atras", likes: 289 },
-            { id: 3, name: "Restaurante Ferroviario", category: "restaurant", location: "Mindelo", rating: 4, text: "Ambiente bonitu, musica bo. Cachupa ta bom ma podia ten mais carne. Precu mediu.", author: "Joao M.", time: "1 semana atras", likes: 156 },
-            { id: 4, name: "Hotel Oasis", category: "hotel", location: "Praia", rating: 4, text: "Quartu limpu, cafe da manha variadu. Sempri ten agua korrenti. Recomendu pa viajanti.", author: "Maria L.", time: "5 dia atras", likes: 234 },
-            { id: 5, name: "Loja Chinense Central", category: "shop", location: "Praia, Sucupira", rating: 3, text: "Precu baratu ma qualidade variavel. Ten ki odja ben ki ta compra. Atendimento rapidu.", author: "Carlos P.", time: "1 semana atras", likes: 89 },
-            { id: 6, name: "Oficina Auto Silva", category: "service", location: "Mindelo", rating: 5, text: "Mecaniku honestu, ka ta cobra demais. Arranja nha carru rapidu. Confia dretu!", author: "Pedro A.", time: "4 dia atras", likes: 178 },
-            { id: 7, name: "Cidade Velha", category: "beach", location: "Santiago", rating: 5, text: "Patrimoniu di umanidade! Historia riku, vista lindu. Guia turisticu ta esplica ben.", author: "Historiador", time: "2 semana atras", likes: 445 },
-            { id: 8, name: "Padaria Pao Quent", category: "restaurant", location: "Praia, Achada", rating: 4, text: "Pao fresku tudu manha, croissant delicioso. Cafe forte ki ta dexa bu acorda!", author: "CafeLover", time: "6 dia atras", likes: 267 },
-            { id: 9, name: "Farmacia Popular", category: "service", location: "Praia, Plateau", rating: 3, text: "Ten remedi basiku, ma as vezes ka ten stock. Atendimento bom, farmaceutica ta ajuda.", author: "SaudePrimeiro", time: "1 semana atras", likes: 123 },
-            { id: 10, name: "Mercado de Sucupira", category: "shop", location: "Praia", rating: 4, text: "Lugar animadu! Pode acha tudu, di roupa pa comida. Pode regatea precu.", author: "CompradoraX", time: "3 dia atras", likes: 356 }
+            { id: 1, name: "Cafe Del Mar", category: "restaurant", location: "Santa Maria, Sal", rating: 5, text: "Komida maravilhosa! Pexe grelhadu ta fresku, atendimentu top. Preçu justu.", author: "Ana S.", time: "2 dia atras", likes: 312 },
+            { id: 2, name: "Praia da Chave", category: "beach", location: "Boa Vista", rating: 5, text: "Praia mais bonitu di Kabu Verdi! Agua kristalina, areia branku.", author: "Turista2026", time: "3 dia atras", likes: 289 },
+            { id: 3, name: "Restaurante Ferroviario", category: "restaurant", location: "Mindelo", rating: 4, text: "Ambiente bonitu, muzika bo. Katchupa ta bom ma podia ten mais karni.", author: "Joao M.", time: "1 semana atras", likes: 156 },
+            { id: 4, name: "Hotel Oasis", category: "hotel", location: "Praia", rating: 4, text: "Kuartu limpu, kafe da manha variadu. Sempri ten agua korrenti.", author: "Maria L.", time: "5 dia atras", likes: 234 },
+            { id: 5, name: "Loja Chinense", category: "shop", location: "Praia, Sucupira", rating: 3, text: "Preçu baratu ma kalidadi variavel. Ten ki odja ben ki ta kompra.", author: "Carlos P.", time: "1 semana atras", likes: 89 },
+            { id: 6, name: "Oficina Auto Silva", category: "service", location: "Mindelo", rating: 5, text: "Mekaniku onestu, ka ta kobra dimais. Arranja nha karu rapidu.", author: "Pedro A.", time: "4 dia atras", likes: 178 },
+            { id: 7, name: "Cidade Velha", category: "beach", location: "Santiago", rating: 5, text: "Patrimoniu di umanidadi! Istoria riku, vista lindu.", author: "Historiador", time: "2 semana atras", likes: 445 },
+            { id: 8, name: "Padaria Pao Quent", category: "restaurant", location: "Praia, Achada", rating: 4, text: "Pao fresku tudu manha, croissant delicioso. Kafe forti ki ta dexa bu akorda!", author: "CafeLover", time: "6 dia atras", likes: 267 },
+            { id: 9, name: "Farmasia Popular", category: "service", location: "Praia, Plateau", rating: 3, text: "Ten remedi basiku, ma as vezes ka ten stock. Atendimentu bom.", author: "SaudePrimeiro", time: "1 semana atras", likes: 123 },
+            { id: 10, name: "Mercado Sucupira", category: "shop", location: "Praia", rating: 4, text: "Lugar animadu! Pode atxa tudu, di ropa pa komida.", author: "KompradoraX", time: "3 dia atras", likes: 356 }
         ];
 
         function renderReviews(filter = 'all') {
@@ -185,18 +206,18 @@
             if (filter !== 'all') filtered = reviews.filter(r => r.category === filter);
 
             container.innerHTML = filtered.map(r => `
-                <div class="review-card" data-category="${r.category}">
-                    <div class="review-image"><i class="fas fa-${getIcon(r.category)}"></i></div>
-                    <div class="review-content">
-                        <div class="review-header">
-                            <div class="review-name">${r.name}</div>
-                            <div class="review-rating">${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</div>
+                <div class="review-card-modern" data-category="${r.category}">
+                    <div class="review-image-modern"><i class="fas fa-${getIcon(r.category)}"></i></div>
+                    <div class="review-content-modern">
+                        <div class="review-header-modern">
+                            <div class="review-name-modern">${r.name}</div>
+                            <div class="review-rating-modern">${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</div>
                         </div>
-                        <div class="review-category"><i class="fas fa-map-marker-alt"></i> ${r.location}</div>
-                        <div class="review-text">${r.text}</div>
-                        <div class="review-footer">
+                        <div class="review-category-modern"><i class="fas fa-map-marker-alt"></i> ${r.location}</div>
+                        <div class="review-text-modern">${r.text}</div>
+                        <div class="review-footer-modern">
                             <span>${r.author} · ${r.time}</span>
-                            <div class="review-actions">
+                            <div class="review-actions-modern">
                                 <span onclick="alert('Bu gosta: ${r.likes + 1}')"><i class="fas fa-thumbs-up"></i> ${r.likes}</span>
                                 <span><i class="fas fa-comment"></i> ${Math.floor(Math.random() * 50 + 10)}</span>
                             </div>
@@ -211,9 +232,9 @@
             return icons[cat] || 'star';
         }
 
-        document.querySelectorAll('.category-tab').forEach(btn => {
+        document.querySelectorAll('.category-tab-modern').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.category-tab').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.category-tab-modern').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 renderReviews(btn.dataset.cat);
             });

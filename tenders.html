@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="ke">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Licitacoes - CasaCV</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Licitasaun - CasaCV</title>
+    <meta name="description" content="Oportunidadi di negosiu di governo i empresas na Kabu Verdi.">
+    <link rel="stylesheet" href="css/modern-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N52TE42NYM"></script>
     <script>
@@ -14,135 +16,155 @@
         gtag('config', 'G-N52TE42NYM');
     </script>
     <style>
-        .tender-hero { background: linear-gradient(135deg, #2d3748, #4a5568); color: white; padding: 50px 20px; text-align: center; }
-        .tender-hero h1 { font-size: 2rem; margin-bottom: 10px; }
-        .tender-stats { display: flex; justify-content: center; gap: 40px; margin-top: 25px; flex-wrap: wrap; }
-        .tender-stat { text-align: center; }
-        .tender-stat-number { font-size: 2rem; font-weight: 700; color: #48bb78; }
-        .tender-section { padding: 40px 20px; max-width: 1100px; margin: 0 auto; }
-        .tender-filters { display: flex; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; }
-        .tender-filter { padding: 8px 16px; border: 1px solid #e2e8f0; border-radius: 20px; background: white; cursor: pointer; font-size: 0.9rem; }
-        .tender-filter.active { background: #2d3748; color: white; }
-        .tender-item { background: white; border-radius: 10px; padding: 20px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #48bb78; }
-        .tender-item.urgent { border-left-color: #e53e3e; }
-        .tender-item.closed { border-left-color: #a0aec0; opacity: 0.7; }
-        .tender-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
-        .tender-title { font-size: 1.1rem; color: #2d3748; font-weight: 600; }
-        .tender-badge { padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; }
-        .tender-badge.open { background: #c6f6d5; color: #22543d; }
-        .tender-badge.urgent { background: #fed7d7; color: #742a2a; }
-        .tender-badge.closed { background: #e2e8f0; color: #4a5568; }
-        .tender-org { color: #4a5568; font-size: 0.9rem; margin-bottom: 8px; }
-        .tender-meta { display: flex; gap: 20px; font-size: 0.85rem; color: #718096; flex-wrap: wrap; }
-        .tender-meta span { display: flex; align-items: center; gap: 5px; }
-        .tender-value { color: #2d3748; font-weight: 600; }
-        .btn-view { padding: 8px 16px; background: #2d3748; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85rem; margin-top: 12px; }
-        .alert-box { background: #fffaf0; border: 1px solid #fbd38d; border-radius: 8px; padding: 15px; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; }
-        .alert-box i { color: #dd6b20; }
+        .tender-hero-modern { background: linear-gradient(135deg, #5a6b7c, #4a5568); color: white; padding: 60px 20px; text-align: center; }
+        .tender-hero-modern h1 { font-size: 2rem; margin-bottom: 10px; }
+        .tender-stats-modern { display: flex; justify-content: center; gap: 40px; margin-top: 25px; flex-wrap: wrap; }
+        .tender-stat-modern { text-align: center; }
+        .tender-stat-number-modern { font-size: 2rem; font-weight: 700; color: #7a9e7e; }
+        .tender-section-modern { padding: 40px 20px; max-width: 1100px; margin: 0 auto; }
+        .tender-filters-modern { display: flex; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; }
+        .tender-filter-modern { padding: 8px 16px; border: 1px solid #e8e4df; border-radius: 20px; background: white; cursor: pointer; font-size: 0.9rem; }
+        .tender-filter-modern.active { background: #5a6b7c; color: white; }
+        .tender-item-modern { background: white; border-radius: 10px; padding: 20px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #7a9e7e; }
+        .tender-item-modern.urgent { border-left-color: #b87b7b; }
+        .tender-item-modern.closed { border-left-color: #a0aec0; opacity: 0.7; }
+        .tender-header-modern { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+        .tender-title-modern { font-size: 1.1rem; color: #2c3e50; font-weight: 600; }
+        .tender-badge-modern { padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; }
+        .tender-badge-modern.open { background: #e5f0e5; color: #5b7b5b; }
+        .tender-badge-modern.urgent { background: #f5e5e5; color: #8b5b5b; }
+        .tender-badge-modern.closed { background: #e2e8f0; color: #4a5568; }
+        .tender-org-modern { color: #5a6b7c; font-size: 0.9rem; margin-bottom: 8px; }
+        .tender-meta-modern { display: flex; gap: 20px; font-size: 0.85rem; color: #5a6b7c; flex-wrap: wrap; }
+        .tender-meta-modern span { display: flex; align-items: center; gap: 5px; }
+        .tender-value-modern { color: #2c3e50; font-weight: 600; }
+        .btn-view-modern { padding: 8px 16px; background: #5a6b7c; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85rem; margin-top: 12px; }
+        .alert-box-modern { background: #faf9f7; border: 1px solid #e8e4df; border-radius: 8px; padding: 15px; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; }
+        .alert-box-modern i { color: #c4a77d; }
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-home"></i>
-                <span>CasaCV</span>
-            </a>
-            <div class="nav-links" id="navLinks">
-                <a href="index.html" data-i18n="nav_home">Início</a>
-                <a href="listings.html" data-i18n="nav_listings">Kasa</a>
-                <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
-                <a href="china-trade.html" data-i18n="nav_china">China</a>
-                <a href="tenders.html" class="active" data-i18n="nav_tenders">Licitacoes</a>
-                <a href="services.html" data-i18n="nav_services">Servicos</a>
-                <a href="reviews.html" data-i18n="nav_reviews">Avaliacoes</a>
-                <a href="complaints.html" data-i18n="nav_complaints">Voz di Povu</a>
-                <a href="confession-wall.html" data-i18n="nav_confession">Mural</a>
-                <a href="taxi-group.html" data-i18n="nav_taxi" style="color:#25d366;"><i class="fab fa-whatsapp"></i> Taxi</a>
-                <a href="publish.html" class="btn-primary" data-i18n="nav_publish">Publika</a>
+    <!-- 顶部导航 -->
+    <nav class="navbar-modern">
+        <div class="nav-container-modern">
+            <a href="index.html" class="logo-modern"><i class="fas fa-home"></i><span>CasaCV</span></a>
+            <div class="search-bar-modern">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buska..." id="search-input">
             </div>
-            <div class="nav-actions">
-                <div class="language-switcher">
-                    <button class="lang-btn" onclick="toggleLang()">
-                        <i class="fas fa-globe"></i>
-                        <span id="current-lang">Kriolu</span>
-                    </button>
-                    <div class="lang-dropdown" id="lang-dropdown">
-                        <a href="#" onclick="setLanguage('ke')">Kriolu</a>
-                        <a href="#" onclick="setLanguage('zh')">中文</a>
-                    </div>
-                </div>
+            <div class="nav-actions-modern">
+                <a href="publish.html" class="btn-publish-nav"><i class="fas fa-plus"></i><span>Publika</span></a>
             </div>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
+            <button class="mobile-menu-btn-modern" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
         </div>
     </nav>
 
     <!-- 移动端菜单 -->
-    <div class="mobile-menu" id="mobile-menu">
-        <a href="index.html" data-i18n="nav_home">Início</a>
-        <a href="listings.html" data-i18n="nav_listings">Kasa</a>
-        <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
-        <a href="china-trade.html" data-i18n="nav_china">China</a>
-        <a href="tenders.html" class="active" data-i18n="nav_tenders">Licitacoes</a>
-        <a href="services.html" data-i18n="nav_services">Servicos</a>
-        <a href="reviews.html" data-i18n="nav_reviews">Avaliacoes</a>
-        <a href="complaints.html" data-i18n="nav_complaints">Voz di Povu</a>
-        <a href="confession-wall.html" data-i18n="nav_confession">Mural</a>
-        <a href="taxi-group.html" data-i18n="nav_taxi">Taxi</a>
-        <a href="publish.html" data-i18n="nav_publish">Publika</a>
+    <div class="mobile-menu-modern" id="mobile-menu">
+        <a href="index.html"><i class="fas fa-home"></i> Inisio</a>
+        <a href="listings.html"><i class="fas fa-building"></i> Kasa</a>
+        <a href="jobs.html"><i class="fas fa-briefcase"></i> Trabaiu</a>
+        <a href="services.html"><i class="fas fa-tools"></i> Servisu</a>
+        <a href="reviews.html"><i class="fas fa-star"></i> Avaliasaun</a>
+        <a href="confession-wall.html"><i class="fas fa-heart"></i> Mural</a>
+        <a href="complaints.html"><i class="fas fa-bullhorn"></i> Voz di Povu</a>
+        <a href="taxi-group.html"><i class="fab fa-whatsapp"></i> Taxi</a>
+        <a href="tenders.html" class="active"><i class="fas fa-gavel"></i> Licitasaun</a>
+        <a href="publish.html"><i class="fas fa-plus-circle"></i> Publika</a>
     </div>
 
-    <section class="tender-hero">
-        <h1><i class="fas fa-gavel"></i> Licitacoes & Concursos</h1>
-        <p>Oportunidades de negócio do governo e empresas</p>
-        <div class="tender-stats">
-            <div class="tender-stat">
-                <div class="tender-stat-number" id="openCount">23</div>
-                <div>Abertas</div>
+    <section class="tender-hero-modern">
+        <h1><i class="fas fa-gavel"></i> Licitasaun</h1>
+        <p>Oportunidadi di negosiu di governo i empresas</p>
+        <div class="tender-stats-modern">
+            <div class="tender-stat-modern">
+                <div class="tender-stat-number-modern" id="openCount">23</div>
+                <div>Abertu</div>
             </div>
-            <div class="tender-stat">
-                <div class="tender-stat-number" id="totalValue">$12.5M</div>
+            <div class="tender-stat-modern">
+                <div class="tender-stat-number-modern" id="totalValue">$12.5M</div>
                 <div>Valor Total</div>
             </div>
         </div>
     </section>
 
-    <section class="tender-section">
-        <div class="alert-box">
+    <section class="tender-section-modern">
+        <div class="alert-box-modern">
             <i class="fas fa-info-circle"></i>
-            <span>Receba alertas de novas licitações por email: houlei@live.cn</span>
+            <span>Resebe alerta di novu licitasaun: houlei@live.cn</span>
         </div>
 
-        <div class="tender-filters">
-            <button class="tender-filter active" data-filter="all">Todas</button>
-            <button class="tender-filter" data-filter="open">Abertas</button>
-            <button class="tender-filter" data-filter="urgent">Urgentes</button>
-            <button class="tender-filter" data-filter="construction">Construção</button>
-            <button class="tender-filter" data-filter="services">Serviços</button>
-            <button class="tender-filter" data-filter="goods">Bens</button>
+        <div class="tender-filters-modern">
+            <button class="tender-filter-modern active" data-filter="all">Tudu</button>
+            <button class="tender-filter-modern" data-filter="open">Abertu</button>
+            <button class="tender-filter-modern" data-filter="urgent">Urgente</button>
+            <button class="tender-filter-modern" data-filter="construction">Konstrusaun</button>
+            <button class="tender-filter-modern" data-filter="services">Servisu</button>
+            <button class="tender-filter-modern" data-filter="goods">Bens</button>
         </div>
 
         <div id="tenderList"></div>
     </section>
 
-    <footer style="background:#2d3748;color:white;padding:30px;text-align:center;">
-        <p>CasaCV - Informação de licitações atualizada diariamente</p>
-        <p style="margin-top:8px;opacity:0.7;font-size:0.9rem;">Contato: houlei@live.cn</p>
+    <!-- 页脚 -->
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="footer-grid-modern">
+                <div class="footer-brand-modern">
+                    <a href="index.html" class="logo-modern"><i class="fas fa-home"></i><span>CasaCV</span></a>
+                    <p>Plataforma di konfiansa pa aluguel na Kabu Verdi</p>
+                </div>
+                <div class="footer-links-modern">
+                    <h4>Servisu</h4>
+                    <a href="services.html">Servisu</a>
+                    <a href="jobs.html">Empregu</a>
+                    <a href="publish.html">Publika</a>
+                </div>
+                <div class="footer-links-modern">
+                    <h4>Kontaktu</h4>
+                    <p><i class="fas fa-envelope"></i> houlei@live.cn</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Praia, Kabu Verdi</p>
+                </div>
+            </div>
+            <div class="footer-bottom-modern">
+                <p>&copy; 2026 CasaCV. Tudu direitu riservadu.</p>
+            </div>
+        </div>
     </footer>
 
+    <!-- 移动端底部导航 -->
+    <nav class="mobile-bottom-nav-modern" id="mobile-bottom-nav">
+        <a href="index.html" class="nav-item-modern"><i class="fas fa-home"></i><span>Inisio</span></a>
+        <a href="listings.html" class="nav-item-modern"><i class="fas fa-building"></i><span>Kasa</span></a>
+        <a href="publish.html" class="nav-item-modern nav-item-main-modern"><div class="nav-main-btn-modern"><i class="fas fa-plus"></i></div><span>Publika</span></a>
+        <a href="jobs.html" class="nav-item-modern"><i class="fas fa-briefcase"></i><span>Trabaiu</span></a>
+        <a href="#" class="nav-item-modern active" id="more-menu-btn"><i class="fas fa-ellipsis-h"></i><span>Mais</span></a>
+    </nav>
+
+    <!-- 更多菜单弹窗 -->
+    <div class="more-menu-modal" id="more-menu-modal">
+        <div class="more-menu-content">
+            <a href="services.html"><i class="fas fa-tools"></i> Servisu</a>
+            <a href="reviews.html"><i class="fas fa-star"></i> Avaliasaun</a>
+            <a href="confession-wall.html"><i class="fas fa-heart"></i> Mural</a>
+            <a href="complaints.html"><i class="fas fa-bullhorn"></i> Voz di Povu</a>
+            <a href="taxi-group.html"><i class="fab fa-whatsapp"></i> Taxi</a>
+            <a href="tenders.html" class="active"><i class="fas fa-gavel"></i> Licitasaun</a>
+        </div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
     <script>
         const tenders = [
-            { id: 'CV-LIC-2026-001', title: 'Construção Escola Secundária Praia', org: 'Ministério Educação', value: '450,000,000 CVE', deadline: '2026-05-15', status: 'open', category: 'construction', location: 'Praia' },
-            { id: 'CV-LIC-2026-002', title: 'Fornecimento Equipamentos Hospitalares', org: 'Hospital Agostinho Neto', value: '120,000,000 CVE', deadline: '2026-04-28', status: 'urgent', category: 'goods', location: 'Praia' },
-            { id: 'CV-LIC-2026-003', title: 'Reabilitação Estrada Sal-Praia', org: 'Ministério Infraestrutura', value: '890,000,000 CVE', deadline: '2026-06-10', status: 'open', category: 'construction', location: 'Nacional' },
-            { id: 'CV-LIC-2026-004', title: 'Serviços Limpeza Municipal', org: 'Câmara Municipal Mindelo', value: '45,000,000 CVE', deadline: '2026-04-20', status: 'urgent', category: 'services', location: 'Mindelo' },
-            { id: 'CV-LIC-2026-005', title: 'Aquisição Veículos Oficiais', org: 'Governo de Cabo Verde', value: '180,000,000 CVE', deadline: '2026-05-30', status: 'open', category: 'goods', location: 'Nacional' },
-            { id: 'CV-LIC-2026-006', title: 'Consultoria Energia Solar', org: 'Electra', value: '35,000,000 CVE', deadline: '2026-04-25', status: 'urgent', category: 'services', location: 'Nacional' },
-            { id: 'CV-LIC-2026-007', title: 'Construção Porto Pesqueiro', org: 'Ministério Pescas', value: '670,000,000 CVE', deadline: '2026-07-01', status: 'open', category: 'construction', location: 'Sal' },
-            { id: 'CV-LIC-2026-008', title: 'Fornecimento Material Escolar 2026', org: 'Ministério Educação', value: '85,000,000 CVE', deadline: '2026-05-05', status: 'open', category: 'goods', location: 'Nacional' }
+            { id: 'CV-LIC-2026-001', title: 'Konstrusaun Eskola Sekundaria Praia', org: 'Ministeriu Edukasaun', value: '450,000,000 CVE', deadline: '2026-05-15', status: 'open', category: 'construction', location: 'Praia' },
+            { id: 'CV-LIC-2026-002', title: 'Fornesimentu Equipamentu Hospitalar', org: 'Hospital Agostinho Neto', value: '120,000,000 CVE', deadline: '2026-04-28', status: 'urgent', category: 'goods', location: 'Praia' },
+            { id: 'CV-LIC-2026-003', title: 'Reabilitasaun Estrada Sal-Praia', org: 'Ministeriu Infraestrutura', value: '890,000,000 CVE', deadline: '2026-06-10', status: 'open', category: 'construction', location: 'Nasonal' },
+            { id: 'CV-LIC-2026-004', title: 'Servisu Limpesa Municipal', org: 'Camara Municipal Mindelo', value: '45,000,000 CVE', deadline: '2026-04-20', status: 'urgent', category: 'services', location: 'Mindelo' },
+            { id: 'CV-LIC-2026-005', title: 'Aquisisaun Veikulu Ofisial', org: 'Governu Kabu Verdi', value: '180,000,000 CVE', deadline: '2026-05-30', status: 'open', category: 'goods', location: 'Nasonal' },
+            { id: 'CV-LIC-2026-006', title: 'Konsultoria Enerjia Solar', org: 'Electra', value: '35,000,000 CVE', deadline: '2026-04-25', status: 'urgent', category: 'services', location: 'Nasonal' },
+            { id: 'CV-LIC-2026-007', title: 'Konstrusaun Portu Peskadu', org: 'Ministeriu Peskas', value: '670,000,000 CVE', deadline: '2026-07-01', status: 'open', category: 'construction', location: 'Sal' },
+            { id: 'CV-LIC-2026-008', title: 'Fornesimentu Material Eskolar 2026', org: 'Ministeriu Edukasaun', value: '85,000,000 CVE', deadline: '2026-05-05', status: 'open', category: 'goods', location: 'Nasonal' }
         ];
 
         function renderTenders(filter = 'all') {
@@ -156,28 +178,28 @@
             }
 
             container.innerHTML = filtered.map(t => `
-                <div class="tender-item ${t.status}">
-                    <div class="tender-header">
+                <div class="tender-item-modern ${t.status}">
+                    <div class="tender-header-modern">
                         <div>
-                            <div style="font-size:0.8rem;color:#718096;margin-bottom:4px;">${t.id}</div>
-                            <div class="tender-title">${t.title}</div>
+                            <div style="font-size:0.8rem;color:#5a6b7c;margin-bottom:4px;">${t.id}</div>
+                            <div class="tender-title-modern">${t.title}</div>
                         </div>
-                        <span class="tender-badge ${t.status}">${t.status === 'open' ? 'Aberta' : t.status === 'urgent' ? 'Urgente' : 'Fechada'}</span>
+                        <span class="tender-badge-modern ${t.status}">${t.status === 'open' ? 'Abertu' : t.status === 'urgent' ? 'Urgente' : 'Fexadu'}</span>
                     </div>
-                    <div class="tender-org"><i class="fas fa-building"></i> ${t.org}</div>
-                    <div class="tender-meta">
+                    <div class="tender-org-modern"><i class="fas fa-building"></i> ${t.org}</div>
+                    <div class="tender-meta-modern">
                         <span><i class="fas fa-map-marker-alt"></i> ${t.location}</span>
-                        <span class="tender-value"><i class="fas fa-money-bill-wave"></i> ${t.value}</span>
-                        <span><i class="fas fa-calendar-alt"></i> Até ${t.deadline}</span>
+                        <span class="tender-value-modern"><i class="fas fa-money-bill-wave"></i> ${t.value}</span>
+                        <span><i class="fas fa-calendar-alt"></i> Ate ${t.deadline}</span>
                     </div>
-                    <button class="btn-view" onclick="alert('Detalhes: ${t.id}\\nContato: houlei@live.cn')">Ver Detalhes</button>
+                    <button class="btn-view-modern" onclick="alert('Detalhes: ${t.id}\\nKontaktu: houlei@live.cn')">Ver Detalhes</button>
                 </div>
             `).join('');
         }
 
-        document.querySelectorAll('.tender-filter').forEach(btn => {
+        document.querySelectorAll('.tender-filter-modern').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.tender-filter').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tender-filter-modern').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 renderTenders(btn.dataset.filter);
             });

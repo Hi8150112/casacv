@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="ke">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Negósiu ku China - CasaCV</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Negosiu ku China - CasaCV</title>
+    <meta name="description" content="Ligasaun komersial entri Kabu Verdi i China. Importasaun, esportasaun, parcerias.">
+    <link rel="stylesheet" href="css/modern-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N52TE42NYM"></script>
     <script>
@@ -14,159 +16,179 @@
         gtag('config', 'G-N52TE42NYM');
     </script>
     <style>
-        .trade-hero { background: linear-gradient(135deg, #1a365d, #2c5282); color: white; padding: 60px 20px; text-align: center; }
-        .trade-hero h1 { font-size: 2.2rem; margin-bottom: 15px; }
-        .trade-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; max-width: 800px; margin: 30px auto 0; }
-        .trade-stat { background: rgba(255,255,255,0.15); padding: 15px; border-radius: 10px; }
-        .trade-stat-number { font-size: 1.8rem; font-weight: 700; color: #ffd700; }
-        .trade-section { padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
-        .trade-categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .trade-category { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
-        .trade-category-icon { width: 50px; height: 50px; background: linear-gradient(135deg, #3182ce, #2c5282); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; }
-        .trade-category-icon i { color: white; font-size: 1.3rem; }
-        .trade-filters { display: flex; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; justify-content: center; }
-        .trade-filter { padding: 8px 18px; border: 2px solid #e2e8f0; border-radius: 20px; background: white; cursor: pointer; }
-        .trade-filter.active { background: #3182ce; color: white; border-color: #3182ce; }
-        .trade-item { background: white; border-radius: 10px; padding: 20px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); display: flex; gap: 15px; align-items: flex-start; }
-        .trade-item-type { width: 45px; height: 45px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-        .trade-item-type.buy { background: #c6f6d5; color: #22543d; }
-        .trade-item-type.sell { background: #feebc8; color: #744210; }
-        .trade-item-type.partner { background: #e9d8fd; color: #553c9a; }
-        .trade-item-content { flex: 1; }
-        .trade-item-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
-        .trade-item-tag { padding: 3px 10px; background: #edf2f7; border-radius: 12px; font-size: 0.75rem; }
-        .btn-contact { padding: 8px 16px; background: #3182ce; color: white; border: none; border-radius: 6px; cursor: pointer; }
+        .trade-hero-modern { background: linear-gradient(135deg, #5a6b7c, #4a5568); color: white; padding: 60px 20px; text-align: center; }
+        .trade-hero-modern h1 { font-size: 2.2rem; margin-bottom: 15px; }
+        .trade-stats-modern { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; max-width: 800px; margin: 30px auto 0; }
+        .trade-stat-modern { background: rgba(255,255,255,0.15); padding: 15px; border-radius: 10px; }
+        .trade-stat-number-modern { font-size: 1.8rem; font-weight: 700; color: #c4a77d; }
+        .trade-section-modern { padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
+        .trade-categories-modern { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .trade-category-modern { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+        .trade-category-icon-modern { width: 50px; height: 50px; background: linear-gradient(135deg, #5a6b7c, #7a9e7e); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; }
+        .trade-category-icon-modern i { color: white; font-size: 1.3rem; }
+        .trade-filters-modern { display: flex; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; justify-content: center; }
+        .trade-filter-modern { padding: 8px 18px; border: 2px solid #e8e4df; border-radius: 20px; background: white; cursor: pointer; }
+        .trade-filter-modern.active { background: #5a6b7c; color: white; border-color: #5a6b7c; }
+        .trade-item-modern { background: white; border-radius: 10px; padding: 20px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); display: flex; gap: 15px; align-items: flex-start; }
+        .trade-item-type-modern { width: 45px; height: 45px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .trade-item-type-modern.buy { background: #e5f0e5; color: #5b7b5b; }
+        .trade-item-type-modern.sell { background: #f5f0e5; color: #7b6b5b; }
+        .trade-item-type-modern.partner { background: #f0e5f5; color: #6b5b7b; }
+        .trade-item-content-modern { flex: 1; }
+        .trade-item-tags-modern { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+        .trade-item-tag-modern { padding: 3px 10px; background: #faf9f7; border-radius: 12px; font-size: 0.75rem; }
+        .btn-contact-modern { padding: 8px 16px; background: #5a6b7c; color: white; border: none; border-radius: 6px; cursor: pointer; }
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-home"></i>
-                <span>CasaCV</span>
-            </a>
-            <div class="nav-links" id="navLinks">
-                <a href="index.html" data-i18n="nav_home">Início</a>
-                <a href="listings.html" data-i18n="nav_listings">Kasa</a>
-                <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
-                <a href="china-trade.html" class="active" data-i18n="nav_china">China</a>
-                <a href="tenders.html" data-i18n="nav_tenders">Licitacoes</a>
-                <a href="services.html" data-i18n="nav_services">Servicos</a>
-                <a href="reviews.html" data-i18n="nav_reviews">Avaliacoes</a>
-                <a href="complaints.html" data-i18n="nav_complaints">Voz di Povu</a>
-                <a href="confession-wall.html" data-i18n="nav_confession">Mural</a>
-                <a href="taxi-group.html" data-i18n="nav_taxi" style="color:#25d366;"><i class="fab fa-whatsapp"></i> Taxi</a>
-                <a href="publish.html" class="btn-primary" data-i18n="nav_publish">Publika</a>
+    <!-- 顶部导航 -->
+    <nav class="navbar-modern">
+        <div class="nav-container-modern">
+            <a href="index.html" class="logo-modern"><i class="fas fa-home"></i><span>CasaCV</span></a>
+            <div class="search-bar-modern">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buska..." id="search-input">
             </div>
-            <div class="nav-actions">
-                <div class="language-switcher">
-                    <button class="lang-btn" onclick="toggleLang()">
-                        <i class="fas fa-globe"></i>
-                        <span id="current-lang">Kriolu</span>
-                    </button>
-                    <div class="lang-dropdown" id="lang-dropdown">
-                        <a href="#" onclick="setLanguage('ke')">Kriolu</a>
-                        <a href="#" onclick="setLanguage('zh')">中文</a>
-                    </div>
-                </div>
+            <div class="nav-actions-modern">
+                <a href="publish.html" class="btn-publish-nav"><i class="fas fa-plus"></i><span>Publika</span></a>
             </div>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
+            <button class="mobile-menu-btn-modern" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
         </div>
     </nav>
 
     <!-- 移动端菜单 -->
-    <div class="mobile-menu" id="mobile-menu">
-        <a href="index.html" data-i18n="nav_home">Início</a>
-        <a href="listings.html" data-i18n="nav_listings">Kasa</a>
-        <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
-        <a href="china-trade.html" class="active" data-i18n="nav_china">China</a>
-        <a href="tenders.html" data-i18n="nav_tenders">Licitacoes</a>
-        <a href="services.html" data-i18n="nav_services">Servicos</a>
-        <a href="reviews.html" data-i18n="nav_reviews">Avaliacoes</a>
-        <a href="complaints.html" data-i18n="nav_complaints">Voz di Povu</a>
-        <a href="confession-wall.html" data-i18n="nav_confession">Mural</a>
-        <a href="taxi-group.html" data-i18n="nav_taxi">Taxi</a>
-        <a href="publish.html" data-i18n="nav_publish">Publika</a>
+    <div class="mobile-menu-modern" id="mobile-menu">
+        <a href="index.html"><i class="fas fa-home"></i> Inisio</a>
+        <a href="listings.html"><i class="fas fa-building"></i> Kasa</a>
+        <a href="jobs.html"><i class="fas fa-briefcase"></i> Trabaiu</a>
+        <a href="services.html"><i class="fas fa-tools"></i> Servisu</a>
+        <a href="reviews.html"><i class="fas fa-star"></i> Avaliasaun</a>
+        <a href="confession-wall.html"><i class="fas fa-heart"></i> Mural</a>
+        <a href="complaints.html"><i class="fas fa-bullhorn"></i> Voz di Povu</a>
+        <a href="taxi-group.html"><i class="fab fa-whatsapp"></i> Taxi</a>
+        <a href="tenders.html"><i class="fas fa-gavel"></i> Licitasaun</a>
+        <a href="publish.html"><i class="fas fa-plus-circle"></i> Publika</a>
     </div>
 
-    <section class="trade-hero">
-        <h1><i class="fas fa-handshake"></i> Negósiu ku China</h1>
-        <p>Ligação comercial entre Cabo Verde e China. Importação, exportação, parcerias.</p>
-        <div class="trade-stats">
-            <div class="trade-stat">
-                <div class="trade-stat-number" id="importCount">156</div>
-                <div>Pedidos Importação</div>
+    <section class="trade-hero-modern">
+        <h1><i class="fas fa-handshake"></i> Negosiu ku China</h1>
+        <p>Ligasaun komersial entri Kabu Verdi i China. Importasaun, esportasaun, parcerias.</p>
+        <div class="trade-stats-modern">
+            <div class="trade-stat-modern">
+                <div class="trade-stat-number-modern" id="importCount">156</div>
+                <div>Pedidos Importasaun</div>
             </div>
-            <div class="trade-stat">
-                <div class="trade-stat-number" id="exportCount">43</div>
-                <div>Ofertas Exportação</div>
+            <div class="trade-stat-modern">
+                <div class="trade-stat-number-modern" id="exportCount">43</div>
+                <div>Ofertas Esportasaun</div>
             </div>
-            <div class="trade-stat">
-                <div class="trade-stat-number" id="partnerCount">89</div>
+            <div class="trade-stat-modern">
+                <div class="trade-stat-number-modern" id="partnerCount">89</div>
                 <div>Parcerias</div>
             </div>
-            <div class="trade-stat">
-                <div class="trade-stat-number" id="tradeValue">$2.4M</div>
-                <div>Volume Negócio</div>
+            <div class="trade-stat-modern">
+                <div class="trade-stat-number-modern" id="tradeValue">$2.4M</div>
+                <div>Volume Negosiu</div>
             </div>
         </div>
     </section>
 
-    <section class="trade-section">
-        <h2 style="text-align:center;margin-bottom:30px;color:#1a365d;">Categorias</h2>
-        <div class="trade-categories">
-            <div class="trade-category">
-                <div class="trade-category-icon"><i class="fas fa-shopping-cart"></i></div>
-                <h3>Importar da China</h3>
-                <p>Eletrônicos, roupas, móveis, materiais construção. Preços competitivos.</p>
+    <section class="trade-section-modern">
+        <h2 style="text-align:center;margin-bottom:30px;color:#2c3e50;">Kategorias</h2>
+        <div class="trade-categories-modern">
+            <div class="trade-category-modern">
+                <div class="trade-category-icon-modern"><i class="fas fa-shopping-cart"></i></div>
+                <h3>Importa di China</h3>
+                <p>Eletroduku, ropa, moveis, material konstrusaun. Preçu kompetitivu.</p>
             </div>
-            <div class="trade-category">
-                <div class="trade-category-icon"><i class="fas fa-ship"></i></div>
-                <h3>Exportar para China</h3>
-                <p>Peixe, sal, café, vinho. Conectamos produtores locais com compradores chineses.</p>
+            <div class="trade-category-modern">
+                <div class="trade-category-icon-modern"><i class="fas fa-ship"></i></div>
+                <h3>Esporta pa China</h3>
+                <p>Pexe, sal, kafe, vinhu. Liga produtores lokais ku kompradores.</p>
             </div>
-            <div class="trade-category">
-                <div class="trade-category-icon"><i class="fas fa-building"></i></div>
-                <h3>Investimento</h3>
-                <p>Projetos de infraestrutura, turismo, energia solar. Busca investidores chineses.</p>
+            <div class="trade-category-modern">
+                <div class="trade-category-icon-modern"><i class="fas fa-building"></i></div>
+                <h3>Investimentu</h3>
+                <p>Projetu di infraestrutura, turizmu, energia solar. Buska investidores.</p>
             </div>
-            <div class="trade-category">
-                <div class="trade-category-icon"><i class="fas fa-users"></i></div>
+            <div class="trade-category-modern">
+                <div class="trade-category-icon-modern"><i class="fas fa-users"></i></div>
                 <h3>Parcerias</h3>
-                <p>Joint ventures, representação comercial, agência distribuição.</p>
+                <p>Joint ventures, representasaun komersial, agensia distribuisaun.</p>
             </div>
         </div>
     </section>
 
-    <section class="trade-section" style="background:#f7fafc;">
-        <h2 style="text-align:center;margin-bottom:30px;color:#1a365d;">Oportunidades Recentes</h2>
-        <div class="trade-filters">
-            <button class="trade-filter active" data-filter="all">Tudo</button>
-            <button class="trade-filter" data-filter="buy">Quero Comprar</button>
-            <button class="trade-filter" data-filter="sell">Quero Vender</button>
-            <button class="trade-filter" data-filter="partner">Parceria</button>
+    <section class="trade-section-modern" style="background:#faf9f7;">
+        <h2 style="text-align:center;margin-bottom:30px;color:#2c3e50;">Oportunidades Recenti</h2>
+        <div class="trade-filters-modern">
+            <button class="trade-filter-modern active" data-filter="all">Tudu</button>
+            <button class="trade-filter-modern" data-filter="buy">Kero Kompra</button>
+            <button class="trade-filter-modern" data-filter="sell">Kero Vende</button>
+            <button class="trade-filter-modern" data-filter="partner">Parceria</button>
         </div>
         <div id="tradeListings"></div>
     </section>
 
-    <footer style="background:#1a365d;color:white;padding:40px 20px;text-align:center;">
-        <p>CasaCV - Ligando Cabo Verde ao Mundo</p>
-        <p style="margin-top:10px;opacity:0.8;">Contato: houlei@live.cn</p>
+    <!-- 页脚 -->
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="footer-grid-modern">
+                <div class="footer-brand-modern">
+                    <a href="index.html" class="logo-modern"><i class="fas fa-home"></i><span>CasaCV</span></a>
+                    <p>Plataforma di konfiansa pa aluguel na Kabu Verdi</p>
+                </div>
+                <div class="footer-links-modern">
+                    <h4>Servisu</h4>
+                    <a href="services.html">Servisu</a>
+                    <a href="jobs.html">Empregu</a>
+                    <a href="publish.html">Publika</a>
+                </div>
+                <div class="footer-links-modern">
+                    <h4>Kontaktu</h4>
+                    <p><i class="fas fa-envelope"></i> houlei@live.cn</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Praia, Kabu Verdi</p>
+                </div>
+            </div>
+            <div class="footer-bottom-modern">
+                <p>&copy; 2026 CasaCV. Tudu direitu riservadu.</p>
+            </div>
+        </div>
     </footer>
 
+    <!-- 移动端底部导航 -->
+    <nav class="mobile-bottom-nav-modern" id="mobile-bottom-nav">
+        <a href="index.html" class="nav-item-modern"><i class="fas fa-home"></i><span>Inisio</span></a>
+        <a href="listings.html" class="nav-item-modern"><i class="fas fa-building"></i><span>Kasa</span></a>
+        <a href="publish.html" class="nav-item-modern nav-item-main-modern"><div class="nav-main-btn-modern"><i class="fas fa-plus"></i></div><span>Publika</span></a>
+        <a href="jobs.html" class="nav-item-modern"><i class="fas fa-briefcase"></i><span>Trabaiu</span></a>
+        <a href="#" class="nav-item-modern active" id="more-menu-btn"><i class="fas fa-ellipsis-h"></i><span>Mais</span></a>
+    </nav>
+
+    <!-- 更多菜单弹窗 -->
+    <div class="more-menu-modal" id="more-menu-modal">
+        <div class="more-menu-content">
+            <a href="services.html"><i class="fas fa-tools"></i> Servisu</a>
+            <a href="reviews.html"><i class="fas fa-star"></i> Avaliasaun</a>
+            <a href="confession-wall.html"><i class="fas fa-heart"></i> Mural</a>
+            <a href="complaints.html"><i class="fas fa-bullhorn"></i> Voz di Povu</a>
+            <a href="taxi-group.html"><i class="fab fa-whatsapp"></i> Taxi</a>
+            <a href="tenders.html"><i class="fas fa-gavel"></i> Licitasaun</a>
+        </div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
     <script>
         const tradeData = [
-            { type: 'buy', title: 'Procurar fornecedor de painéis solares', desc: 'Preciso de 500 painéis solares 300W para projeto em Sal.', tags: ['Energia', 'Importação', 'Sal'], date: '2 dias atrás', author: 'Empresa Solar CV' },
-            { type: 'sell', title: 'Exportação de atum fresco', desc: 'Disponível 20 toneladas atum fresco por mês. Certificação internacional.', tags: ['Pescado', 'Exportação', 'Praia'], date: '1 dia atrás', author: 'Pesca Atlântico' },
-            { type: 'partner', title: 'Busco parceiro para restaurante chinês', desc: 'Tenho local em Mindelo, busco cozinheiro chinês ou investidor.', tags: ['Restaurante', 'Parceria', 'Mindelo'], date: '3 dias atrás', author: 'João Silva' },
-            { type: 'buy', title: 'Importar móveis para hotel', desc: 'Hotel 50 quartos em Santa Maria precisa mobília completa.', tags: ['Móveis', 'Hotelaria', 'Sal'], date: '5 horas atrás', author: 'Hotel Paradise' },
-            { type: 'sell', title: 'Café Fogo para exportação', desc: 'Café arábica de alta qualidade, produção 5 toneladas/ano.', tags: ['Agricultura', 'Exportação', 'Fogo'], date: '1 semana atrás', author: 'Coop Café Fogo' },
-            { type: 'partner', title: 'Distribuidor de eletrônicos', desc: 'Representar marca chinesa de smartphones em Cabo Verde.', tags: ['Eletrônicos', 'Distribuição', 'Nacional'], date: '2 dias atrás', author: 'Tech CV' },
-            { type: 'buy', title: 'Material construção para condomínio', desc: 'Cimento, azulejos, sanitários para 100 apartamentos.', tags: ['Construção', 'Importação', 'Praia'], date: '4 dias atrás', author: 'Construtora Horizonte' },
-            { type: 'sell', title: 'Sal marinho industrial', desc: 'Exportação sal marinho para indústria química.', tags: ['Minerais', 'Exportação', 'Sal'], date: '3 dias atrás', author: 'Salinas do Norte' }
+            { type: 'buy', title: 'Buska fornesedor di painel solar', desc: 'Presiza 500 painel solar 300W pa projetu na Sal.', tags: ['Energia', 'Importasaun', 'Sal'], date: '2 dia atras', author: 'Empresa Solar CV' },
+            { type: 'sell', title: 'Esportasaun di atum fresku', desc: 'Disponivel 20 tonelada atum fresku pa mes. Sertifikasaun internasional.', tags: ['Peskadu', 'Esportasaun', 'Praia'], date: '1 dia atras', author: 'Pesca Atlantiku' },
+            { type: 'partner', title: 'Buska parceiru pa restaurante china', desc: 'Nha ten lokal na Mindelo, buska kuzinheiru china o investidor.', tags: ['Restaurante', 'Parceria', 'Mindelo'], date: '3 dia atras', author: 'Joao Silva' },
+            { type: 'buy', title: 'Importa moveis pa hotel', desc: 'Hotel 50 kuartu na Santa Maria presiza mobilia kompletu.', tags: ['Moveis', 'Hoteleria', 'Sal'], date: '5 oras atras', author: 'Hotel Paradise' },
+            { type: 'sell', title: 'Kafe Fogo pa esportasaun', desc: 'Kafe arabika di alta kalidadi, produsaun 5 tonelada/anu.', tags: ['Agrikultura', 'Esportasaun', 'Fogo'], date: '1 semana atras', author: 'Coop Kafe Fogo' },
+            { type: 'partner', title: 'Distribuidor di eletroduku', desc: 'Representa marka china di smartphones na Kabu Verdi.', tags: ['Eletroduku', 'Distribuisaun', 'Nasonal'], date: '2 dia atras', author: 'Tech CV' },
+            { type: 'buy', title: 'Material konstrusaun pa condominio', desc: 'Simentu, azuleju, sanitariu pa 100 apartamentu.', tags: ['Konstrusaun', 'Importasaun', 'Praia'], date: '4 dia atras', author: 'Konstrutora Horizonte' },
+            { type: 'sell', title: 'Sal marinh industrial', desc: 'Esportasaun sal marinh pa industria kímika.', tags: ['Minerais', 'Esportasaun', 'Sal'], date: '3 dia atras', author: 'Salinas di Norte' }
         ];
 
         function renderTradeItems(filter = 'all') {
@@ -174,26 +196,26 @@
             const filtered = filter === 'all' ? tradeData : tradeData.filter(item => item.type === filter);
             
             container.innerHTML = filtered.map(item => `
-                <div class="trade-item">
-                    <div class="trade-item-type ${item.type}">
+                <div class="trade-item-modern">
+                    <div class="trade-item-type-modern ${item.type}">
                         <i class="fas fa-${item.type === 'buy' ? 'shopping-cart' : item.type === 'sell' ? 'ship' : 'handshake'}"></i>
                     </div>
-                    <div class="trade-item-content">
+                    <div class="trade-item-content-modern">
                         <h4>${item.title}</h4>
                         <p>${item.desc}</p>
-                        <div class="trade-item-tags">
-                            ${item.tags.map(t => `<span class="trade-item-tag">${t}</span>`).join('')}
+                        <div class="trade-item-tags-modern">
+                            ${item.tags.map(t => `<span class="trade-item-tag-modern">${t}</span>`).join('')}
                         </div>
-                        <small style="color:#999;">${item.author} · ${item.date}</small>
+                        <small style="color:#5a6b7c;">${item.author} · ${item.date}</small>
                     </div>
-                    <button class="btn-contact" onclick="alert('Contato: houlei@live.cn')">Contactar</button>
+                    <button class="btn-contact-modern" onclick="alert('Kontaktu: houlei@live.cn')">Kontaktu</button>
                 </div>
             `).join('');
         }
 
-        document.querySelectorAll('.trade-filter').forEach(btn => {
+        document.querySelectorAll('.trade-filter-modern').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.trade-filter').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.trade-filter-modern').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 renderTradeItems(btn.dataset.filter);
             });

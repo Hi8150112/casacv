@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="ke">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mural di Amor - CasaCV | Confissões em Cabo Verde</title>
-    <meta name="description" content="Mural di Amor - O lugar onde bu pode confessa amor anonimamente. Praia, Mindelo, Cabo Verde.">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Mural di Amor - CasaCV</title>
+    <meta name="description" content="Mural di Amor - Lugar undi bu pode konfesa amor anonimamente. Praia, Mindelo, Kabu Verdi.">
+    <link rel="stylesheet" href="css/modern-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N52TE42NYM"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -17,52 +16,52 @@
         gtag('config', 'G-N52TE42NYM');
     </script>
     <style>
-        .confession-hero {
-            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
-            padding: 80px 0;
+        .confession-hero-modern {
+            background: linear-gradient(135deg, #b87b7b 0%, #c98b8b 100%);
+            padding: 60px 0;
             text-align: center;
             color: white;
         }
-        .confession-hero h1 {
+        .confession-hero-modern h1 {
             font-size: 2.5rem;
             margin-bottom: 15px;
         }
-        .confession-hero p {
+        .confession-hero-modern p {
             font-size: 1.2rem;
             opacity: 0.95;
         }
-        .confession-container {
+        .confession-container-modern {
             max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
         }
-        .confession-form {
+        .confession-form-modern {
             background: white;
             border-radius: 16px;
             padding: 30px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             margin-bottom: 40px;
         }
-        .confession-form h3 {
+        .confession-form-modern h3 {
             margin-bottom: 20px;
-            color: #333;
+            color: #2c3e50;
         }
-        .confession-form textarea {
+        .confession-form-modern textarea {
             width: 100%;
             min-height: 120px;
             padding: 15px;
-            border: 2px solid #e5e7eb;
+            border: 2px solid #e8e4df;
             border-radius: 12px;
             font-size: 1rem;
             resize: vertical;
             margin-bottom: 15px;
         }
-        .confession-form textarea:focus {
+        .confession-form-modern textarea:focus {
             outline: none;
-            border-color: #ff6b9d;
+            border-color: #b87b7b;
         }
-        .confession-form button {
-            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+        .confession-form-modern button {
+            background: linear-gradient(135deg, #b87b7b 0%, #c98b8b 100%);
             color: white;
             border: none;
             padding: 15px 40px;
@@ -71,72 +70,72 @@
             cursor: pointer;
             transition: transform 0.2s;
         }
-        .confession-form button:hover {
+        .confession-form-modern button:hover {
             transform: scale(1.05);
         }
-        .confession-list {
+        .confession-list-modern {
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
-        .confession-card {
+        .confession-card-modern {
             background: white;
             border-radius: 16px;
             padding: 25px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             transition: transform 0.2s;
         }
-        .confession-card:hover {
+        .confession-card-modern:hover {
             transform: translateY(-3px);
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
-        .confession-header {
+        .confession-header-modern {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 15px;
         }
-        .confession-id {
-            color: #ff6b9d;
+        .confession-id-modern {
+            color: #b87b7b;
             font-weight: 600;
             font-size: 0.9rem;
         }
-        .confession-time {
-            color: #9ca3af;
+        .confession-time-modern {
+            color: #5a6b7c;
             font-size: 0.85rem;
         }
-        .confession-content {
-            color: #374151;
+        .confession-content-modern {
+            color: #2c3e50;
             line-height: 1.8;
             font-size: 1.05rem;
             margin-bottom: 15px;
         }
-        .confession-to {
-            color: #c44569;
+        .confession-to-modern {
+            color: #b87b7b;
             font-weight: 600;
             margin-bottom: 10px;
         }
-        .confession-actions {
+        .confession-actions-modern {
             display: flex;
             gap: 20px;
             padding-top: 15px;
-            border-top: 1px solid #f3f4f6;
+            border-top: 1px solid #e8e4df;
         }
-        .confession-action {
+        .confession-action-modern {
             display: flex;
             align-items: center;
             gap: 5px;
-            color: #6b7280;
+            color: #5a6b7c;
             cursor: pointer;
             transition: color 0.2s;
         }
-        .confession-action:hover {
-            color: #ff6b9d;
+        .confession-action-modern:hover {
+            color: #b87b7b;
         }
-        .confession-action.liked {
-            color: #ff6b9d;
+        .confession-action-modern.liked {
+            color: #b87b7b;
         }
-        .stats-bar {
+        .stats-bar-modern {
             background: white;
             border-radius: 12px;
             padding: 20px;
@@ -145,134 +144,109 @@
             justify-content: space-around;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
-        .stat-item {
+        .stat-item-modern {
             text-align: center;
         }
-        .stat-number {
+        .stat-number-modern {
             font-size: 2rem;
             font-weight: 700;
-            color: #ff6b9d;
+            color: #b87b7b;
         }
-        .stat-label {
-            color: #6b7280;
+        .stat-label-modern {
+            color: #5a6b7c;
             font-size: 0.9rem;
         }
-        .filter-tabs {
+        .filter-tabs-modern {
             display: flex;
             gap: 10px;
             margin-bottom: 30px;
             flex-wrap: wrap;
         }
-        .filter-tab {
+        .filter-tab-modern {
             padding: 10px 20px;
             border-radius: 20px;
             background: white;
-            border: 2px solid #e5e7eb;
+            border: 2px solid #e8e4df;
             cursor: pointer;
             transition: all 0.2s;
         }
-        .filter-tab.active {
-            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+        .filter-tab-modern.active {
+            background: linear-gradient(135deg, #b87b7b 0%, #c98b8b 100%);
             color: white;
             border-color: transparent;
         }
-        .filter-tab:hover:not(.active) {
-            border-color: #ff6b9d;
-            color: #ff6b9d;
+        .filter-tab-modern:hover:not(.active) {
+            border-color: #b87b7b;
+            color: #b87b7b;
         }
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-home"></i>
-                <span>CasaCV</span>
-            </a>
-            <div class="nav-links" id="navLinks">
-                <a href="index.html" data-i18n="nav_home">Início</a>
-                <a href="listings.html" data-i18n="nav_listings">Kasa</a>
-                <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
-                <a href="china-trade.html" data-i18n="nav_china">China</a>
-                <a href="tenders.html" data-i18n="nav_tenders">Licitacoes</a>
-                <a href="services.html" data-i18n="nav_services">Servicos</a>
-                <a href="reviews.html" data-i18n="nav_reviews">Avaliacoes</a>
-                <a href="complaints.html" data-i18n="nav_complaints">Voz di Povu</a>
-                <a href="confession-wall.html" class="active" data-i18n="nav_confession" style="color: #ff6b9d;"><i class="fas fa-heart"></i> Mural</a>
-                <a href="taxi-group.html" data-i18n="nav_taxi" style="color:#25d366;"><i class="fab fa-whatsapp"></i> Taxi</a>
-                <a href="publish.html" class="btn-primary" data-i18n="nav_publish">Publika</a>
+    <!-- 顶部导航 -->
+    <nav class="navbar-modern">
+        <div class="nav-container-modern">
+            <a href="index.html" class="logo-modern"><i class="fas fa-home"></i><span>CasaCV</span></a>
+            <div class="search-bar-modern">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buska..." id="search-input">
             </div>
-            <div class="nav-actions">
-                <div class="language-switcher">
-                    <button class="lang-btn" onclick="toggleLang()">
-                        <i class="fas fa-globe"></i>
-                        <span id="current-lang">Kriolu</span>
-                    </button>
-                    <div class="lang-dropdown" id="lang-dropdown">
-                        <a href="#" onclick="setLanguage('ke')">Kriolu</a>
-                        <a href="#" onclick="setLanguage('zh')">中文</a>
-                    </div>
-                </div>
+            <div class="nav-actions-modern">
+                <a href="publish.html" class="btn-publish-nav"><i class="fas fa-plus"></i><span>Publika</span></a>
             </div>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
+            <button class="mobile-menu-btn-modern" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
         </div>
     </nav>
 
     <!-- 移动端菜单 -->
-    <div class="mobile-menu" id="mobile-menu">
-        <a href="index.html" data-i18n="nav_home">Início</a>
-        <a href="listings.html" data-i18n="nav_listings">Kasa</a>
-        <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
-        <a href="china-trade.html" data-i18n="nav_china">China</a>
-        <a href="tenders.html" data-i18n="nav_tenders">Licitacoes</a>
-        <a href="services.html" data-i18n="nav_services">Servicos</a>
-        <a href="reviews.html" data-i18n="nav_reviews">Avaliacoes</a>
-        <a href="complaints.html" data-i18n="nav_complaints">Voz di Povu</a>
-        <a href="confession-wall.html" class="active" data-i18n="nav_confession">Mural</a>
-        <a href="taxi-group.html" data-i18n="nav_taxi">Taxi</a>
-        <a href="publish.html" data-i18n="nav_publish">Publika</a>
+    <div class="mobile-menu-modern" id="mobile-menu">
+        <a href="index.html"><i class="fas fa-home"></i> Inisio</a>
+        <a href="listings.html"><i class="fas fa-building"></i> Kasa</a>
+        <a href="jobs.html"><i class="fas fa-briefcase"></i> Trabaiu</a>
+        <a href="services.html"><i class="fas fa-tools"></i> Servisu</a>
+        <a href="reviews.html"><i class="fas fa-star"></i> Avaliasaun</a>
+        <a href="confession-wall.html" class="active"><i class="fas fa-heart"></i> Mural</a>
+        <a href="complaints.html"><i class="fas fa-bullhorn"></i> Voz di Povu</a>
+        <a href="taxi-group.html"><i class="fab fa-whatsapp"></i> Taxi</a>
+        <a href="publish.html"><i class="fas fa-plus-circle"></i> Publika</a>
     </div>
 
-    <section class="confession-hero">
+    <section class="confession-hero-modern">
         <h1><i class="fas fa-heart"></i> Mural di Amor</h1>
-        <p>Confessa bu amor anonimamente. Praia, Mindelo, tudu Kabu Verdi.</p>
+        <p>Konfesa bu amor anonimamente. Praia, Mindelo, tudu Kabu Verdi.</p>
     </section>
 
-    <div class="confession-container">
-        <div class="stats-bar">
-            <div class="stat-item">
-                <div class="stat-number" id="total-confessions">128</div>
-                <div class="stat-label">Confissões</div>
+    <div class="confession-container-modern">
+        <div class="stats-bar-modern">
+            <div class="stat-item-modern">
+                <div class="stat-number-modern" id="total-confessions">128</div>
+                <div class="stat-label-modern">Konfesaun</div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number" id="total-likes">2.5k</div>
-                <div class="stat-label">Likes</div>
+            <div class="stat-item-modern">
+                <div class="stat-number-modern" id="total-likes">2.5k</div>
+                <div class="stat-label-modern">Gostas</div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number" id="today-confessions">12</div>
-                <div class="stat-label">Oji</div>
+            <div class="stat-item-modern">
+                <div class="stat-number-modern" id="today-confessions">12</div>
+                <div class="stat-label-modern">Oji</div>
             </div>
         </div>
 
-        <div class="filter-tabs">
-            <div class="filter-tab active" onclick="filterConfessions('all')">Tudu</div>
-            <div class="filter-tab" onclick="filterConfessions('praia')">Praia</div>
-            <div class="filter-tab" onclick="filterConfessions('mindelo')">Mindelo</div>
-            <div class="filter-tab" onclick="filterConfessions('sal')">Ilha di Sal</div>
-            <div class="filter-tab" onclick="filterConfessions('recent')">Recenti</div>
-            <div class="filter-tab" onclick="filterConfessions('popular')">Popular</div>
+        <div class="filter-tabs-modern">
+            <div class="filter-tab-modern active" onclick="filterConfessions('all')">Tudu</div>
+            <div class="filter-tab-modern" onclick="filterConfessions('praia')">Praia</div>
+            <div class="filter-tab-modern" onclick="filterConfessions('mindelo')">Mindelo</div>
+            <div class="filter-tab-modern" onclick="filterConfessions('sal')">Ilha di Sal</div>
+            <div class="filter-tab-modern" onclick="filterConfessions('recent')">Recenti</div>
+            <div class="filter-tab-modern" onclick="filterConfessions('popular')">Popular</div>
         </div>
 
-        <div class="confession-form">
-            <h3><i class="fas fa-pen-fancy"></i> Skrebe bu confissão</h3>
-            <input type="text" id="confession-to" placeholder="Para: (opcional)" style="width: 100%; padding: 12px; margin-bottom: 10px; border: 2px solid #e5e7eb; border-radius: 8px;">
+        <div class="confession-form-modern">
+            <h3><i class="fas fa-pen-fancy"></i> Skrebe bu konfesaun</h3>
+            <input type="text" id="confession-to" placeholder="Pa: (opsional)" style="width: 100%; padding: 12px; margin-bottom: 10px; border: 2px solid #e8e4df; border-radius: 8px;">
             <textarea id="confession-text" placeholder="Konta bu sentimentu... (anonimu)"></textarea>
             <div style="display: flex; justify-content: space-between; align-items: center;">
-                <select id="confession-location" style="padding: 10px; border: 2px solid #e5e7eb; border-radius: 8px;">
-                    <option value="">Seleciona sidadi</option>
+                <select id="confession-location" style="padding: 10px; border: 2px solid #e8e4df; border-radius: 8px;">
+                    <option value="">Selekiona sidadi</option>
                     <option value="praia">Praia</option>
                     <option value="mindelo">Mindelo</option>
                     <option value="santa-maria">Santa Maria</option>
@@ -285,25 +259,60 @@
             </div>
         </div>
 
-        <div class="confession-list" id="confession-list">
+        <div class="confession-list-modern" id="confession-list">
             <!-- Confessions will be loaded by JavaScript -->
         </div>
     </div>
 
-    <footer class="footer">
+    <!-- 页脚 -->
+    <footer class="footer-modern">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo"><i class="fas fa-home"></i><span>CasaCV</span></a>
-                    <p>Mural di Amor - Bu lugar pa confessa</p>
+            <div class="footer-grid-modern">
+                <div class="footer-brand-modern">
+                    <a href="index.html" class="logo-modern"><i class="fas fa-home"></i><span>CasaCV</span></a>
+                    <p>Mural di Amor - Bu lugar pa konfesa</p>
+                </div>
+                <div class="footer-links-modern">
+                    <h4>Servisu</h4>
+                    <a href="services.html">Servisu</a>
+                    <a href="jobs.html">Empregu</a>
+                    <a href="publish.html">Publika</a>
+                </div>
+                <div class="footer-links-modern">
+                    <h4>Kontaktu</h4>
+                    <p><i class="fas fa-envelope"></i> houlei@live.cn</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Praia, Kabu Verdi</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 CasaCV. Tudu direitu reservadu.</p>
+            <div class="footer-bottom-modern">
+                <p>&copy; 2026 CasaCV. Tudu direitu riservadu.</p>
             </div>
         </div>
     </footer>
 
+    <!-- 移动端底部导航 -->
+    <nav class="mobile-bottom-nav-modern" id="mobile-bottom-nav">
+        <a href="index.html" class="nav-item-modern"><i class="fas fa-home"></i><span>Inisio</span></a>
+        <a href="listings.html" class="nav-item-modern"><i class="fas fa-building"></i><span>Kasa</span></a>
+        <a href="publish.html" class="nav-item-modern nav-item-main-modern"><div class="nav-main-btn-modern"><i class="fas fa-plus"></i></div><span>Publika</span></a>
+        <a href="jobs.html" class="nav-item-modern"><i class="fas fa-briefcase"></i><span>Trabaiu</span></a>
+        <a href="#" class="nav-item-modern active" id="more-menu-btn"><i class="fas fa-ellipsis-h"></i><span>Mais</span></a>
+    </nav>
+
+    <!-- 更多菜单弹窗 -->
+    <div class="more-menu-modal" id="more-menu-modal">
+        <div class="more-menu-content">
+            <a href="services.html"><i class="fas fa-tools"></i> Servisu</a>
+            <a href="reviews.html"><i class="fas fa-star"></i> Avaliasaun</a>
+            <a href="confession-wall.html" class="active"><i class="fas fa-heart"></i> Mural</a>
+            <a href="complaints.html"><i class="fas fa-bullhorn"></i> Voz di Povu</a>
+            <a href="taxi-group.html"><i class="fab fa-whatsapp"></i> Taxi</a>
+            <a href="tenders.html"><i class="fas fa-gavel"></i> Licitasaun</a>
+        </div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/confessions.js"></script>
 </body>
 </html>

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="ke">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo Taxi - CasaCV</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Grupu Taxi - CasaCV</title>
+    <meta name="description" content="Entra na grupu taxi WhatsApp. Txoma taxi rapidu na Kabu Verdi.">
+    <link rel="stylesheet" href="css/modern-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N52TE42NYM"></script>
     <script>
@@ -14,190 +16,210 @@
         gtag('config', 'G-N52TE42NYM');
     </script>
     <style>
-        .taxi-hero { background: linear-gradient(135deg, #25d366, #128c7e); color: white; padding: 60px 20px; text-align: center; }
-        .taxi-hero h1 { font-size: 2.2rem; margin-bottom: 15px; }
-        .taxi-hero p { font-size: 1.1rem; opacity: 0.95; }
-        .whatsapp-btn { display: inline-flex; align-items: center; gap: 10px; background: white; color: #25d366; padding: 15px 30px; border-radius: 30px; font-size: 1.1rem; font-weight: 600; text-decoration: none; margin-top: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        .taxi-section { padding: 40px 20px; max-width: 900px; margin: 0 auto; }
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
-        .feature-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); text-align: center; }
-        .feature-icon { font-size: 2.5rem; color: #25d366; margin-bottom: 15px; }
-        .feature-card h3 { color: #2d3748; margin-bottom: 10px; }
-        .feature-card p { color: #666; font-size: 0.95rem; }
-        .how-it-works { background: #f7fafc; padding: 40px 20px; border-radius: 15px; margin: 30px 0; }
-        .step { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; }
-        .step-number { width: 35px; height: 35px; background: #25d366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0; }
-        .step-content h4 { color: #2d3748; margin-bottom: 5px; }
-        .step-content p { color: #666; font-size: 0.9rem; }
-        .stats-bar { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); margin: 30px 0; }
-        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: center; }
-        .stat-item h3 { color: #25d366; font-size: 2rem; margin-bottom: 5px; }
-        .stat-item p { color: #666; font-size: 0.9rem; }
-        .rules-box { background: #fffaf0; border-left: 4px solid #dd6b20; padding: 20px; margin: 30px 0; border-radius: 0 8px 8px 0; }
-        .rules-box h4 { color: #dd6b20; margin-bottom: 10px; }
-        .rules-box ul { color: #666; padding-left: 20px; }
-        .rules-box li { margin-bottom: 5px; }
+        .taxi-hero-modern { background: linear-gradient(135deg, #25d366, #128c7e); color: white; padding: 60px 20px; text-align: center; }
+        .taxi-hero-modern h1 { font-size: 2.2rem; margin-bottom: 15px; }
+        .taxi-hero-modern p { font-size: 1.1rem; opacity: 0.95; }
+        .whatsapp-btn-modern { display: inline-flex; align-items: center; gap: 10px; background: white; color: #25d366; padding: 15px 30px; border-radius: 30px; font-size: 1.1rem; font-weight: 600; text-decoration: none; margin-top: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .taxi-section-modern { padding: 40px 20px; max-width: 900px; margin: 0 auto; }
+        .feature-grid-modern { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
+        .feature-card-modern { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); text-align: center; }
+        .feature-icon-modern { font-size: 2.5rem; color: #25d366; margin-bottom: 15px; }
+        .feature-card-modern h3 { color: #2c3e50; margin-bottom: 10px; }
+        .feature-card-modern p { color: #5a6b7c; font-size: 0.95rem; }
+        .how-it-works-modern { background: #faf9f7; padding: 40px 20px; border-radius: 15px; margin: 30px 0; }
+        .step-modern { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; }
+        .step-number-modern { width: 35px; height: 35px; background: #25d366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0; }
+        .step-content-modern h4 { color: #2c3e50; margin-bottom: 5px; }
+        .step-content-modern p { color: #5a6b7c; font-size: 0.9rem; }
+        .stats-bar-modern { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); margin: 30px 0; }
+        .stats-grid-modern { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: center; }
+        .stat-item-modern h3 { color: #25d366; font-size: 2rem; margin-bottom: 5px; }
+        .stat-item-modern p { color: #5a6b7c; font-size: 0.9rem; }
+        .rules-box-modern { background: #fffaf0; border-left: 4px solid #c4a77d; padding: 20px; margin: 30px 0; border-radius: 0 8px 8px 0; }
+        .rules-box-modern h4 { color: #c4a77d; margin-bottom: 10px; }
+        .rules-box-modern ul { color: #5a6b7c; padding-left: 20px; }
+        .rules-box-modern li { margin-bottom: 5px; }
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-home"></i>
-                <span>CasaCV</span>
-            </a>
-            <div class="nav-links" id="navLinks">
-                <a href="index.html" data-i18n="nav_home">Início</a>
-                <a href="listings.html" data-i18n="nav_listings">Kasa</a>
-                <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
-                <a href="china-trade.html" data-i18n="nav_china">China</a>
-                <a href="tenders.html" data-i18n="nav_tenders">Licitacoes</a>
-                <a href="services.html" data-i18n="nav_services">Servicos</a>
-                <a href="reviews.html" data-i18n="nav_reviews">Avaliacoes</a>
-                <a href="complaints.html" data-i18n="nav_complaints">Voz di Povu</a>
-                <a href="confession-wall.html" data-i18n="nav_confession">Mural</a>
-                <a href="taxi-group.html" class="active" data-i18n="nav_taxi" style="color:#25d366;"><i class="fab fa-whatsapp"></i> Taxi</a>
-                <a href="publish.html" class="btn-primary" data-i18n="nav_publish">Publika</a>
+    <!-- 顶部导航 -->
+    <nav class="navbar-modern">
+        <div class="nav-container-modern">
+            <a href="index.html" class="logo-modern"><i class="fas fa-home"></i><span>CasaCV</span></a>
+            <div class="search-bar-modern">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buska..." id="search-input">
             </div>
-            <div class="nav-actions">
-                <div class="language-switcher">
-                    <button class="lang-btn" onclick="toggleLang()">
-                        <i class="fas fa-globe"></i>
-                        <span id="current-lang">Kriolu</span>
-                    </button>
-                    <div class="lang-dropdown" id="lang-dropdown">
-                        <a href="#" onclick="setLanguage('ke')">Kriolu</a>
-                        <a href="#" onclick="setLanguage('zh')">中文</a>
-                    </div>
-                </div>
+            <div class="nav-actions-modern">
+                <a href="publish.html" class="btn-publish-nav"><i class="fas fa-plus"></i><span>Publika</span></a>
             </div>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
+            <button class="mobile-menu-btn-modern" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
         </div>
     </nav>
 
     <!-- 移动端菜单 -->
-    <div class="mobile-menu" id="mobile-menu">
-        <a href="index.html" data-i18n="nav_home">Início</a>
-        <a href="listings.html" data-i18n="nav_listings">Kasa</a>
-        <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
-        <a href="china-trade.html" data-i18n="nav_china">China</a>
-        <a href="tenders.html" data-i18n="nav_tenders">Licitacoes</a>
-        <a href="services.html" data-i18n="nav_services">Servicos</a>
-        <a href="reviews.html" data-i18n="nav_reviews">Avaliacoes</a>
-        <a href="complaints.html" data-i18n="nav_complaints">Voz di Povu</a>
-        <a href="confession-wall.html" data-i18n="nav_confession">Mural</a>
-        <a href="taxi-group.html" class="active" data-i18n="nav_taxi">Taxi</a>
-        <a href="publish.html" data-i18n="nav_publish">Publika</a>
+    <div class="mobile-menu-modern" id="mobile-menu">
+        <a href="index.html"><i class="fas fa-home"></i> Inisio</a>
+        <a href="listings.html"><i class="fas fa-building"></i> Kasa</a>
+        <a href="jobs.html"><i class="fas fa-briefcase"></i> Trabaiu</a>
+        <a href="services.html"><i class="fas fa-tools"></i> Servisu</a>
+        <a href="reviews.html"><i class="fas fa-star"></i> Avaliasaun</a>
+        <a href="confession-wall.html"><i class="fas fa-heart"></i> Mural</a>
+        <a href="complaints.html"><i class="fas fa-bullhorn"></i> Voz di Povu</a>
+        <a href="taxi-group.html" class="active"><i class="fab fa-whatsapp"></i> Taxi</a>
+        <a href="publish.html"><i class="fas fa-plus-circle"></i> Publika</a>
     </div>
 
-    <section class="taxi-hero">
-        <h1><i class="fas fa-taxi"></i> Grupo Taxi Cabo Verde</h1>
-        <p>Encontra taxi rápido no WhatsApp! Clientes e taxistas no mesmo grupo.</p>
-        <a href="https://wa.me/2389862098?text=Oi! Quero entrar no grupo taxi Cabo Verde" class="whatsapp-btn" target="_blank">
-            <i class="fab fa-whatsapp"></i> Entra no Grupo WhatsApp
+    <section class="taxi-hero-modern">
+        <h1><i class="fas fa-taxi"></i> Grupu Taxi Kabu Verdi</h1>
+        <p>Atxa taxi rapidu no WhatsApp! Klienti i taxistas na mesmu grupu.</p>
+        <a href="https://wa.me/2389862098?text=Oi! Kero entra na grupu taxi Kabu Verdi" class="whatsapp-btn-modern" target="_blank">
+            <i class="fab fa-whatsapp"></i> Entra na Grupu WhatsApp
         </a>
         <p style="margin-top: 15px; font-size: 0.9rem;">WhatsApp: +238 986 20 98</p>
     </section>
 
-    <section class="taxi-section">
-        <div class="stats-bar">
-            <div class="stats-grid">
-                <div class="stat-item">
+    <section class="taxi-section-modern">
+        <div class="stats-bar-modern">
+            <div class="stats-grid-modern">
+                <div class="stat-item-modern">
                     <h3>156</h3>
                     <p>Taxistas</p>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item-modern">
                     <h3>2,340</h3>
                     <p>Membros</p>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item-modern">
                     <h3>24/7</h3>
-                    <p>Serviço</p>
+                    <p>Servisu</p>
                 </div>
             </div>
         </div>
 
-        <div class="feature-grid">
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-                <h3>Rápido</h3>
-                <p>Manda mensagem no grupo, taxistas respondem em minutos</p>
+        <div class="feature-grid-modern">
+            <div class="feature-card-modern">
+                <div class="feature-icon-modern"><i class="fas fa-bolt"></i></div>
+                <h3>Rapidu</h3>
+                <p>Manda mensagem, taxistas responde na minutus</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                <h3>Seguro</h3>
-                <p>Taxistas verificados, viagem com segurança</p>
+            <div class="feature-card-modern">
+                <div class="feature-icon-modern"><i class="fas fa-shield-alt"></i></div>
+                <h3>Seguru</h3>
+                <p>Taxistas verifikadu, viajem ku seguransa</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
-                <h3>Todo Cabo Verde</h3>
-                <p>Praia, Mindelo, Sal, Santiago, todas ilhas</p>
+            <div class="feature-card-modern">
+                <div class="feature-icon-modern"><i class="fas fa-map-marker-alt"></i></div>
+                <h3>Tudu Kabu Verdi</h3>
+                <p>Praia, Mindelo, Sal, Santiago, tudu ilhas</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-clock"></i></div>
-                <h3>24 Horas</h3>
-                <p>Dia e noite, sempre tem taxi disponível</p>
-            </div>
-        </div>
-
-        <div class="how-it-works">
-            <h2 style="text-align: center; margin-bottom: 25px; color: #2d3748;">Como Funciona?</h2>
-            <div class="step">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                    <h4>Entra no Grupo</h4>
-                    <p>Clica no botão verde, manda mensagem para +238 986 20 98</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                    <h4>Pede Taxi</h4>
-                    <p>Manda mensagem no grupo: "Preciso taxi de [local] para [destino], [hora]"</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                    <h4>Taxistas Respondem</h4>
-                    <p>Taxistas disponíveis respondem com preço e tempo de chegada</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-number">4</div>
-                <div class="step-content">
-                    <h4>Confirma e Viaja</h4>
-                    <p>Escolhe o taxi, confirma, e espera no local combinado</p>
-                </div>
+            <div class="feature-card-modern">
+                <div class="feature-icon-modern"><i class="fas fa-clock"></i></div>
+                <h3>24 Oras</h3>
+                <p>Dia i noiti, sempri ten taxi disponivel</p>
             </div>
         </div>
 
-        <div class="rules-box">
-            <h4><i class="fas fa-exclamation-triangle"></i> Regras do Grupo</h4>
+        <div class="how-it-works-modern">
+            <h2 style="text-align: center; margin-bottom: 25px; color: #2c3e50;">Komo Ta Funsiona?</h2>
+            <div class="step-modern">
+                <div class="step-number-modern">1</div>
+                <div class="step-content-modern">
+                    <h4>Entra na Grupu</h4>
+                    <p>Klica na boton verdi, manda mensagem pa +238 986 20 98</p>
+                </div>
+            </div>
+            <div class="step-modern">
+                <div class="step-number-modern">2</div>
+                <div class="step-content-modern">
+                    <h4>Pedi Taxi</h4>
+                    <p>Manda mensagem: "Presiza taxi di [lokal] pa [destinu], [ora]"</p>
+                </div>
+            </div>
+            <div class="step-modern">
+                <div class="step-number-modern">3</div>
+                <div class="step-content-modern">
+                    <h4>Taxistas Responde</h4>
+                    <p>Taxistas disponivel responde ku preçu i tempu di txiga</p>
+                </div>
+            </div>
+            <div class="step-modern">
+                <div class="step-number-modern">4</div>
+                <div class="step-content-modern">
+                    <h4>Konfirma i Viaja</h4>
+                    <p>Skolhe taxi, konfirma, i espeta na lokal kombinadu</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="rules-box-modern">
+            <h4><i class="fas fa-exclamation-triangle"></i> Regras di Grupu</h4>
             <ul>
-                <li>Respeita todos os membros</li>
-                <li>Não manda spam ou propaganda</li>
-                <li>Preço combinado antes de viajar</li>
-                <li>Taxistas: mostra licença se cliente pedir</li>
-                <li>Problemas? Contacta admin: houlei@live.cn</li>
+                <li>Respeita tudu membros</li>
+                <li>Ka manda spam o propaganda</li>
+                <li>Preçu kombinadu antis di viaja</li>
+                <li>Taxistas: mostra lisensa si klienti pidi</li>
+                <li>Problemas? Kontaktu admin: houlei@live.cn</li>
             </ul>
         </div>
 
         <div style="text-align: center; padding: 30px 0;">
-            <h3 style="margin-bottom: 20px; color: #2d3748;">Taxista? Quer entrar no grupo?</h3>
-            <p style="color: #666; margin-bottom: 20px;">Manda mensagem com: nome, número de telefone, e cidade onde trabalha</p>
-            <a href="https://wa.me/2389862098?text=Oi! Sou taxista, quero entrar no grupo. Nome: [seu nome], Cidade: [sua cidade]" class="whatsapp-btn" target="_blank" style="background: #25d366; color: white;">
-                <i class="fab fa-whatsapp"></i> Registar como Taxista
+            <h3 style="margin-bottom: 20px; color: #2c3e50;">Taxista? Kero entra na grupu?</h3>
+            <p style="color: #5a6b7c; margin-bottom: 20px;">Manda mensagem ku: nómi, númeru, i sidadi undi bu trabadja</p>
+            <a href="https://wa.me/2389862098?text=Oi! Nha taxista, kero entra na grupu. Nómi: [bu nómi], Sidadi: [bu sidadi]" class="whatsapp-btn-modern" target="_blank" style="background: #25d366; color: white;">
+                <i class="fab fa-whatsapp"></i> Regista komu Taxista
             </a>
         </div>
     </section>
 
-    <footer style="background:#128c7e;color:white;padding:30px;text-align:center;">
-        <p>Grupo Taxi Cabo Verde - WhatsApp: +238 986 20 98</p>
-        <p style="margin-top:8px;opacity:0.8;font-size:0.9rem;">Admin: houlei@live.cn</p>
+    <!-- 页脚 -->
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="footer-grid-modern">
+                <div class="footer-brand-modern">
+                    <a href="index.html" class="logo-modern"><i class="fas fa-home"></i><span>CasaCV</span></a>
+                    <p>Plataforma di konfiansa pa aluguel na Kabu Verdi</p>
+                </div>
+                <div class="footer-links-modern">
+                    <h4>Servisu</h4>
+                    <a href="services.html">Servisu</a>
+                    <a href="jobs.html">Empregu</a>
+                    <a href="publish.html">Publika</a>
+                </div>
+                <div class="footer-links-modern">
+                    <h4>Kontaktu</h4>
+                    <p><i class="fas fa-envelope"></i> houlei@live.cn</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Praia, Kabu Verdi</p>
+                </div>
+            </div>
+            <div class="footer-bottom-modern">
+                <p>&copy; 2026 CasaCV. Tudu direitu riservadu.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- 移动端底部导航 -->
+    <nav class="mobile-bottom-nav-modern" id="mobile-bottom-nav">
+        <a href="index.html" class="nav-item-modern"><i class="fas fa-home"></i><span>Inisio</span></a>
+        <a href="listings.html" class="nav-item-modern"><i class="fas fa-building"></i><span>Kasa</span></a>
+        <a href="publish.html" class="nav-item-modern nav-item-main-modern"><div class="nav-main-btn-modern"><i class="fas fa-plus"></i></div><span>Publika</span></a>
+        <a href="jobs.html" class="nav-item-modern"><i class="fas fa-briefcase"></i><span>Trabaiu</span></a>
+        <a href="#" class="nav-item-modern active" id="more-menu-btn"><i class="fas fa-ellipsis-h"></i><span>Mais</span></a>
+    </nav>
+
+    <!-- 更多菜单弹窗 -->
+    <div class="more-menu-modal" id="more-menu-modal">
+        <div class="more-menu-content">
+            <a href="services.html"><i class="fas fa-tools"></i> Servisu</a>
+            <a href="reviews.html"><i class="fas fa-star"></i> Avaliasaun</a>
+            <a href="confession-wall.html"><i class="fas fa-heart"></i> Mural</a>
+            <a href="complaints.html"><i class="fas fa-bullhorn"></i> Voz di Povu</a>
+            <a href="taxi-group.html" class="active"><i class="fab fa-whatsapp"></i> Taxi</a>
+            <a href="tenders.html"><i class="fas fa-gavel"></i> Licitasaun</a>
+        </div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

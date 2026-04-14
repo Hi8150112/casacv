@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="ke">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>房源列表 - CasaCV</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Kasa Disponivel - CasaCV</title>
+    <meta name="description" content="Atxa kasa pa arrenda na Praia, Mindelo, Sal i otus sidadi di Kabu Verdi.">
+    <link rel="stylesheet" href="css/modern-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google tag (gtag.js) -->
@@ -17,161 +18,252 @@
     </script>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
+    <!-- 顶部导航 -->
+    <nav class="navbar-modern">
+        <div class="nav-container-modern">
+            <a href="index.html" class="logo-modern">
                 <i class="fas fa-home"></i>
                 <span>CasaCV</span>
             </a>
-            <div class="nav-links" id="navLinks">
-                <a href="index.html" data-i18n="nav_home">Início</a>
-                <a href="listings.html" class="active" data-i18n="nav_listings">Kasa</a>
-                <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
-                <a href="china-trade.html" data-i18n="nav_china">China</a>
-                <a href="tenders.html" data-i18n="nav_tenders">Licitacoes</a>
-                <a href="services.html" data-i18n="nav_services">Servicos</a>
-                <a href="reviews.html" data-i18n="nav_reviews">Avaliacoes</a>
-                <a href="complaints.html" data-i18n="nav_complaints">Voz di Povu</a>
-                <a href="confession-wall.html" data-i18n="nav_confession">Mural</a>
-                <a href="taxi-group.html" data-i18n="nav_taxi" style="color:#25d366;"><i class="fab fa-whatsapp"></i> Taxi</a>
-                <a href="publish.html" class="btn-primary" data-i18n="nav_publish">Publika</a>
+            <div class="search-bar-modern">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buska kasa na Praia, Mindelo..." id="search-input">
             </div>
-            <div class="nav-actions">
-                <div class="language-switcher">
-                    <button class="lang-btn" onclick="toggleLang()">
-                        <i class="fas fa-globe"></i>
-                        <span id="current-lang">Kriolu</span>
-                    </button>
-                    <div class="lang-dropdown" id="lang-dropdown">
-                        <a href="#" onclick="setLanguage('ke')">Kriolu</a>
-                        <a href="#" onclick="setLanguage('zh')">中文</a>
-                    </div>
-                </div>
+            <div class="nav-actions-modern">
+                <a href="publish.html" class="btn-publish-nav">
+                    <i class="fas fa-plus"></i>
+                    <span>Publika</span>
+                </a>
             </div>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <button class="mobile-menu-btn-modern" id="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
 
     <!-- 移动端菜单 -->
-    <div class="mobile-menu" id="mobile-menu">
-        <a href="index.html" data-i18n="nav_home">Início</a>
-        <a href="listings.html" class="active" data-i18n="nav_listings">Kasa</a>
-        <a href="jobs.html" data-i18n="nav_jobs">Trabaiu</a>
-        <a href="china-trade.html" data-i18n="nav_china">China</a>
-        <a href="tenders.html" data-i18n="nav_tenders">Licitacoes</a>
-        <a href="services.html" data-i18n="nav_services">Servicos</a>
-        <a href="reviews.html" data-i18n="nav_reviews">Avaliacoes</a>
-        <a href="complaints.html" data-i18n="nav_complaints">Voz di Povu</a>
-        <a href="confession-wall.html" data-i18n="nav_confession">Mural</a>
-        <a href="taxi-group.html" data-i18n="nav_taxi">Taxi</a>
-        <a href="publish.html" data-i18n="nav_publish">Publika</a>
+    <div class="mobile-menu-modern" id="mobile-menu">
+        <a href="index.html"><i class="fas fa-home"></i> Inisio</a>
+        <a href="listings.html" class="active"><i class="fas fa-building"></i> Kasa</a>
+        <a href="jobs.html"><i class="fas fa-briefcase"></i> Trabaiu</a>
+        <a href="services.html"><i class="fas fa-tools"></i> Servisu</a>
+        <a href="reviews.html"><i class="fas fa-star"></i> Avaliasaun</a>
+        <a href="confession-wall.html"><i class="fas fa-heart"></i> Mural</a>
+        <a href="complaints.html"><i class="fas fa-bullhorn"></i> Voz di Povu</a>
+        <a href="taxi-group.html"><i class="fab fa-whatsapp"></i> Taxi</a>
+        <a href="publish.html"><i class="fas fa-plus-circle"></i> Publika</a>
     </div>
 
     <!-- 页面标题 -->
-    <section class="page-header">
-        <h1 data-i18n="listings_title">Kasa pa Arrenda</h1>
-        <p data-i18n="listings_subtitle">Diskubri kasa di kalidadi na Kabu Verdi</p>
+    <section class="page-header-modern">
+        <div class="container">
+            <h1>Kasa pa Arrenda</h1>
+            <p>Diskubri kasa di kalidadi na Kabu Verdi</p>
+        </div>
     </section>
 
     <!-- 筛选栏 -->
-    <section class="filter-bar">
-        <div class="filter-container">
-            <div class="filter-group">
-                <label data-i18n="form_city">城市</label>
-                <select id="filter-city">
-                    <option value="">所有城市</option>
-                    <option value="Praia">普拉亚 Praia</option>
-                    <option value="Mindelo">明德卢 Mindelo</option>
-                    <option value="Santa Maria">圣玛丽亚 Santa Maria</option>
-                    <option value="Sal Rei">萨尔雷 Sal Rei</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label data-i18n="form_property_type">房屋类型</label>
-                <select id="filter-type">
-                    <option value="">所有类型</option>
-                    <option value="apartment" data-i18n="type_apartment">公寓</option>
-                    <option value="house" data-i18n="type_house">独栋房屋</option>
-                    <option value="villa" data-i18n="type_villa">别墅</option>
-                    <option value="studio" data-i18n="type_studio">单间</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label data-i18n="form_rent_type">出租类型</label>
-                <select id="filter-rent">
-                    <option value="">不限</option>
-                    <option value="long" data-i18n="rent_long">长租</option>
-                    <option value="short" data-i18n="rent_short">短租/民宿</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label>价格范围</label>
-                <select id="filter-price">
-                    <option value="">不限</option>
-                    <option value="0-20000">0 - 20,000 CVE</option>
-                    <option value="20000-50000">20,000 - 50,000 CVE</option>
-                    <option value="50000-100000">50,000 - 100,000 CVE</option>
-                    <option value="100000-max">100,000+ CVE</option>
-                </select>
+    <section class="filter-bar-modern">
+        <div class="container">
+            <div class="filter-container-modern">
+                <div class="filter-group-modern">
+                    <label><i class="fas fa-map-marker-alt"></i> Sidadi</label>
+                    <select id="filter-city">
+                        <option value="">Tudu sidadi</option>
+                        <option value="Praia">Praia</option>
+                        <option value="Mindelo">Mindelo</option>
+                        <option value="Santa Maria">Santa Maria</option>
+                        <option value="Sal Rei">Sal Rei</option>
+                        <option value="Assomada">Assomada</option>
+                    </select>
+                </div>
+                <div class="filter-group-modern">
+                    <label><i class="fas fa-home"></i> Tipu</label>
+                    <select id="filter-type">
+                        <option value="">Tudu tipu</option>
+                        <option value="apartment">Apartamentu</option>
+                        <option value="house">Kasa</option>
+                        <option value="villa">Vila</option>
+                        <option value="studio">Stúdiu</option>
+                    </select>
+                </div>
+                <div class="filter-group-modern">
+                    <label><i class="fas fa-clock"></i> Tempu</label>
+                    <select id="filter-rent">
+                        <option value="">Tudu</option>
+                        <option value="long">Longu prazu</option>
+                        <option value="short">Curtu prazu</option>
+                    </select>
+                </div>
+                <div class="filter-group-modern">
+                    <label><i class="fas fa-tag"></i> Preçu</label>
+                    <select id="filter-price">
+                        <option value="">Tudu preçu</option>
+                        <option value="0-20000">0 - 20,000 CVE</option>
+                        <option value="20000-50000">20,000 - 50,000 CVE</option>
+                        <option value="50000-100000">50,000 - 100,000 CVE</option>
+                        <option value="100000-max">100,000+ CVE</option>
+                    </select>
+                </div>
+                <button class="filter-btn-modern" onclick="applyFilters()">
+                    <i class="fas fa-filter"></i> Filtra
+                </button>
             </div>
         </div>
     </section>
 
     <!-- 房源列表 -->
-    <section class="listings">
+    <section class="listings-section-modern">
         <div class="container">
-            <div id="all-listings" class="listings-grid">
+            <div class="section-header-modern">
+                <h2><i class="fas fa-list"></i> Rezultadu</h2>
+                <span class="results-count" id="results-count">0 kasa</span>
+            </div>
+            <div id="all-listings" class="listings-grid-modern">
                 <!-- 房源卡片将通过JS动态生成 -->
             </div>
         </div>
     </section>
 
     <!-- 页脚 -->
-    <footer class="footer">
+    <footer class="footer-modern">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">
+            <div class="footer-grid-modern">
+                <div class="footer-brand-modern">
+                    <a href="index.html" class="logo-modern">
                         <i class="fas fa-home"></i>
                         <span>CasaCV</span>
                     </a>
-                    <p data-i18n="footer_desc">佛得角最专业的租房平台，为华人社区提供便捷的租房服务</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-weixin"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <p>Plataforma di konfiansa pa aluguel na Kabu Verdi</p>
+                    <div class="social-links-modern">
                         <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="footer-links">
-                    <h4 data-i18n="footer_rent">我要租房</h4>
-                    <a href="listings.html" data-i18n="nav_listings">房源列表</a>
-                    <a href="#" data-i18n="footer_short">短租/民宿</a>
-                    <a href="#" data-i18n="footer_long">长租公寓</a>
-                    <a href="#" data-i18n="footer_guide">租房攻略</a>
+                <div class="footer-links-modern">
+                    <h4>Arrenda</h4>
+                    <a href="listings.html">Kasa</a>
+                    <a href="listings.html?type=short">Curtu prazu</a>
+                    <a href="listings.html?type=long">Longu prazu</a>
                 </div>
-                <div class="footer-links">
-                    <h4 data-i18n="footer_landlord">我是房东</h4>
-                    <a href="publish.html" data-i18n="nav_publish">发布房源</a>
-                    <a href="#" data-i18n="footer_tips">房东指南</a>
-                    <a href="#" data-i18n="footer_pricing">服务费用</a>
+                <div class="footer-links-modern">
+                    <h4>Servisu</h4>
+                    <a href="publish.html">Publika</a>
+                    <a href="services.html">Buska servisu</a>
+                    <a href="jobs.html">Empregu</a>
                 </div>
-                <div class="footer-links">
-                    <h4 data-i18n="footer_contact">联系我们</h4>
+                <div class="footer-links-modern">
+                    <h4>Kontaktu</h4>
                     <p><i class="fas fa-phone"></i> +238 9123 4567</p>
                     <p><i class="fas fa-envelope"></i> info@casacv.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Praia, Cape Verde</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Praia, Kabu Verdi</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 CasaCV. All rights reserved.</p>
+            <div class="footer-bottom-modern">
+                <p>&copy; 2026 CasaCV. Tudu direitu riservadu.</p>
             </div>
         </div>
     </footer>
 
+    <!-- 移动端底部导航 -->
+    <nav class="mobile-bottom-nav-modern" id="mobile-bottom-nav">
+        <a href="index.html" class="nav-item-modern">
+            <i class="fas fa-home"></i>
+            <span>Inisio</span>
+        </a>
+        <a href="listings.html" class="nav-item-modern active">
+            <i class="fas fa-building"></i>
+            <span>Kasa</span>
+        </a>
+        <a href="publish.html" class="nav-item-modern nav-item-main-modern">
+            <div class="nav-main-btn-modern">
+                <i class="fas fa-plus"></i>
+            </div>
+            <span>Publika</span>
+        </a>
+        <a href="jobs.html" class="nav-item-modern">
+            <i class="fas fa-briefcase"></i>
+            <span>Trabaiu</span>
+        </a>
+        <a href="#" class="nav-item-modern" id="more-menu-btn">
+            <i class="fas fa-ellipsis-h"></i>
+            <span>Mais</span>
+        </a>
+    </nav>
+
+    <!-- 更多菜单弹窗 -->
+    <div class="more-menu-modal" id="more-menu-modal">
+        <div class="more-menu-content">
+            <a href="services.html"><i class="fas fa-tools"></i> Servisu</a>
+            <a href="reviews.html"><i class="fas fa-star"></i> Avaliasaun</a>
+            <a href="confession-wall.html"><i class="fas fa-heart"></i> Mural</a>
+            <a href="complaints.html"><i class="fas fa-bullhorn"></i> Voz di Povu</a>
+            <a href="taxi-group.html"><i class="fab fa-whatsapp"></i> Taxi</a>
+            <a href="tenders.html"><i class="fas fa-gavel"></i> Licitasaun</a>
+        </div>
+    </div>
+
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // 房源列表页专用脚本
+        document.addEventListener('DOMContentLoaded', () => {
+            renderAllListings();
+            updateResultsCount();
+        });
+
+        function updateResultsCount() {
+            const count = listingsData.length;
+            document.getElementById('results-count').textContent = count + ' kasa';
+        }
+
+        function applyFilters() {
+            const city = document.getElementById('filter-city').value;
+            const type = document.getElementById('filter-type').value;
+            const rentType = document.getElementById('filter-rent').value;
+            const priceRange = document.getElementById('filter-price').value;
+
+            let filtered = listingsData.filter(listing => {
+                if (city && listing.city !== city) return false;
+                if (type && listing.type !== type) return false;
+                if (rentType && listing.rentType !== rentType) return false;
+                if (priceRange) {
+                    const [min, max] = priceRange.split('-').map(v => v === 'max' ? Infinity : parseInt(v));
+                    if (listing.price < min || (max && listing.price > max)) return false;
+                }
+                return true;
+            });
+
+            renderFilteredListings(filtered);
+            document.getElementById('results-count').textContent = filtered.length + ' kasa';
+        }
+
+        function renderFilteredListings(listings) {
+            const container = document.getElementById('all-listings');
+            if (!container) return;
+
+            if (listings.length === 0) {
+                container.innerHTML = `
+                    <div class="no-results-modern">
+                        <i class="fas fa-search"></i>
+                        <p>Nada atxa ku es filtru</p>
+                        <button onclick="clearFilters()" class="btn-primary-modern">Limpa filtru</button>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = listings.map(listing => createListingCard(listing)).join('');
+        }
+
+        function clearFilters() {
+            document.getElementById('filter-city').value = '';
+            document.getElementById('filter-type').value = '';
+            document.getElementById('filter-rent').value = '';
+            document.getElementById('filter-price').value = '';
+            applyFilters();
+        }
+    </script>
 </body>
 </html>
