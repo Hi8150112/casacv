@@ -477,8 +477,132 @@
         <i class="fas fa-plus"></i>
     </button>
 
+    <!-- 分享弹窗 -->
+    <div id="shareModal" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.8);z-index:9999;align-items:center;justify-content:center;">
+        <div style="background:#1a1a1a;border-radius:16px;padding:24px;max-width:400px;width:90%;text-align:center;border:1px solid #2f2f2f;">
+            <div style="font-size:3rem;margin-bottom:16px;">🎁</div>
+            <h3 style="margin-bottom:12px;color:#fff;">Partilha i Ganhá!</h3>
+            <p style="color:#b5b5b5;margin-bottom:20px;">Partilha CasaCV ku 5 amigu i ganha <span style="color:#3ba55d;font-weight:600;">500 CVE</span> pa bu conta!</p>
+            <div style="display:flex;gap:12px;justify-content:center;margin-bottom:20px;">
+                <button onclick="shareWhatsApp()" style="width:50px;height:50px;border-radius:50%;background:#25d366;border:none;color:#fff;font-size:1.3rem;cursor:pointer;">
+                    <i class="fab fa-whatsapp"></i>
+                </button>
+                <button onclick="shareFacebook()" style="width:50px;height:50px;border-radius:50%;background:#1877f2;border:none;color:#fff;font-size:1.3rem;cursor:pointer;">
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+                <button onclick="copyLink()" style="width:50px;height:50px;border-radius:50%;background:#5865f2;border:none;color:#fff;font-size:1.3rem;cursor:pointer;">
+                    <i class="fas fa-link"></i>
+                </button>
+            </div>
+            <div style="background:#0f0f0f;padding:12px;border-radius:8px;margin-bottom:16px;">
+                <div style="font-size:0.8rem;color:#6e6e6e;margin-bottom:4px;">Bu código di convite:</div>
+                <div style="font-size:1.2rem;font-weight:600;color:#5865f2;">CV2026<span id="userId">ABC</span></div>
+            </div>
+            <button onclick="closeShareModal()" style="padding:12px 24px;background:transparent;border:1px solid #2f2f2f;border-radius:8px;color:#b5b5b5;cursor:pointer;">Agora Não</button>
+        </div>
+    </div>
+
+    <!-- 邀请进度条 -->
+    <div id="inviteProgress" style="display:none;position:fixed;top:80px;right:20px;background:#1a1a1a;border-radius:12px;padding:16px;border:1px solid #2f2f2f;z-index:100;max-width:280px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#5865f2,#eb459e);display:flex;align-items:center;justify-content:center;">
+                <i class="fas fa-gift" style="color:#fff;"></i>
+            </div>
+            <div>
+                <div style="font-weight:600;">Convida Amigu</div>
+                <div style="font-size:0.8rem;color:#6e6e6e;"><span id="inviteCount">0</span>/5 convidados</div>
+            </div>
+        </div>
+        <div style="height:6px;background:#0f0f0f;border-radius:3px;overflow:hidden;">
+            <div id="progressBar" style="height:100%;width:0%;background:linear-gradient(90deg,#5865f2,#eb459e);transition:width 0.3s;"></div>
+        </div>
+        <div style="margin-top:12px;font-size:0.85rem;color:#b5b5b5;">
+            Faltam <span id="remainingInvites" style="color:#3ba55d;font-weight:600;">5</span> pa ganha 500 CVE!
+        </div>
+        <button onclick="openShareModal()" style="width:100%;margin-top:12px;padding:10px;background:#5865f2;border:none;border-radius:8px;color:#fff;font-weight:600;cursor:pointer;">
+            <i class="fas fa-share-alt"></i> Partilha Agora
+        </button>
+    </div>
+
     <script src="js/i18n.js"></script>
     <script>
+        // 生成随机用户ID
+        function generateUserId() {
+            let userId = localStorage.getItem('casacv_user_id');
+            if (!userId) {
+                userId = Math.random().toString(36).substring(2, 6).toUpperCase();
+                localStorage.setItem('casacv_user_id', userId);
+            }
+            return userId;
+        }
+
+        // 获取邀请数据
+        function getInviteData() {
+            return {
+                count: parseInt(localStorage.getItem('casacv_invites') || '0'),
+                shared: localStorage.getItem('casacv_shared') === 'true'
+            };
+        }
+
+        // 更新邀请进度
+        function updateInviteProgress() {
+            const data = getInviteData();
+            document.getElementById('inviteCount').textContent = data.count;
+            document.getElementById('remainingInvites').textContent = Math.max(0, 5 - data.count);
+            document.getElementById('progressBar').style.width = (data.count / 5 * 100) + '%';
+            document.getElementById('userId').textContent = generateUserId();
+        }
+
+        // 打开分享弹窗
+        function openShareModal() {
+            document.getElementById('shareModal').style.display = 'flex';
+            updateInviteProgress();
+        }
+
+        // 关闭分享弹窗
+        function closeShareModal() {
+            document.getElementById('shareModal').style.display = 'none';
+        }
+
+        // WhatsApp分享
+        function shareWhatsApp() {
+            const text = `🎁 Junta-se a CasaCV - A maior comunidade di Kabu Verdi!\n\nUsa bu código: CV2026${generateUserId()}\n\n👉 https://tinyurl.com/25wg7dwa`;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+            recordShare();
+        }
+
+        // Facebook分享
+        function shareFacebook() {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=https://tinyurl.com/25wg7dwa`, '_blank');
+            recordShare();
+        }
+
+        // 复制链接
+        function copyLink() {
+            const link = `https://tinyurl.com/25wg7dwa?ref=CV2026${generateUserId()}`;
+            navigator.clipboard.writeText(link).then(() => {
+                alert('Link copiado! Partilha ku bu amigus.');
+                recordShare();
+            });
+        }
+
+        // 记录分享
+        function recordShare() {
+            localStorage.setItem('casacv_shared', 'true');
+            // 模拟邀请成功（实际应该通过后端验证）
+            setTimeout(() => {
+                let count = parseInt(localStorage.getItem('casacv_invites') || '0');
+                if (count < 5) {
+                    count++;
+                    localStorage.setItem('casacv_invites', count);
+                    updateInviteProgress();
+                    if (count >= 5) {
+                        alert('🎉 Parabéns! Bu ganhou 500 CVE!');
+                    }
+                }
+            }, 2000);
+        }
+
         function toggleLang() {
             const current = localStorage.getItem('casacv_language') || 'ke';
             const next = current === 'ke' ? 'zh' : 'ke';
@@ -489,6 +613,26 @@
         function toggleMobileMenu() {
             alert('Menu: Licitacoes, Servicos, Avaliacoes, Voz di Povu, Grupo Taxi');
         }
+
+        // 页面加载时显示邀请进度
+        document.addEventListener('DOMContentLoaded', () => {
+            updateInviteProgress();
+            // 5秒后显示邀请进度条
+            setTimeout(() => {
+                const data = getInviteData();
+                if (!data.shared) {
+                    document.getElementById('inviteProgress').style.display = 'block';
+                }
+            }, 5000);
+            
+            // 30秒后显示分享弹窗（如果还没分享过）
+            setTimeout(() => {
+                const data = getInviteData();
+                if (!data.shared) {
+                    openShareModal();
+                }
+            }, 30000);
+        });
     </script>
 </body>
 </html>
