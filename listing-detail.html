@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ke">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhi di Kasa - CasaCV</title>
+    <meta name="description" content="Detalhi di kasa pa arrenda na Kabu Verdi.">
+    <link rel="stylesheet" href="css/modern-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N52TE42NYM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N52TE42NYM');
+    </script>
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <nav class="navbar-modern">
+        <div class="nav-container-modern">
+            <a href="index.html" class="logo-modern">
+                <i class="fas fa-home"></i>
+                <span>CasaCV</span>
+            </a>
+            <div class="search-bar-modern">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buska kasa..." id="search-input">
+            </div>
+            <div class="nav-actions-modern">
+                <a href="publish.html" class="btn-publish-nav">
+                    <i class="fas fa-plus"></i>
+                    <span>Publika</span>
+                </a>
+            </div>
+            <button class="mobile-menu-btn-modern" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 移动端菜单 -->
+    <div class="mobile-menu-modern" id="mobile-menu">
+        <a href="index.html"><i class="fas fa-home"></i> Inisio</a>
+        <a href="listings.html"><i class="fas fa-building"></i> Kasa</a>
+        <a href="jobs.html"><i class="fas fa-briefcase"></i> Trabaiu</a>
+        <a href="services.html"><i class="fas fa-tools"></i> Servisu</a>
+        <a href="reviews.html"><i class="fas fa-star"></i> Avaliasaun</a>
+        <a href="confession-wall.html"><i class="fas fa-heart"></i> Mural</a>
+        <a href="complaints.html"><i class="fas fa-bullhorn"></i> Voz di Povu</a>
+        <a href="taxi-group.html"><i class="fab fa-whatsapp"></i> Taxi</a>
+        <a href="publish.html"><i class="fas fa-plus-circle"></i> Publika</a>
+    </div>
+
+    <!-- 返回按钮 -->
+    <div class="container" style="padding-top: 100px; padding-bottom: 20px;">
+        <a href="listings.html" class="btn-back-modern">
+            <i class="fas fa-arrow-left"></i> Volta pa lista
+        </a>
+    </div>
+
+    <!-- 房源详情 -->
+    <section class="listing-detail-section">
+        <div class="container">
+            <div id="listing-detail-content">
+                <!-- 内容将通过JS动态加载 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="footer-grid-modern">
+                <div class="footer-brand-modern">
+                    <a href="index.html" class="logo-modern">
+                        <i class="fas fa-home"></i>
+                        <span>CasaCV</span>
+                    </a>
+                    <p>Plataforma di konfiansa pa aluguel na Kabu Verdi</p>
+                </div>
+                <div class="footer-links-modern">
+                    <h4>Arrenda</h4>
+                    <a href="listings.html">Kasa</a>
+                    <a href="listings.html?type=short">Curtu prazu</a>
+                    <a href="listings.html?type=long">Longu prazu</a>
+                </div>
+                <div class="footer-links-modern">
+                    <h4>Servisu</h4>
+                    <a href="publish.html">Publika</a>
+                    <a href="services.html">Buska servisu</a>
+                    <a href="jobs.html">Empregu</a>
+                </div>
+                <div class="footer-links-modern">
+                    <h4>Kontaktu</h4>
+                    <p><i class="fas fa-envelope"></i> info@casacv.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Praia, Kabu Verdi</p>
+                </div>
+            </div>
+            <div class="footer-bottom-modern">
+                <p>&copy; 2026 CasaCV. Tudu direitu riservadu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // 获取URL参数中的房源ID
+        function getListingId() {
+            const params = new URLSearchParams(window.location.search);
+            return parseInt(params.get('id'));
+        }
+
+        // 渲染房源详情
+        function renderListingDetail() {
+            const id = getListingId();
+            const listing = listingsData.find(l => l.id === id);
+            const container = document.getElementById('listing-detail-content');
+            
+            if (!listing) {
+                container.innerHTML = `
+                    <div class="no-results-modern">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Kasa nãu atxadu</p>
+                        <a href="listings.html" class="btn-primary-modern">Volta pa lista</a>
+                    </div>
+                `;
+                return;
+            }
+
+            const lang = 'pt'; // 使用葡语/Kriolu
+            const priceUnit = listing.priceType === 'day' ? '/ dia' : '/ mês';
+            const rentTypeText = listing.rentType === 'short' ? 'Curtu prazu' : 'Longu prazu';
+
+            container.innerHTML = `
+                <div class="listing-detail-grid">
+                    <div class="listing-detail-images">
+                        <div class="main-image">
+                            <img src="${listing.image}" alt="${listing.title[lang]}">
+                        </div>
+                    </div>
+                    <div class="listing-detail-info">
+                        <div class="listing-detail-header">
+                            <span class="listing-badge ${listing.badge}">${rentTypeText}</span>
+                            <h1>${listing.title[lang]}</h1>
+                            <div class="listing-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>${listing.location[lang]}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="listing-detail-price">
+                            <span class="price">${listing.price.toLocaleString()} CVE</span>
+                            <span class="period">${priceUnit}</span>
+                        </div>
+
+                        <div class="listing-detail-features">
+                            <div class="feature-item">
+                                <i class="fas fa-bed"></i>
+                                <span>${listing.rooms} Quartu</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-bath"></i>
+                                <span>${listing.bathrooms} Banhu</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>${listing.area} m²</span>
+                            </div>
+                        </div>
+
+                        <div class="listing-detail-description">
+                            <h3>Diskrisaun</h3>
+                            <p>Kasa di kalidadi, prontu pa mudansa. Localizasaun otimu, pertu di tudu servisu. 
+                            Kondisiones di pagamentu flexivel. Pa mais informasaun, kontaktu nos.</p>
+                        </div>
+
+                        <div class="listing-detail-contact">
+                            <h3>Kontaktu</h3>
+                            <div class="contact-buttons">
+                                <a href="tel:+23891234567" class="btn-contact-phone">
+                                    <i class="fas fa-phone"></i>
+                                    <span>Liga</span>
+                                </a>
+                                <a href="https://wa.me/23891234567" class="btn-contact-whatsapp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>WhatsApp</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="listing-detail-actions">
+                            <button class="btn-favorite" onclick="toggleFavorite(${listing.id})">
+                                <i class="far fa-heart"></i>
+                                <span>Guarda</span>
+                            </button>
+                            <button class="btn-share" onclick="shareListing(${listing.id})">
+                                <i class="fas fa-share-alt"></i>
+                                <span>Partilha</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // 分享房源
+        function shareListing(id) {
+            const url = window.location.href;
+            if (navigator.share) {
+                navigator.share({
+                    title: 'CasaCV - Kasa pa Arrenda',
+                    url: url
+                });
+            } else {
+                // 复制链接到剪贴板
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('Link kopiadu!');
+                });
+            }
+        }
+
+        // 页面加载时渲染
+        document.addEventListener('DOMContentLoaded', renderListingDetail);
+    </script>
+</body>
+</html>

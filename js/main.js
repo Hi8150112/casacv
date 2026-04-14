@@ -172,8 +172,7 @@ function setCity(city) {
 
 // 查看房源详情
 function viewListing(id) {
-    // 实际项目中这里会跳转到详情页
-    alert('房源详情页 - ID: ' + id);
+    window.location.href = `listing-detail.html?id=${id}`;
 }
 
 // 收藏功能
