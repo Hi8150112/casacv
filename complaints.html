@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voz di Povu - CasaCV</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N52TE42NYM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N52TE42NYM');
+    </script>
+    <style>
+        .complaint-hero { background: linear-gradient(135deg, #c53030, #e53e3e); color: white; padding: 50px 20px; text-align: center; }
+        .complaint-hero h1 { font-size: 2rem; margin-bottom: 10px; }
+        .complaint-hero p { opacity: 0.9; }
+        .complaint-section { padding: 40px 20px; max-width: 900px; margin: 0 auto; }
+        .complaint-filters { display: flex; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; }
+        .complaint-filter { padding: 8px 16px; border: 1px solid #e2e8f0; border-radius: 20px; background: white; cursor: pointer; font-size: 0.9rem; }
+        .complaint-filter.active { background: #c53030; color: white; }
+        .complaint-item { background: white; border-radius: 10px; padding: 20px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #e53e3e; }
+        .complaint-item.resolved { border-left-color: #38a169; opacity: 0.8; }
+        .complaint-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+        .complaint-title { font-size: 1.1rem; color: #2d3748; font-weight: 600; }
+        .complaint-badge { padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; }
+        .complaint-badge.pending { background: #fed7d7; color: #742a2a; }
+        .complaint-badge.resolved { background: #c6f6d5; color: #22543d; }
+        .complaint-location { color: #718096; font-size: 0.85rem; margin-bottom: 10px; }
+        .complaint-content { color: #4a5568; line-height: 1.6; margin-bottom: 12px; }
+        .complaint-footer { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #718096; }
+        .complaint-actions { display: flex; gap: 15px; }
+        .complaint-actions span { cursor: pointer; }
+        .complaint-actions span:hover { color: #c53030; }
+        .btn-complaint { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #c53030; color: white; border-radius: 50%; border: none; font-size: 1.5rem; cursor: pointer; box-shadow: 0 4px 12px rgba(197,48,48,0.4); }
+        .hot-topics { background: #fff5f5; border-radius: 10px; padding: 20px; margin-bottom: 25px; }
+        .hot-topics h3 { color: #c53030; margin-bottom: 12px; }
+        .hot-topic-tag { display: inline-block; padding: 6px 14px; background: white; border-radius: 20px; margin: 5px; font-size: 0.85rem; color: #c53030; border: 1px solid #fed7d7; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">CasaCV</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="listings.html">Kasa</a></li>
+                <li><a href="jobs.html">Trabaiu</a></li>
+                <li><a href="china-trade.html">China</a></li>
+                <li><a href="tenders.html">Licitacoes</a></li>
+                <li><a href="services.html">Servicos</a></li>
+                <li><a href="reviews.html">Avaliacoes</a></li>
+                <li><a href="complaints.html" class="active">Voz di Povu</a></li>
+                <li><a href="confession-wall.html">Mural</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="complaint-hero">
+        <h1><i class="fas fa-bullhorn"></i> Voz di Povu</h1>
+        <p>Fala bu problema, bu voz importa!</p>
+    </section>
+
+    <section class="complaint-section">
+        <div class="hot-topics">
+            <h3><i class="fas fa-fire"></i> Temas Korrenti</h3>
+            <span class="hot-topic-tag">#AguaElectra</span>
+            <span class="hot-topic-tag">#EstradaRuin</span>
+            <span class="hot-topic-tag">#SaudePublica</span>
+            <span class="hot-topic-tag">#PrecuAltu</span>
+            <span class="hot-topic-tag">#Transporte</span>
+        </div>
+
+        <div class="complaint-filters">
+            <button class="complaint-filter active" data-filter="all">Tudu</button>
+            <button class="complaint-filter" data-filter="infrastructure">Infraestrutura</button>
+            <button class="complaint-filter" data-filter="service">Servicos Publicos</button>
+            <button class="complaint-filter" data-filter="safety">Seguranca</button>
+            <button class="complaint-filter" data-filter="resolved">Resolvido</button>
+        </div>
+
+        <div id="complaintList"></div>
+    </section>
+
+    <button class="btn-complaint" onclick="alert('Publika reclamacao: houlei@live.cn')" title="Publika Reclamacao">
+        <i class="fas fa-plus"></i>
+    </button>
+
+    <footer style="background:#c53030;color:white;padding:30px;text-align:center;">
+        <p>Voz di Povu - Bu voz, bu direitu</p>
+        <p style="margin-top:8px;opacity:0.7;font-size:0.9rem;">Contato: houlei@live.cn</p>
+    </footer>
+
+    <script>
+        const complaints = [
+            { id: 1, title: "Sem agua 3 dia na Praia", location: "Praia, Achada Grande", category: "infrastructure", content: "Electra ka ta manda agua faz 3 dia. Nha krianca ta bebe agua botija, ki ta kustadu karu. Alguem sabe kel ki ta pasau?", author: "Maria S.", time: "2 oras atras", likes: 156, comments: 42, status: "pending" },
+            { id: 2, title: "Estrada Sao Filipe ta perigoso", location: "Sao Filipe, Fogo", category: "infrastructure", content: "Estrada principal ki ta bai Mosteiros ten buraku grandi. Onti un moto kai, sorti ki pessoa ka more. Kamarada, arranja es bai!", author: "Joao F.", time: "5 oras atras", likes: 234, comments: 67, status: "pending" },
+            { id: 3, title: "Hospital Mindelo sem remedi", location: "Mindelo, Sao Vicente", category: "service", content: "Nha mai ta duenti, bai hospital, mediku fala ka ten remedi basiku. Onde ki nos ta bai busca ajuda? Governo ten ki odja es.", author: "Ana P.", time: "1 dia atras", likes: 412, comments: 89, status: "pending" },
+            { id: 4, title: "Precu pexe ta altu dimais", location: "Praia, Mercado", category: "service", content: "Antes pexe ta kustadu 200 CVE, agora 500 CVE! Povu ki ta puxa vida kon ki? Pescador fala ki intermediario ki ta subi precu.", author: "Carlos M.", time: "1 dia atras", likes: 189, comments: 56, status: "pending" },
+            { id: 5, title: "Ladron na bairro Palmarejo", location: "Praia, Palmarejo", category: "safety", content: "Semana pasada 3 kaza fura. Policia bai, fala ki ten ki faze denuncia, ma nada acontece. Nos ta vive ku medu.", author: "Familia G.", time: "2 dia atras", likes: 298, comments: 78, status: "pending" },
+            { id: 6, title: "Onibus tarde sempri", location: "Praia, Achada Santo Antonio", category: "service", content: "Transporte publico ta um desastri. Onibus ta txiga tarde, as vezes ka ta txiga. Povu ta perde trabaiu ku es atrasu.", author: "Pedro L.", time: "3 dia atras", likes: 167, comments: 45, status: "pending" },
+            { id: 7, title: "Lixo na praia da Gamboa", location: "Praia, Gamboa", category: "infrastructure", content: "Praia bonitu, ma ta cheiu di lixo. Turista ta tira foto, ma ta vomi ku odjor. Câmara Municipal ten ki atua.", author: "Turista2026", time: "3 dia atras", likes: 445, comments: 123, status: "resolved", resolution: "Câmara limpa praia ontem. Obrigadu pa bu voz!" },
+            { id: 8, title: "Internet ta lentu na Sal", location: "Santa Maria, Sal", category: "infrastructure", content: "Pagu 5000 CVE pa internet, ma ta funsiona 50% di tempu. Trabaiu online ta fika difisil. CV Telecom ten ki mija servisu.", author: "Empresario J.", time: "4 dia atras", likes: 312, comments: 98, status: "pending" },
+            { id: 9, title: "Escola sem professor", location: "Tarrafal, Santiago", category: "service", content: "Nha fidju ta bai escola, ma ka ten professor di matematica faz 2 mes. Krianca ta perde anu letivu. Ministério ka ta responde.", author: "Pai Preocupadu", time: "5 dia atras", likes: 523, comments: 156, status: "pending" },
+            { id: 10, title: "Barulhu discoteca na noite", location: "Mindelo, Centro", category: "safety", content: "Discoteca pertu di kaza, ta toca musica te 5 da madrugada. Ka pode durmi. Policia bai, ma donu di bar fala ki paga 'direitu'.", author: "Vizinho Cansadu", time: "6 dia atras", likes: 278, comments: 89, status: "pending" }
+        ];
+
+        function renderComplaints(filter = 'all') {
+            const container = document.getElementById('complaintList');
+            let filtered = complaints;
+            
+            if (filter !== 'all') {
+                if (filter === 'resolved') {
+                    filtered = complaints.filter(c => c.status === 'resolved');
+                } else {
+                    filtered = complaints.filter(c => c.category === filter);
+                }
+            }
+
+            container.innerHTML = filtered.map(c => `
+                <div class="complaint-item ${c.status}">
+                    <div class="complaint-header">
+                        <div class="complaint-title">${c.title}</div>
+                        <span class="complaint-badge ${c.status}">${c.status === 'pending' ? 'Pendente' : 'Resolvido'}</span>
+                    </div>
+                    <div class="complaint-location"><i class="fas fa-map-marker-alt"></i> ${c.location}</div>
+                    <div class="complaint-content">${c.content}</div>
+                    ${c.resolution ? `<div style="background:#f0fff4;padding:10px;border-radius:6px;margin:10px 0;color:#22543d;"><i class="fas fa-check-circle"></i> ${c.resolution}</div>` : ''}
+                    <div class="complaint-footer">
+                        <span><i class="fas fa-user"></i> ${c.author} · ${c.time}</span>
+                        <div class="complaint-actions">
+                            <span onclick="alert('Bu gosta: ${c.likes + 1}')"><i class="fas fa-thumbs-up"></i> ${c.likes}</span>
+                            <span><i class="fas fa-comment"></i> ${c.comments}</span>
+                            <span onclick="alert('Partilha: houlei@live.cn')"><i class="fas fa-share"></i></span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        document.querySelectorAll('.complaint-filter').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.complaint-filter').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderComplaints(btn.dataset.filter);
+            });
+        });
+
+        renderComplaints();
+    </script>
+</body>
+</html>

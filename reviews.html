@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliacoes - CasaCV</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N52TE42NYM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N52TE42NYM');
+    </script>
+    <style>
+        .review-hero { background: linear-gradient(135deg, #d69e2e, #ecc94b); color: white; padding: 50px 20px; text-align: center; }
+        .review-hero h1 { font-size: 2rem; margin-bottom: 10px; }
+        .review-section { padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
+        .category-tabs { display: flex; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; justify-content: center; }
+        .category-tab { padding: 10px 20px; border: 2px solid #e2e8f0; border-radius: 25px; background: white; cursor: pointer; font-weight: 500; }
+        .category-tab.active { background: #d69e2e; color: white; border-color: #d69e2e; }
+        .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .review-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+        .review-image { height: 180px; background: linear-gradient(135deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; }
+        .review-content { padding: 20px; }
+        .review-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+        .review-name { font-size: 1.1rem; font-weight: 600; color: #2d3748; }
+        .review-rating { color: #ecc94b; }
+        .review-category { font-size: 0.8rem; color: #718096; margin-bottom: 8px; }
+        .review-text { color: #4a5568; font-size: 0.9rem; line-height: 1.5; margin-bottom: 12px; }
+        .review-footer { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #718096; border-top: 1px solid #e2e8f0; padding-top: 12px; }
+        .review-actions { display: flex; gap: 15px; }
+        .review-actions span { cursor: pointer; }
+        .review-actions span:hover { color: #d69e2e; }
+        .top-rated { background: #fffaf0; border-radius: 10px; padding: 20px; margin-bottom: 25px; }
+        .top-rated h3 { color: #d69e2e; margin-bottom: 15px; }
+        .top-item { display: flex; align-items: center; padding: 10px 0; border-bottom: 1px solid #fed7d7; }
+        .top-item:last-child { border-bottom: none; }
+        .top-rank { width: 30px; height: 30px; background: #d69e2e; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; margin-right: 15px; }
+        .top-info { flex: 1; }
+        .top-name { font-weight: 500; color: #2d3748; }
+        .top-category { font-size: 0.8rem; color: #718096; }
+        .top-score { color: #d69e2e; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">CasaCV</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="listings.html">Kasa</a></li>
+                <li><a href="jobs.html">Trabaiu</a></li>
+                <li><a href="china-trade.html">China</a></li>
+                <li><a href="tenders.html">Licitacoes</a></li>
+                <li><a href="services.html">Servicos</a></li>
+                <li><a href="reviews.html" class="active">Avaliacoes</a></li>
+                <li><a href="complaints.html">Voz di Povu</a></li>
+                <li><a href="confession-wall.html">Mural</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="review-hero">
+        <h1><i class="fas fa-star"></i> Avaliacoes</h1>
+        <p>Descubri melhor lugar na Kabu Verdi</p>
+    </section>
+
+    <section class="review-section">
+        <div class="top-rated">
+            <h3><i class="fas fa-trophy"></i> Top 5 Es Semana</h3>
+            <div class="top-item">
+                <div class="top-rank">1</div>
+                <div class="top-info">
+                    <div class="top-name">Cafe Del Mar</div>
+                    <div class="top-category">Restaurante · Santa Maria</div>
+                </div>
+                <div class="top-score">4.9</div>
+            </div>
+            <div class="top-item">
+                <div class="top-rank">2</div>
+                <div class="top-info">
+                    <div class="top-name">Praia da Chave</div>
+                    <div class="top-category">Praia · Boa Vista</div>
+                </div>
+                <div class="top-score">4.8</div>
+            </div>
+            <div class="top-item">
+                <div class="top-rank">3</div>
+                <div class="top-info">
+                    <div class="top-name">Restaurante Ferroviario</div>
+                    <div class="top-category">Restaurante · Mindelo</div>
+                </div>
+                <div class="top-score">4.7</div>
+            </div>
+            <div class="top-item">
+                <div class="top-rank">4</div>
+                <div class="top-info">
+                    <div class="top-name">Cidade Velha</div>
+                    <div class="top-category">Turismo · Santiago</div>
+                </div>
+                <div class="top-score">4.7</div>
+            </div>
+            <div class="top-item">
+                <div class="top-rank">5</div>
+                <div class="top-info">
+                    <div class="top-name">Mercado de Sucupira</div>
+                    <div class="top-category">Compras · Praia</div>
+                </div>
+                <div class="top-score">4.6</div>
+            </div>
+        </div>
+
+        <div class="category-tabs">
+            <button class="category-tab active" data-cat="all">Tudu</button>
+            <button class="category-tab" data-cat="restaurant">Restaurante</button>
+            <button class="category-tab" data-cat="beach">Praia</button>
+            <button class="category-tab" data-cat="hotel">Hotel</button>
+            <button class="category-tab" data-cat="shop">Loja</button>
+            <button class="category-tab" data-cat="service">Servico</button>
+        </div>
+
+        <div class="review-grid" id="reviewGrid"></div>
+    </section>
+
+    <footer style="background:#d69e2e;color:white;padding:30px;text-align:center;">
+        <p>Avaliacoes - Bu opiniao importa</p>
+        <p style="margin-top:8px;opacity:0.7;">Contato: houlei@live.cn</p>
+    </footer>
+
+    <script>
+        const reviews = [
+            { id: 1, name: "Cafe Del Mar", category: "restaurant", location: "Santa Maria, Sal", rating: 5, text: "Comida maravilhosa! Peixe grelhado ta fresco, atendimento top. Precu justu pa qualidade. Recomendu!", author: "Ana S.", time: "2 dia atras", likes: 312 },
+            { id: 2, name: "Praia da Chave", category: "beach", location: "Boa Vista", rating: 5, text: "Praia mais bonitu di Kabu Verdi! Agua cristalina, areia branca. Ta vale pena visita.", author: "Turista2026", time: "3 dia atras", likes: 289 },
+            { id: 3, name: "Restaurante Ferroviario", category: "restaurant", location: "Mindelo", rating: 4, text: "Ambiente bonitu, musica bo. Cachupa ta bom ma podia ten mais carne. Precu mediu.", author: "Joao M.", time: "1 semana atras", likes: 156 },
+            { id: 4, name: "Hotel Oasis", category: "hotel", location: "Praia", rating: 4, text: "Quartu limpu, cafe da manha variadu. Sempri ten agua korrenti. Recomendu pa viajanti.", author: "Maria L.", time: "5 dia atras", likes: 234 },
+            { id: 5, name: "Loja Chinense Central", category: "shop", location: "Praia, Sucupira", rating: 3, text: "Precu baratu ma qualidade variavel. Ten ki odja ben ki ta compra. Atendimento rapidu.", author: "Carlos P.", time: "1 semana atras", likes: 89 },
+            { id: 6, name: "Oficina Auto Silva", category: "service", location: "Mindelo", rating: 5, text: "Mecaniku honestu, ka ta cobra demais. Arranja nha carru rapidu. Confia dretu!", author: "Pedro A.", time: "4 dia atras", likes: 178 },
+            { id: 7, name: "Cidade Velha", category: "beach", location: "Santiago", rating: 5, text: "Patrimoniu di umanidade! Historia riku, vista lindu. Guia turisticu ta esplica ben.", author: "Historiador", time: "2 semana atras", likes: 445 },
+            { id: 8, name: "Padaria Pao Quent", category: "restaurant", location: "Praia, Achada", rating: 4, text: "Pao fresku tudu manha, croissant delicioso. Cafe forte ki ta dexa bu acorda!", author: "CafeLover", time: "6 dia atras", likes: 267 },
+            { id: 9, name: "Farmacia Popular", category: "service", location: "Praia, Plateau", rating: 3, text: "Ten remedi basiku, ma as vezes ka ten stock. Atendimento bom, farmaceutica ta ajuda.", author: "SaudePrimeiro", time: "1 semana atras", likes: 123 },
+            { id: 10, name: "Mercado de Sucupira", category: "shop", location: "Praia", rating: 4, text: "Lugar animadu! Pode acha tudu, di roupa pa comida. Pode regatea precu.", author: "CompradoraX", time: "3 dia atras", likes: 356 }
+        ];
+
+        function renderReviews(filter = 'all') {
+            const container = document.getElementById('reviewGrid');
+            let filtered = reviews;
+            if (filter !== 'all') filtered = reviews.filter(r => r.category === filter);
+
+            container.innerHTML = filtered.map(r => `
+                <div class="review-card" data-category="${r.category}">
+                    <div class="review-image"><i class="fas fa-${getIcon(r.category)}"></i></div>
+                    <div class="review-content">
+                        <div class="review-header">
+                            <div class="review-name">${r.name}</div>
+                            <div class="review-rating">${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</div>
+                        </div>
+                        <div class="review-category"><i class="fas fa-map-marker-alt"></i> ${r.location}</div>
+                        <div class="review-text">${r.text}</div>
+                        <div class="review-footer">
+                            <span>${r.author} · ${r.time}</span>
+                            <div class="review-actions">
+                                <span onclick="alert('Bu gosta: ${r.likes + 1}')"><i class="fas fa-thumbs-up"></i> ${r.likes}</span>
+                                <span><i class="fas fa-comment"></i> ${Math.floor(Math.random() * 50 + 10)}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function getIcon(cat) {
+            const icons = { restaurant: 'utensils', beach: 'umbrella-beach', hotel: 'hotel', shop: 'shopping-bag', service: 'tools' };
+            return icons[cat] || 'star';
+        }
+
+        document.querySelectorAll('.category-tab').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.category-tab').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderReviews(btn.dataset.cat);
+            });
+        });
+
+        renderReviews();
+    </script>
+</body>
+</html>
