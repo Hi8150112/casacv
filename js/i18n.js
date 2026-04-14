@@ -1,10 +1,15 @@
-// CasaCV 多语言支持
+// CasaCV 多语言支持 - 克里奥尔语(默认) + 中文
 
 const translations = {
     zh: {
         nav_home: "首页",
         nav_listings: "房源",
         nav_publish: "发布房源",
+        nav_jobs: "找工作",
+        nav_china: "中国商务",
+        nav_tenders: "招投标",
+        nav_services: "本地服务",
+        nav_confession: "表白墙",
         login: "登录",
         hero_title: "在佛得角找到理想的家",
         hero_subtitle: "普拉亚、明德卢、萨尔岛... 长租房、短租民宿一站式解决",
@@ -23,7 +28,7 @@ const translations = {
         feature_safe: "真实房源",
         feature_safe_desc: "人工审核每套房源，杜绝虚假信息",
         feature_lang: "多语言服务",
-        feature_lang_desc: "中文、英文、葡语三语支持",
+        feature_lang_desc: "中文、克里奥尔语双语支持",
         feature_community: "华人社区",
         feature_community_desc: "专为华人打造的租房专区",
         feature_support: "全程服务",
@@ -76,166 +81,26 @@ const translations = {
         form_images_desc: "支持拖拽上传，最多10张",
         submit_publish: "立即发布",
         price_month: "/月",
-        price_day: "/天"
-    },
-    en: {
-        nav_home: "Home",
-        nav_listings: "Listings",
-        nav_publish: "Post Property",
-        login: "Login",
-        hero_title: "Find Your Ideal Home in Cape Verde",
-        hero_subtitle: "Praia, Mindelo, Sal Island... Long-term rentals and short-term stays",
-        search_location: "Enter city or area",
-        all_types: "All Types",
-        type_apartment: "Apartment",
-        type_house: "House",
-        type_villa: "Villa",
-        type_studio: "Studio",
-        all_rent_types: "All Rent Types",
-        rent_long: "Long-term",
-        rent_short: "Short-term/B&B",
-        search: "Search",
-        popular_cities: "Popular Cities:",
-        why_choose: "Why Choose CasaCV",
-        feature_safe: "Verified Listings",
-        feature_safe_desc: "Every listing is manually verified to ensure authenticity",
-        feature_lang: "Multilingual Support",
-        feature_lang_desc: "Available in Chinese, English, and Portuguese",
-        feature_community: "Chinese Community",
-        feature_community_desc: "Dedicated rental section for Chinese expats",
-        feature_support: "Full Service",
-        feature_support_desc: "Assistance from viewing to contract signing",
-        featured_listings: "Featured Listings",
-        view_all: "View All",
-        rent_guide: "Rental Guide",
-        guide_search: "Search Properties",
-        guide_search_desc: "Filter by city, price, and property type",
-        guide_contact: "Contact Landlord",
-        guide_contact_desc: "Call directly or schedule a viewing online",
-        guide_visit: "View Property",
-        guide_visit_desc: "Inspect the property and neighborhood in person",
-        guide_sign: "Sign Contract",
-        guide_sign_desc: "Sign a formal contract and move in with peace of mind",
-        cta_title: "Have a Property to Rent?",
-        cta_subtitle: "Post for free and find quality tenants quickly",
-        cta_button: "Post Now",
-        footer_desc: "Cape Verde's premier rental platform, providing convenient services for the Chinese community",
-        footer_rent: "I Want to Rent",
-        footer_short: "Short-term/B&B",
-        footer_long: "Long-term Rentals",
-        footer_guide: "Rental Guide",
-        footer_landlord: "I'm a Landlord",
-        footer_tips: "Landlord Guide",
-        footer_pricing: "Pricing",
-        footer_contact: "Contact Us",
-        listings_title: "Property Listings",
-        listings_subtitle: "Discover quality properties in Cape Verde",
-        publish_title: "Post Property",
-        publish_subtitle: "Post for free, find tenants fast",
-        form_basic_info: "Basic Information",
-        form_title: "Property Title",
-        form_title_placeholder: "e.g., 3-bedroom apartment in Praia city center",
-        form_city: "City",
-        form_district: "District",
-        form_address: "Address",
-        form_rent_type: "Rent Type",
-        form_property_type: "Property Type",
-        form_rooms: "Bedrooms",
-        form_area: "Area (㎡)",
-        form_price: "Rent (CVE/month)",
-        form_deposit: "Deposit (CVE)",
-        form_description: "Description",
-        form_description_placeholder: "Describe the property, amenities, transportation...",
-        form_contact_name: "Contact Name",
-        form_contact_phone: "Phone Number",
-        form_contact_wechat: "WeChat (Optional)",
-        form_images: "Upload Images",
-        form_images_desc: "Drag and drop, up to 10 images",
-        submit_publish: "Publish Now",
-        price_month: "/month",
-        price_day: "/day"
-    },
-    pt: {
-        nav_home: "Início",
-        nav_listings: "Imóveis",
-        nav_publish: "Anunciar",
-        login: "Entrar",
-        hero_title: "Encontre Sua Casa Ideal em Cabo Verde",
-        hero_subtitle: "Praia, Mindelo, Ilha do Sal... Aluguel por temporada ou anual",
-        search_location: "Digite cidade ou bairro",
-        all_types: "Todos os Tipos",
-        type_apartment: "Apartamento",
-        type_house: "Casa",
-        type_villa: "Moradia",
-        type_studio: "Estúdio",
-        all_rent_types: "Todos",
-        rent_long: "Anual",
-        rent_short: "Temporada",
-        search: "Buscar",
-        popular_cities: "Cidades Populares:",
-        why_choose: "Por Que Escolher CasaCV",
-        feature_safe: "Imóveis Verificados",
-        feature_safe_desc: "Cada imóvel é verificado manualmente",
-        feature_lang: "Multilíngue",
-        feature_lang_desc: "Disponível em Chinês, Inglês e Português",
-        feature_community: "Comunidade Chinesa",
-        feature_community_desc: "Seção especial para a comunidade chinesa",
-        feature_support: "Serviço Completo",
-        feature_support_desc: "Assistência da visita à assinatura do contrato",
-        featured_listings: "Destaques",
-        view_all: "Ver Todos",
-        rent_guide: "Guia de Aluguel",
-        guide_search: "Buscar Imóveis",
-        guide_search_desc: "Filtre por cidade, preço e tipo de imóvel",
-        guide_contact: "Contactar Proprietário",
-        guide_contact_desc: "Ligue diretamente ou agende uma visita",
-        guide_visit: "Visitar Imóvel",
-        guide_visit_desc: "Veja pessoalmente o imóvel e a vizinhança",
-        guide_sign: "Assinar Contrato",
-        guide_sign_desc: "Assine um contrato formal e mude-se com segurança",
-        cta_title: "Tem um Imóvel para Alugar?",
-        cta_subtitle: "Anuncie grátis e encontre inquilinos rapidamente",
-        cta_button: "Anunciar Agora",
-        footer_desc: "A melhor plataforma de aluguel de Cabo Verde, servindo a comunidade chinesa",
-        footer_rent: "Quero Alugar",
-        footer_short: "Temporada",
-        footer_long: "Aluguel Anual",
-        footer_guide: "Guia",
-        footer_landlord: "Sou Proprietário",
-        footer_tips: "Guia do Proprietário",
-        footer_pricing: "Preços",
-        footer_contact: "Contacto",
-        listings_title: "Imóveis Disponíveis",
-        listings_subtitle: "Descubra imóveis de qualidade em Cabo Verde",
-        publish_title: "Anunciar Imóvel",
-        publish_subtitle: "Anuncie grátis, encontre inquilinos rápido",
-        form_basic_info: "Informações Básicas",
-        form_title: "Título do Anúncio",
-        form_title_placeholder: "Ex: Apartamento T3 no centro da Praia",
-        form_city: "Cidade",
-        form_district: "Bairro",
-        form_address: "Endereço",
-        form_rent_type: "Tipo de Aluguel",
-        form_property_type: "Tipo de Imóvel",
-        form_rooms: "Quartos",
-        form_area: "Área (㎡)",
-        form_price: "Renda (CVE/mês)",
-        form_deposit: "Caução (CVE)",
-        form_description: "Descrição",
-        form_description_placeholder: "Descreva o imóvel, comodidades, transporte...",
-        form_contact_name: "Nome de Contacto",
-        form_contact_phone: "Telefone",
-        form_contact_wechat: "WeChat (Opcional)",
-        form_images: "Carregar Imagens",
-        form_images_desc: "Arraste e solte, máximo 10 imagens",
-        submit_publish: "Publicar Agora",
-        price_month: "/mês",
-        price_day: "/dia"
+        price_day: "/天",
+        // 新增板块
+        china_title: "中国采购与商务",
+        china_subtitle: "连接佛得角与中国的贸易桥梁",
+        tenders_title: "招投标信息",
+        tenders_subtitle: "政府与企业招标机会",
+        services_title: "本地服务",
+        services_subtitle: "找专业服务人员",
+        confession_title: "表白墙",
+        confession_subtitle: "分享你的心声"
     },
     ke: {
         nav_home: "Página Inicial",
         nav_listings: "Kasa",
         nav_publish: "Publika",
+        nav_jobs: "Trabaiu",
+        nav_china: "Negósiu China",
+        nav_tenders: "Licitacoes",
+        nav_services: "Servicos",
+        nav_confession: "Mural Amor",
         login: "Entra",
         hero_title: "Atxa Bu Kasa na Kabu Verdi",
         hero_subtitle: "Praia, Mindelo, Ilha di Sal... Aluguel pa tempu o pa anu",
@@ -254,9 +119,9 @@ const translations = {
         feature_safe: "Kasa Verificadu",
         feature_safe_desc: "Tudu kasa é verificadu na mau",
         feature_lang: "Tudu Língua",
-        feature_lang_desc: "Disponível na Chinês, Inglês, Português",
-        feature_community: "Comunidadi Xinês",
-        feature_community_desc: "Seksãu spesial pa komunidadi xinês",
+        feature_lang_desc: "Disponível na Kriolu i Chinês",
+        feature_community: "Comunidadi Kabuverdianu",
+        feature_community_desc: "Plataforma pa tudu kabuverdianu",
         feature_support: "Servisu Kompletu",
         feature_support_desc: "Ajudanti di visita té contratu",
         featured_listings: "Kasa di Destaki",
@@ -307,30 +172,42 @@ const translations = {
         form_images_desc: "Arrasta i larga, máximu 10 imagen",
         submit_publish: "Publika Agora",
         price_month: "/mês",
-        price_day: "/dia"
+        price_day: "/dia",
+        // 新增板块
+        china_title: "Negósiu ku China",
+        china_subtitle: "Ligason entri Kabu Verdi i China",
+        tenders_title: "Licitacoes",
+        tenders_subtitle: "Oportunidadis di governo i empresas",
+        services_title: "Servicos Lokais",
+        services_subtitle: "Atxa profisionais",
+        confession_title: "Mural di Amor",
+        confession_subtitle: "Partilha bu sentimentu"
     }
 };
 
-let currentLang = 'zh';
+let currentLang = 'ke'; // 默认克里奥尔语
 
 function setLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('casacv_language', lang);
     
     // 更新当前语言显示
-    const langNames = { zh: '中文', en: 'English', pt: 'Português', ke: 'Kriolu' };
+    const langNames = { ke: 'Kriolu', zh: '中文' };
     const langEl = document.getElementById('current-lang');
     if (langEl) {
         langEl.textContent = langNames[lang];
     }
     
     // 隐藏下拉菜单
-    document.getElementById('lang-dropdown').classList.remove('show');
+    const dropdown = document.getElementById('lang-dropdown');
+    if (dropdown) {
+        dropdown.classList.remove('show');
+    }
     
     // 更新所有带 data-i18n 属性的元素
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (translations[lang][key]) {
+        if (translations[lang] && translations[lang][key]) {
             el.textContent = translations[lang][key];
         }
     });
@@ -338,37 +215,48 @@ function setLanguage(lang) {
     // 更新 placeholder
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         const key = el.getAttribute('data-i18n-placeholder');
-        if (translations[lang][key]) {
+        if (translations[lang] && translations[lang][key]) {
             el.placeholder = translations[lang][key];
         }
     });
     
     // 更新页面标题
     const titleMap = {
-        'index.html': { zh: 'CasaCV - 佛得角租房平台', en: 'CasaCV - Cape Verde Rental Platform', pt: 'CasaCV - Plataforma de Aluguel' },
-        'listings.html': { zh: '房源列表 - CasaCV', en: 'Property Listings - CasaCV', pt: 'Imóveis - CasaCV' },
-        'publish.html': { zh: '发布房源 - CasaCV', en: 'Post Property - CasaCV', pt: 'Anunciar - CasaCV' }
+        'index.html': { zh: 'CasaCV - 佛得角租房平台', ke: 'CasaCV - Aluguel Kabu Verdi' },
+        'listings.html': { zh: '房源列表 - CasaCV', ke: 'Kasa - CasaCV' },
+        'publish.html': { zh: '发布房源 - CasaCV', ke: 'Publika - CasaCV' },
+        'jobs.html': { zh: '找工作 - CasaCV', ke: 'Trabaiu - CasaCV' },
+        'china-trade.html': { zh: '中国商务 - CasaCV', ke: 'Negósiu China - CasaCV' },
+        'tenders.html': { zh: '招投标 - CasaCV', ke: 'Licitacoes - CasaCV' },
+        'services.html': { zh: '本地服务 - CasaCV', ke: 'Servicos - CasaCV' },
+        'confession-wall.html': { zh: '表白墙 - CasaCV', ke: 'Mural Amor - CasaCV' }
     };
     
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     if (titleMap[currentPage]) {
-        document.title = titleMap[currentPage][lang];
+        document.title = titleMap[currentPage][lang] || titleMap[currentPage]['ke'];
     }
 }
 
 function toggleLang() {
-    document.getElementById('lang-dropdown').classList.toggle('show');
+    const dropdown = document.getElementById('lang-dropdown');
+    if (dropdown) {
+        dropdown.classList.toggle('show');
+    }
 }
 
 // 点击外部关闭下拉菜单
 document.addEventListener('click', (e) => {
     if (!e.target.closest('.language-switcher')) {
-        document.getElementById('lang-dropdown')?.classList.remove('show');
+        const dropdown = document.getElementById('lang-dropdown');
+        if (dropdown) {
+            dropdown.classList.remove('show');
+        }
     }
 });
 
 // 页面加载时初始化语言
 document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('casacv_language') || 'zh';
+    const savedLang = localStorage.getItem('casacv_language') || 'ke';
     setLanguage(savedLang);
 });

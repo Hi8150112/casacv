@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicos - CasaCV</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N52TE42NYM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N52TE42NYM');
+    </script>
+    <style>
+        .services-hero { background: linear-gradient(135deg, #6b46c1, #805ad5); color: white; padding: 50px 20px; text-align: center; }
+        .services-hero h1 { font-size: 2rem; margin-bottom: 10px; }
+        .services-section { padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .service-card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); transition: transform 0.3s; }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-icon { width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; font-size: 1.3rem; color: white; }
+        .service-icon.repair { background: #e53e3e; }
+        .service-icon.transport { background: #3182ce; }
+        .service-icon.cleaning { background: #38a169; }
+        .service-icon.legal { background: #d69e2e; }
+        .service-icon.health { background: #805ad5; }
+        .service-icon.tech { background: #00b5d8; }
+        .service-card h3 { font-size: 1.1rem; margin-bottom: 10px; color: #2d3748; }
+        .service-card p { color: #666; font-size: 0.9rem; margin-bottom: 15px; }
+        .service-price { color: #38a169; font-weight: 600; font-size: 1.1rem; }
+        .btn-hire { width: 100%; padding: 10px; background: #6b46c1; color: white; border: none; border-radius: 6px; cursor: pointer; margin-top: 15px; }
+        .category-filter { display: flex; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; justify-content: center; }
+        .category-btn { padding: 8px 16px; border: 1px solid #e2e8f0; border-radius: 20px; background: white; cursor: pointer; }
+        .category-btn.active { background: #6b46c1; color: white; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">CasaCV</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="listings.html">Casas</a></li>
+                <li><a href="jobs.html">Trabaiu</a></li>
+                <li><a href="china-trade.html">Negósiu China</a></li>
+                <li><a href="tenders.html">Licitacoes</a></li>
+                <li><a href="services.html" class="active">Servicos</a></li>
+                <li><a href="confession-wall.html">Mural</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="services-hero">
+        <h1><i class="fas fa-tools"></i> Servicos Locais</h1>
+        <p>Encontre profissionais qualificados em Cabo Verde</p>
+    </section>
+
+    <section class="services-section">
+        <div class="category-filter">
+            <button class="category-btn active" data-cat="all">Todos</button>
+            <button class="category-btn" data-cat="repair">Reparos</button>
+            <button class="category-btn" data-cat="transport">Transporte</button>
+            <button class="category-btn" data-cat="cleaning">Limpeza</button>
+            <button class="category-btn" data-cat="legal">Jurídico</button>
+            <button class="category-btn" data-cat="health">Saúde</button>
+            <button class="category-btn" data-cat="tech">Tecnologia</button>
+        </div>
+
+        <div class="services-grid" id="servicesGrid">
+            <div class="service-card" data-category="repair">
+                <div class="service-icon repair"><i class="fas fa-wrench"></i></div>
+                <h3>Eletricista</h3>
+                <p>Instalação e reparo elétrico residencial e comercial</p>
+                <div class="service-price">3,500 CVE/hora</div>
+                <button class="btn-hire" onclick="alert('Contato: houlei@live.cn')">Contratar</button>
+            </div>
+            <div class="service-card" data-category="repair">
+                <div class="service-icon repair"><i class="fas fa-faucet"></i></div>
+                <h3>Canalizador</h3>
+                <p>Reparos de canalização, fugas de água, instalações sanitárias</p>
+                <div class="service-price">4,000 CVE/hora</div>
+                <button class="btn-hire" onclick="alert('Contato: houlei@live.cn')">Contratar</button>
+            </div>
+            <div class="service-card" data-category="transport">
+                <div class="service-icon transport"><i class="fas fa-truck-moving"></i></div>
+                <h3>Mudanças</h3>
+                <p>Serviço completo de mudança residencial e comercial</p>
+                <div class="service-price">15,000 CVE+</div>
+                <button class="btn-hire" onclick="alert('Contato: houlei@live.cn')">Contratar</button>
+            </div>
+            <div class="service-card" data-category="cleaning">
+                <div class="service-icon cleaning"><i class="fas fa-broom"></i></div>
+                <h3>Limpeza Doméstica</h3>
+                <p>Limpeza profunda de casas e apartamentos</p>
+                <div class="service-price">2,500 CVE/visita</div>
+                <button class="btn-hire" onclick="alert('Contato: houlei@live.cn')">Contratar</button>
+            </div>
+            <div class="service-card" data-category="legal">
+                <div class="service-icon legal"><i class="fas fa-balance-scale"></i></div>
+                <h3>Advogado</h3>
+                <p>Consultoria jurídica, contratos, direito imobiliário</p>
+                <div class="service-price">10,000 CVE/hora</div>
+                <button class="btn-hire" onclick="alert('Contato: houlei@live.cn')">Contratar</button>
+            </div>
+            <div class="service-card" data-category="health">
+                <div class="service-icon health"><i class="fas fa-user-nurse"></i></div>
+                <h3>Enfermeira Particular</h3>
+                <p>Cuidados de saúde em casa, acompanhamento médico</p>
+                <div class="service-price">5,000 CVE/dia</div>
+                <button class="btn-hire" onclick="alert('Contato: houlei@live.cn')">Contratar</button>
+            </div>
+            <div class="service-card" data-category="tech">
+                <div class="service-icon tech"><i class="fas fa-laptop-code"></i></div>
+                <h3>Técnico Informático</h3>
+                <p>Reparo de computadores, redes, instalação de software</p>
+                <div class="service-price">3,000 CVE/hora</div>
+                <button class="btn-hire" onclick="alert('Contato: houlei@live.cn')">Contratar</button>
+            </div>
+            <div class="service-card" data-category="repair">
+                <div class="service-icon repair"><i class="fas fa-snowflake"></i></div>
+                <h3>Técnico Ar Condicionado</h3>
+                <p>Instalação e manutenção de ar condicionado</p>
+                <div class="service-price">5,500 CVE/visita</div>
+                <button class="btn-hire" onclick="alert('Contato: houlei@live.cn')">Contratar</button>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background:#6b46c1;color:white;padding:30px;text-align:center;">
+        <p>CasaCV - Serviços de confiança em Cabo Verde</p>
+        <p style="margin-top:8px;opacity:0.7;">Contato: houlei@live.cn</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const cat = btn.dataset.cat;
+                document.querySelectorAll('.service-card').forEach(card => {
+                    card.style.display = (cat === 'all' || card.dataset.category === cat) ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
