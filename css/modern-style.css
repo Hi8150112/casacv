@@ -569,7 +569,7 @@ body {
         flex-direction: column;
     }
     .sidebar-left {
-        display: none;
+        display: none !important;
     }
     .main-content {
         margin-left: 0;
