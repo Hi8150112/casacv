@@ -1,10 +1,99 @@
-// CasaCV 扩展房源数据 - 25条虚假房源用于引流
-// 合并原有数据 + 新数据
+// CasaCV 扩展房源数据 - 30条虚假房源用于引流
+// 包含原有5条 + 新增25条
 const extendedListings = [
-    // 先添加原有的5条数据（如果有）
-    ...(typeof listingsData !== 'undefined' ? listingsData : []),
+    // 原有5条数据
+    {
+        id: 1,
+        title: "Apartamentu T3 modernu na Plateau",
+        location: "Praia, Plateau",
+        price: 45000,
+        priceType: "month",
+        type: "apartment",
+        rentType: "long",
+        rooms: 3,
+        bathrooms: 2,
+        area: 120,
+        image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+        badge: "featured",
+        description: "Apartamentu modernu ku vista panoramiku di cidade. Tenu kuadra di praia, restoranti i supermerkadu.",
+        amenities: ["WiFi", "Ar Condicionadu", "Elevador", "Seguransa 24h"],
+        contact: { phone: "+238 912 3456", whatsapp: "+238 912 3456", email: "aluguel@casacv.cv" },
+        featured: true
+    },
+    {
+        id: 2,
+        title: "Kaza tradisional renovadu na Mindelo",
+        location: "São Vicente, Mindelo - Centro",
+        price: 35000,
+        priceType: "month",
+        type: "house",
+        rentType: "long",
+        rooms: 2,
+        bathrooms: 1,
+        area: 85,
+        image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+        badge: "long",
+        description: "Kaza tradisional kabuverdianu renovadu, pertu di mercadu i transporte publiku.",
+        amenities: ["Patiu", "Mobiliadu", "Agua Kente"],
+        contact: { phone: "+238 923 4567", whatsapp: "+238 923 4567", email: "casa@casacv.cv" },
+        featured: false
+    },
+    {
+        id: 3,
+        title: "Estudio luxu na ilha di Sal",
+        location: "Sal, Santa Maria",
+        price: 65000,
+        priceType: "month",
+        type: "studio",
+        rentType: "short",
+        rooms: 1,
+        bathrooms: 1,
+        area: 45,
+        image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+        badge: "short",
+        description: "Estudio modernu pertu di praia, ideal pa férias. Aksesu diretu pa mar.",
+        amenities: ["Piscina", "WiFi", "Ar Condicionadu", "Cozinha Equipada"],
+        contact: { phone: "+238 934 5678", whatsapp: "+238 934 5678", email: "sal@casacv.cv" },
+        featured: true
+    },
+    {
+        id: 4,
+        title: "Vila familiar ku jardim na Achada",
+        location: "Praia, Achada",
+        price: 55000,
+        priceType: "month",
+        type: "villa",
+        rentType: "long",
+        rooms: 4,
+        bathrooms: 3,
+        area: 200,
+        image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+        badge: "long",
+        description: "Vila espacosa ku jardim grandi, ideal pa família grandi. Pertu di skola i hospital.",
+        amenities: ["Jardim", "Parkeamentu", "Seguransa", "Quintal"],
+        contact: { phone: "+238 945 6789", whatsapp: "+238 945 6789", email: "vila@casacv.cv" },
+        featured: false
+    },
+    {
+        id: 5,
+        title: "Kuartu individual pertu di universidade",
+        location: "Praia, Achada Grande",
+        price: 15000,
+        priceType: "month",
+        type: "room",
+        rentType: "long",
+        rooms: 1,
+        bathrooms: 1,
+        area: 20,
+        image: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=800",
+        badge: "long",
+        description: "Kuartu individual pertu di universidade, ideal pa estudanti. WiFi i agua inklui.",
+        amenities: ["WiFi", "Agua Inklui", "Kozinha Partilhada"],
+        contact: { phone: "+238 956 7890", whatsapp: "+238 956 7890", email: "quarto@casacv.cv" },
+        featured: false
+    },
     
-    // 新虚假房源数据
+    // 新增25条虚假房源数据
     {
         id: 101,
         title: "Apartamentu T3 modernu na Plateau",
