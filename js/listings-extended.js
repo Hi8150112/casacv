@@ -1,5 +1,10 @@
 // CasaCV 扩展房源数据 - 25条虚假房源用于引流
+// 合并原有数据 + 新数据
 const extendedListings = [
+    // 先添加原有的5条数据（如果有）
+    ...(typeof listingsData !== 'undefined' ? listingsData : []),
+    
+    // 新虚假房源数据
     {
         id: 101,
         title: "Apartamentu T3 modernu na Plateau",
