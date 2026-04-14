@@ -593,6 +593,96 @@ body {
     }
 }
 
+/* 筛选器样式 */
+.filters-modern {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    border: 1px solid var(--border-color);
+}
+
+.filters-row-modern {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    align-items: flex-end;
+}
+
+.filter-group-modern {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    flex: 1;
+    min-width: 150px;
+}
+
+.filter-group-modern label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.filter-group-modern label i {
+    color: var(--accent-primary);
+}
+
+.filter-group-modern select {
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-group-modern select:hover,
+.filter-group-modern select:focus {
+    border-color: var(--accent-primary);
+    outline: none;
+}
+
+.filter-btn-modern {
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--accent-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.filter-btn-modern:hover {
+    background: var(--accent-secondary);
+    transform: translateY(-1px);
+}
+
+/* 移动端筛选器 */
+@media (max-width: 768px) {
+    .filters-row-modern {
+        flex-direction: column;
+    }
+    
+    .filter-group-modern {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .filter-btn-modern {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
 /* Footer 样式 */
 .footer-modern {
     background: var(--bg-secondary);
