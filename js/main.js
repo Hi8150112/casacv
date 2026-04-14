@@ -257,8 +257,106 @@ function publishListing(event) {
     event.target.reset();
 }
 
+// =============================
+// 社区统计数字动态展示
+// =============================
+// 基础值（虚拟种子数据，让平台看起来有人气）
+const BASE_STATS = {
+    members:     3247,
+    listings:    512,
+    jobs:        189,
+    confessions: 1024
+};
+
+// 每次访问随机微小增量，制造「实时增长」感
+function getAnimatedStat(base) {
+    const delta = Math.floor(Math.random() * 5);
+    return base + delta;
+}
+
+// 数字滚动动画
+function animateCount(el, target, duration) {
+    if (!el) return;
+    const start = 0;
+    const step = Math.ceil(target / (duration / 16));
+    let current = start;
+    const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        el.textContent = current.toLocaleString();
+    }, 16);
+}
+
+function initStatsBar() {
+    const members     = document.getElementById('stat-members');
+    const listings    = document.getElementById('stat-listings');
+    const jobs        = document.getElementById('stat-jobs');
+    const confessions = document.getElementById('stat-confessions');
+
+    if (!members) return; // 只在首页运行
+
+    animateCount(members,     getAnimatedStat(BASE_STATS.members),     1200);
+    animateCount(listings,    getAnimatedStat(BASE_STATS.listings),    900);
+    animateCount(jobs,        getAnimatedStat(BASE_STATS.jobs),        800);
+    animateCount(confessions, getAnimatedStat(BASE_STATS.confessions), 1000);
+}
+
+// =============================
+// 内容审核 — 屏蔽词过滤
+// =============================
+// 屏蔽词表：政治敏感、色情、仇恨、暴力、欺诈相关
+const BANNED_KEYWORDS = [
+    // 政治类
+    'golpe','revolução','governo corrup','ditador','manifesto','terroris',
+    // 仇恨/歧视类
+    'racis','morte a','odio','ódio','discrimina','fascis',
+    // 色情类
+    'sexo','pornô','nude','pelad','escort','programa',
+    // 暴力类
+    'matar','matarei','arma','faca','violência','bomba',
+    // 欺诈类
+    'golpista','fraude','scam','piramide','pirâmide',
+    // 中文词
+    '政治','色情','裸','赌博','传销','杀','炸弹','仇恨','种族'
+];
+
+/**
+ * 检查文本是否含违禁词
+ * @param {string} text
+ * @returns {{ ok: boolean, matched: string|null }}
+ */
+function checkContent(text) {
+    if (!text || !text.trim()) return { ok: false, matched: null };
+    const lower = text.toLowerCase();
+    for (const kw of BANNED_KEYWORDS) {
+        if (lower.includes(kw.toLowerCase())) {
+            return { ok: false, matched: kw };
+        }
+    }
+    return { ok: true, matched: null };
+}
+
+/**
+ * 举报某条内容（记录到 localStorage）
+ * @param {string} contentId
+ * @param {string} reason
+ */
+function reportContent(contentId, reason) {
+    const reports = JSON.parse(localStorage.getItem('cv_reports') || '[]');
+    reports.push({ id: contentId, reason, time: new Date().toISOString() });
+    localStorage.setItem('cv_reports', JSON.stringify(reports));
+    alert('Obrigadu! Denúncia recebida. / 举报已收到，我们将尽快审核。');
+}
+
+// =============================
 // 初始化页面
+// =============================
 document.addEventListener('DOMContentLoaded', () => {
+    // 统计条动画
+    initStatsBar();
     // 渲染房源
     renderFeaturedListings();
     renderAllListings();

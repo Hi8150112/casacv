@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mural di Amor - CasaCV | Confissões em Cabo Verde</title>
+    <meta name="description" content="Mural di Amor - O lugar onde bu pode confessa amor anonimamente. Praia, Mindelo, Cabo Verde.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N52TE42NYM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N52TE42NYM');
+    </script>
+    <style>
+        .confession-hero {
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+        .confession-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .confession-hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        .confession-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .confession-form {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        .confession-form h3 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .confession-form textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 1rem;
+            resize: vertical;
+            margin-bottom: 15px;
+        }
+        .confession-form textarea:focus {
+            outline: none;
+            border-color: #ff6b9d;
+        }
+        .confession-form button {
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .confession-form button:hover {
+            transform: scale(1.05);
+        }
+        .confession-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .confession-card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .confession-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .confession-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .confession-id {
+            color: #ff6b9d;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .confession-time {
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+        .confession-content {
+            color: #374151;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+        }
+        .confession-to {
+            color: #c44569;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .confession-actions {
+            display: flex;
+            gap: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #f3f4f6;
+        }
+        .confession-action {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #6b7280;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .confession-action:hover {
+            color: #ff6b9d;
+        }
+        .confession-action.liked {
+            color: #ff6b9d;
+        }
+        .stats-bar {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ff6b9d;
+        }
+        .stat-label {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .filter-tab {
+            padding: 10px 20px;
+            border-radius: 20px;
+            background: white;
+            border: 2px solid #e5e7eb;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .filter-tab.active {
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            color: white;
+            border-color: transparent;
+        }
+        .filter-tab:hover:not(.active) {
+            border-color: #ff6b9d;
+            color: #ff6b9d;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-home"></i>
+                <span>CasaCV</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Página Inicial</a>
+                <a href="listings.html">Kasa</a>
+                <a href="jobs.html">Trabai</a>
+                <a href="confession-wall.html" class="active" style="color: #ff6b9d;">
+                    <i class="fas fa-heart"></i> Mural di Amor
+                </a>
+                <a href="publish.html" class="btn-primary">Publica</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="confession-hero">
+        <h1><i class="fas fa-heart"></i> Mural di Amor</h1>
+        <p>Confessa bu amor anonimamente. Praia, Mindelo, tudu Kabu Verdi.</p>
+    </section>
+
+    <div class="confession-container">
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number" id="total-confessions">128</div>
+                <div class="stat-label">Confissões</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="total-likes">2.5k</div>
+                <div class="stat-label">Likes</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="today-confessions">12</div>
+                <div class="stat-label">Oji</div>
+            </div>
+        </div>
+
+        <div class="filter-tabs">
+            <div class="filter-tab active" onclick="filterConfessions('all')">Tudu</div>
+            <div class="filter-tab" onclick="filterConfessions('praia')">Praia</div>
+            <div class="filter-tab" onclick="filterConfessions('mindelo')">Mindelo</div>
+            <div class="filter-tab" onclick="filterConfessions('sal')">Ilha di Sal</div>
+            <div class="filter-tab" onclick="filterConfessions('recent')">Recenti</div>
+            <div class="filter-tab" onclick="filterConfessions('popular')">Popular</div>
+        </div>
+
+        <div class="confession-form">
+            <h3><i class="fas fa-pen-fancy"></i> Skrebe bu confissão</h3>
+            <input type="text" id="confession-to" placeholder="Para: (opcional)" style="width: 100%; padding: 12px; margin-bottom: 10px; border: 2px solid #e5e7eb; border-radius: 8px;">
+            <textarea id="confession-text" placeholder="Konta bu sentimentu... (anonimu)"></textarea>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <select id="confession-location" style="padding: 10px; border: 2px solid #e5e7eb; border-radius: 8px;">
+                    <option value="">Seleciona sidadi</option>
+                    <option value="praia">Praia</option>
+                    <option value="mindelo">Mindelo</option>
+                    <option value="santa-maria">Santa Maria</option>
+                    <option value="sal-rei">Sal Rei</option>
+                    <option value="outro">Outru</option>
+                </select>
+                <button onclick="submitConfession()">
+                    <i class="fas fa-paper-plane"></i> Manda
+                </button>
+            </div>
+        </div>
+
+        <div class="confession-list" id="confession-list">
+            <!-- Confessions will be loaded by JavaScript -->
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"><i class="fas fa-home"></i><span>CasaCV</span></a>
+                    <p>Mural di Amor - Bu lugar pa confessa</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CasaCV. Tudu direitu reservadu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/confessions.js"></script>
+</body>
+</html>

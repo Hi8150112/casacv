@@ -38,6 +38,47 @@ body {
     padding: 0 20px;
 }
 
+/* 社区统计条 */
+.community-stats-bar {
+    background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+    padding: 14px 0;
+    color: white;
+}
+.stats-strip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.strip-stat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.strip-stat i {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+.strip-number {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fbbf24;
+}
+.strip-label {
+    font-size: 0.82rem;
+    opacity: 0.88;
+}
+.strip-divider {
+    color: rgba(255,255,255,0.3);
+    font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+    .strip-divider { display: none; }
+    .stats-strip { gap: 14px; justify-content: space-around; }
+    .strip-label { display: none; }
+}
+
 /* 导航栏 */
 .navbar {
     background: var(--white);
