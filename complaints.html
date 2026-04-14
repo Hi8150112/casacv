@@ -149,6 +149,7 @@
 
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/interactions.js"></script>
     <script>
         const complaints = [
             { id: 1, title: "Sem agua 3 dia na Praia", location: "Praia, Achada Grande", category: "infrastructure", content: "Electra ka ta manda agua faz 3 dia. Nha krianca ta bebe agua botija, ki ta kustadu karu. Alguem sabe kel ki ta pasau?", author: "Maria S.", time: "2 oras atras", likes: 156, comments: 42, status: "pending" },
@@ -187,9 +188,18 @@
                     <div class="complaint-footer-modern">
                         <span><i class="fas fa-user"></i> ${c.author} · ${c.time}</span>
                         <div class="complaint-actions-modern">
-                            <span onclick="alert('Bu gosta: ${c.likes + 1}')"><i class="fas fa-thumbs-up"></i> ${c.likes}</span>
-                            <span><i class="fas fa-comment"></i> ${c.comments}</span>
-                            <span onclick="alert('Partilha: houlei@live.cn')"><i class="fas fa-share"></i></span>
+                            <button class="action-btn" data-like-id="${c.id}" data-like-type="complaint" onclick="CasaCV.toggleLike('${c.id}', 'complaint')">
+                                <i class="fas fa-thumbs-up"></i> <span class="like-count">${c.likes}</span>
+                            </button>
+                            <button class="action-btn" onclick="CasaCV.showCommentsModal('${c.id}', 'complaint')">
+                                <i class="fas fa-comment"></i> ${c.comments}
+                            </button>
+                            <button class="action-btn" onclick="CasaCV.shareItem('${c.id}', 'complaint', '${c.title}')">
+                                <i class="fas fa-share"></i>
+                            </button>
+                            <button class="action-btn" onclick="CasaCV.showReportModal('${c.id}', 'complaint')">
+                                <i class="fas fa-flag"></i>
+                            </button>
                         </div>
                     </div>
                 </div>

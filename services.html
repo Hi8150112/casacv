@@ -131,14 +131,14 @@
                 <h3>Tekniku IT</h3>
                 <p>Reparu di komputador, rede</p>
                 <div class="service-price-modern">3,000 CVE/ora</div>
-                <button class="btn-hire-modern" onclick="alert('Kontaktu: houlei@live.cn')">Kontrata</button>
+                <button class="btn-hire-modern" onclick="CasaCV.showContactModal('Tekniku IT', '+238 9789 0123', 'houlei@live.cn', '+23897890123')">Kontrata</button>
             </div>
             <div class="service-card-modern" data-category="repair">
                 <div class="service-icon-modern repair"><i class="fas fa-snowflake"></i></div>
                 <h3>Ar Kondisionadu</h3>
                 <p>Instalasaun i manutensaun</p>
                 <div class="service-price-modern">5,500 CVE/visita</div>
-                <button class="btn-hire-modern" onclick="alert('Kontaktu: houlei@live.cn')">Kontrata</button>
+                <button class="btn-hire-modern" onclick="CasaCV.showContactModal('Ar Kondisionadu', '+238 9890 1234', 'houlei@live.cn', '+23898901234')">Kontrata</button>
             </div>
         </div>
     </section>
@@ -192,6 +192,7 @@
 
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/interactions.js"></script>
     <script>
         document.querySelectorAll('.category-btn-modern').forEach(btn => {
             btn.addEventListener('click', () => {

@@ -697,6 +697,289 @@ body {
     text-align: center;
 }
 
+/* Toast 提示 */
+.casacv-toast {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--accent-primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    font-weight: 500;
+    box-shadow: var(--shadow-lg);
+    z-index: 10000;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.casacv-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* 联系弹窗 */
+.contact-modal, .report-modal, .comments-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.contact-modal.active, .report-modal.active, .comments-modal.active {
+    opacity: 1;
+}
+
+.contact-modal-overlay, .report-modal-overlay, .comments-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.contact-modal-content, .report-modal-content, .comments-modal-content {
+    position: relative;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    max-width: 400px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    transform: scale(0.9);
+    transition: transform 0.3s;
+}
+
+.contact-modal.active .contact-modal-content,
+.report-modal.active .report-modal-content,
+.comments-modal.active .comments-modal-content {
+    transform: scale(1);
+}
+
+.contact-modal-close, .report-modal-close, .comments-modal-close {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.contact-modal h3, .report-modal h3, .comments-modal h3 {
+    margin-bottom: var(--space-lg);
+    color: var(--text-primary);
+}
+
+.contact-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.contact-option {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.2s;
+}
+
+.contact-option:hover {
+    background: var(--accent-primary);
+    color: white;
+}
+
+.contact-option i {
+    font-size: 1.5rem;
+    width: 40px;
+    text-align: center;
+}
+
+.contact-option.whatsapp {
+    background: #25d366;
+    color: white;
+}
+
+.contact-option.whatsapp:hover {
+    background: #128c7e;
+}
+
+/* 举报弹窗 */
+.report-reasons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin: var(--space-md) 0;
+}
+
+.report-reasons label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s;
+}
+
+.report-reasons label:hover {
+    background: var(--bg-tertiary);
+}
+
+.report-reasons input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-primary);
+}
+
+#report-details {
+    width: 100%;
+    min-height: 80px;
+    padding: var(--space-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    font-family: inherit;
+    resize: vertical;
+    margin-bottom: var(--space-md);
+}
+
+.btn-submit-report {
+    width: 100%;
+    padding: var(--space-md);
+    background: var(--accent-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-submit-report:hover {
+    background: var(--accent-secondary);
+}
+
+/* 评论弹窗 */
+.comments-list {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: var(--space-md);
+}
+
+.comment-item {
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-xs);
+    font-size: 0.85rem;
+}
+
+.comment-header strong {
+    color: var(--accent-primary);
+}
+
+.comment-header span {
+    color: var(--text-muted);
+}
+
+.comment-item p {
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.no-comments {
+    text-align: center;
+    color: var(--text-muted);
+    padding: var(--space-xl);
+}
+
+.comment-input-area {
+    display: flex;
+    gap: var(--space-sm);
+    border-top: 1px solid var(--border-color);
+    padding-top: var(--space-md);
+}
+
+.comment-input-area input {
+    flex: 1;
+    padding: var(--space-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    font-family: inherit;
+}
+
+.comment-input-area button {
+    padding: var(--space-md) var(--space-lg);
+    background: var(--accent-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.comment-input-area button:hover {
+    background: var(--accent-secondary);
+}
+
+/* 互动按钮样式 */
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-xs) var(--space-sm);
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s;
+}
+
+.action-btn:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.action-btn.liked {
+    color: #e74c3c;
+}
+
+.action-btn.favorited {
+    color: #f39c12;
+}
+
 /* 动画 */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }

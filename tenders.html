@@ -155,6 +155,7 @@
 
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/interactions.js"></script>
     <script>
         const tenders = [
             { id: 'CV-LIC-2026-001', title: 'Konstrusaun Eskola Sekundaria Praia', org: 'Ministeriu Edukasaun', value: '450,000,000 CVE', deadline: '2026-05-15', status: 'open', category: 'construction', location: 'Praia' },
@@ -192,7 +193,7 @@
                         <span class="tender-value-modern"><i class="fas fa-money-bill-wave"></i> ${t.value}</span>
                         <span><i class="fas fa-calendar-alt"></i> Ate ${t.deadline}</span>
                     </div>
-                    <button class="btn-view-modern" onclick="alert('Detalhes: ${t.id}\\nKontaktu: houlei@live.cn')">Ver Detalhes</button>
+                    <button class="btn-view-modern" onclick="CasaCV.showContactModal('${t.title}', '+238 9123 4567', 'houlei@live.cn', '+23891234567')">Ver Detalhes</button>
                 </div>
             `).join('');
         }

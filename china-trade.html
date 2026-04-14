@@ -179,6 +179,7 @@
 
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/interactions.js"></script>
     <script>
         const tradeData = [
             { type: 'buy', title: 'Buska fornesedor di painel solar', desc: 'Presiza 500 painel solar 300W pa projetu na Sal.', tags: ['Energia', 'Importasaun', 'Sal'], date: '2 dia atras', author: 'Empresa Solar CV' },
@@ -208,7 +209,7 @@
                         </div>
                         <small style="color:#5a6b7c;">${item.author} · ${item.date}</small>
                     </div>
-                    <button class="btn-contact-modern" onclick="alert('Kontaktu: houlei@live.cn')">Kontaktu</button>
+                    <button class="btn-contact-modern" onclick="CasaCV.showContactModal('${item.title}', '+238 9123 4567', 'houlei@live.cn', '+23891234567')">Kontaktu</button>
                 </div>
             `).join('');
         }
